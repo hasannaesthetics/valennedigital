@@ -44,7 +44,7 @@
                     spacing: {
                         "section-padding": "140px",
                         "unit": "8px",
-                        "margin-mobile": "24px",
+                        "margin-mobile": "20px",
                         "gutter": "32px",
                         "container-max": "1440px",
                         "margin-desktop": "80px"
@@ -66,7 +66,7 @@
                         "quote": ["32px", { "lineHeight": "1.4", "fontWeight": "400" }],
                         "display-lg": ["68px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
                         "headline-md": ["38px", { "lineHeight": "1.25", "fontWeight": "500" }],
-                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "display-lg-mobile": ["34px", { "lineHeight": "1.18", "letterSpacing": "-0.01em", "fontWeight": "600" }],
                         "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600" }]
                     }
                 }
@@ -90,15 +90,20 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
+        @media (max-width: 768px) {
+            button, a {
+                touch-action: manipulation;
+            }
+        }
     </style>
 </head>
 <body class="bg-[#F9F7F2] text-[#1A1C1C] font-body-md antialiased selection:bg-[#1A1C1C] selection:text-white">
 
     <!-- Top Navigation -->
     <header>
-        <nav class="fixed top-0 w-full z-50 bg-[#F9F7F2]/90 backdrop-blur-md border-b border-[#E5E5E5] transition-all duration-300">
-            <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-5 max-w-container-max mx-auto">
-                <a class="font-display-lg text-[22px] md:text-[28px] tracking-tight text-primary hover:opacity-80 transition-opacity" href="index.html">
+        <nav class="fixed top-0 w-full z-50 bg-[#F9F7F2]/95 backdrop-blur-md border-b border-[#E5E5E5] transition-all duration-300">
+            <div class="flex justify-between items-center px-5 md:px-margin-desktop py-4 md:py-5 max-w-container-max mx-auto">
+                <a class="font-display-lg text-[20px] sm:text-[24px] md:text-[28px] tracking-tight text-primary hover:opacity-80 transition-opacity" href="index.html">
                     VALENNE DIGITAL
                 </a>
 
@@ -112,30 +117,51 @@
                 </div>
 
                 <div class="hidden lg:flex items-center gap-4">
-                    <a class="bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3 rounded hover:bg-[#333333] transition-colors" href="contact.html">
+                    <a class="bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3 rounded hover:bg-[#333333] transition-colors shadow-sm" href="contact.html">
                         Book a Consultation
                     </a>
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobileMenuBtn" class="lg:hidden text-primary p-2 focus:outline-none" aria-label="Toggle Navigation Menu">
-                    <span class="material-symbols-outlined text-[28px]">menu</span>
+                <button id="mobileMenuBtn" class="lg:hidden text-primary p-2 focus:outline-none flex items-center justify-center rounded border border-[#E5E5E5] bg-white/70" aria-label="Toggle Navigation Menu">
+                    <span id="mobileMenuIcon" class="material-symbols-outlined text-[24px]">menu</span>
                 </button>
             </div>
 
             <!-- Mobile Drawer Menu -->
-            <div id="mobileDrawer" class="hidden lg:hidden bg-[#F9F7F2] border-b border-[#E5E5E5] px-margin-mobile py-6 space-y-4 shadow-lg transition-all duration-300">
-                <div class="flex flex-col space-y-4 font-label-caps text-label-caps">
-                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="index.html">Home</a>
-                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="services.html">Services</a>
-                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="pricing.html">Pricing</a>
-                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="process.html">Process</a>
-                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="about.html">About</a>
-                    <a class="text-primary font-semibold py-2 border-b border-[#E5E5E5]/50" href="insights.html">Insights</a>
-                    <a class="text-secondary hover:text-primary py-2" href="contact.html">Contact</a>
+            <div id="mobileDrawer" class="hidden lg:hidden bg-[#F9F7F2] border-b border-[#E5E5E5] px-6 py-8 shadow-2xl transition-all duration-300">
+                <div class="flex flex-col space-y-1 font-label-caps text-label-caps mb-8">
+                    <a class="text-secondary hover:text-primary py-3.5 border-b border-[#E5E5E5] flex items-center justify-between" href="index.html">
+                        <span>HOME</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                    <a class="text-secondary hover:text-primary py-3.5 border-b border-[#E5E5E5] flex items-center justify-between" href="services.html">
+                        <span>SERVICES & CAPABILITIES</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                    <a class="text-secondary hover:text-primary py-3.5 border-b border-[#E5E5E5] flex items-center justify-between" href="pricing.html">
+                        <span>INVESTMENT & PACKAGES</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                    <a class="text-secondary hover:text-primary py-3.5 border-b border-[#E5E5E5] flex items-center justify-between" href="process.html">
+                        <span>METHODOLOGY</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                    <a class="text-secondary hover:text-primary py-3.5 border-b border-[#E5E5E5] flex items-center justify-between" href="about.html">
+                        <span>ABOUT STUDIO</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                    <a class="text-primary font-semibold py-3.5 border-b border-[#E5E5E5] flex items-center justify-between" href="insights.html">
+                        <span>EDITORIAL ESSAYS</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                    <a class="text-secondary hover:text-primary py-3.5 flex items-center justify-between" href="contact.html">
+                        <span>CONTACT</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
                 </div>
-                <div class="pt-4">
-                    <a class="block text-center bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3.5 rounded" href="contact.html">
+                <div class="space-y-3">
+                    <a class="block w-full text-center bg-primary text-on-primary font-label-caps text-label-caps px-6 py-4 rounded shadow-md" href="contact.html">
                         Book a Consultation
                     </a>
                 </div>
@@ -143,42 +169,42 @@
         </nav>
     </header>
 
-    <main class="pt-[90px] md:pt-[110px]">
+    <main class="pt-[78px] md:pt-[110px]">
 
         <!-- Hero Section -->
-        <header class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-16 pb-12">
+        <header class="max-w-container-max mx-auto px-5 md:px-margin-desktop pt-12 pb-8 md:pt-16 md:pb-12">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
                 <div class="md:col-span-10">
-                    <span class="font-label-caps text-label-caps text-secondary mb-4 block">ESSAYS & STRATEGY PERSPECTIVES</span>
-                    <h1 class="font-display-lg-mobile md:font-display-lg text-primary mb-6">
+                    <span class="font-label-caps text-label-caps text-secondary mb-3 md:mb-4 block">ESSAYS & STRATEGY PERSPECTIVES</span>
+                    <h1 class="font-display-lg-mobile md:font-display-lg text-primary mb-4 md:mb-6 leading-tight">
                         Perspectives on better digital experiences.
                     </h1>
-                    <p class="font-body-lg text-body-lg text-secondary max-w-2xl">
+                    <p class="font-body-md md:font-body-lg text-secondary max-w-2xl text-[15px] sm:text-base md:text-[20px] leading-relaxed">
                         Authoritative essays on quiet-luxury digital design, Singapore healthcare advertising regulations (HCSA), conversion psychology, and high-margin client acquisition.
                     </p>
                 </div>
             </div>
         </header>
 
-        <!-- Article Grid (Asymmetric Editorial Style) -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 border-t border-[#E5E5E5]">
+        <!-- Article Grid -->
+        <section class="max-w-container-max mx-auto px-5 md:px-margin-desktop py-8 md:py-12 border-t border-[#E5E5E5]">
 
-            <!-- Featured Article (Wide Spanning) -->
-            <article class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-20 items-center group cursor-pointer" onclick="openArticleModal('essay1')">
-                <div class="lg:col-span-7 mb-8 lg:mb-0 relative overflow-hidden">
+            <!-- Featured Article -->
+            <article class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-12 md:mb-20 items-center group cursor-pointer" onclick="openArticleModal('essay1')">
+                <div class="lg:col-span-7 mb-6 lg:mb-0 relative overflow-hidden">
                     <div class="aspect-[16/10] bg-surface-variant relative rounded overflow-hidden ghost-frame">
                         <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80" alt="Why your website matters more than you think" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out grayscale"/>
-                        <div class="absolute top-4 left-4 bg-white px-3 py-1 rounded text-xs font-label-caps text-primary shadow">
+                        <div class="absolute top-3 left-3 bg-white px-2.5 py-1 rounded text-[10px] md:text-xs font-label-caps text-primary shadow">
                             FEATURED ESSAY
                         </div>
                     </div>
                 </div>
                 <div class="lg:col-span-4 lg:col-start-9">
-                    <span class="font-label-caps text-xs text-secondary mb-3 block">STRATEGY & POSITIONING</span>
-                    <h2 class="font-headline-md text-headline-md text-primary mb-4 group-hover:text-secondary transition-colors">
+                    <span class="font-label-caps text-[10px] md:text-xs text-secondary mb-2 md:mb-3 block">STRATEGY & POSITIONING</span>
+                    <h2 class="font-headline-md text-[22px] sm:text-[26px] md:text-headline-md text-primary mb-3 md:mb-4 group-hover:text-secondary transition-colors">
                         Why your website matters more than you think.
                     </h2>
-                    <p class="font-body-md text-secondary mb-6 leading-relaxed">
+                    <p class="font-body-md text-secondary mb-4 md:mb-6 text-sm md:text-base leading-relaxed">
                         In a market saturated with generic templates, a meticulously crafted digital flagship is not merely a utility; it is the silent ambassador of your caliber and the decisive factor in whether an affluent patient or client initiates contact.
                     </p>
                     <span class="font-label-caps text-label-caps text-primary border-b border-primary pb-1 group-hover:border-secondary transition-colors inline-block">
@@ -188,23 +214,23 @@
             </article>
 
             <!-- Standard Grid (3 Columns) -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-20">
 
                 <!-- Article 2 -->
                 <article class="ghost-frame p-6 rounded bg-white group cursor-pointer flex flex-col justify-between" onclick="openArticleModal('essay2')">
                     <div>
-                        <div class="aspect-[4/3] bg-surface-variant mb-6 overflow-hidden rounded relative">
+                        <div class="aspect-[4/3] bg-surface-variant mb-5 md:mb-6 overflow-hidden rounded relative">
                             <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Private clinic website transformation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out grayscale"/>
                         </div>
-                        <span class="font-label-caps text-[11px] text-secondary mb-2 block uppercase">CLINICAL TRIAGE</span>
-                        <h3 class="font-headline-sm text-[22px] text-primary mb-3 group-hover:text-secondary transition-colors">
+                        <span class="font-label-caps text-[10px] md:text-[11px] text-secondary mb-1.5 md:mb-2 block uppercase">CLINICAL TRIAGE</span>
+                        <h3 class="font-headline-sm text-[18px] sm:text-[20px] md:text-[22px] text-primary mb-2.5 md:mb-3 group-hover:text-secondary transition-colors">
                             7 signs your private clinic is losing high-margin patients.
                         </h3>
-                        <p class="font-body-md text-secondary text-xs leading-relaxed mb-6">
+                        <p class="font-body-md text-secondary text-xs sm:text-sm leading-relaxed mb-5 md:mb-6">
                             Recognizing the subtle conversion leaks that cause discerning patients in Singapore to bounce before requesting a consultation.
                         </p>
                     </div>
-                    <span class="font-label-caps text-[11px] text-primary border-b border-primary pb-0.5 inline-block self-start">
+                    <span class="font-label-caps text-[10px] md:text-[11px] text-primary border-b border-primary pb-0.5 inline-block self-start">
                         READ ANALYSIS →
                     </span>
                 </article>
@@ -212,18 +238,18 @@
                 <!-- Article 3 -->
                 <article class="ghost-frame p-6 rounded bg-white group cursor-pointer flex flex-col justify-between" onclick="openArticleModal('essay3')">
                     <div>
-                        <div class="aspect-[4/3] bg-surface-variant mb-6 overflow-hidden rounded relative">
+                        <div class="aspect-[4/3] bg-surface-variant mb-5 md:mb-6 overflow-hidden rounded relative">
                             <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80" alt="MOH and HCSA Medical advertising compliance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out grayscale"/>
                         </div>
-                        <span class="font-label-caps text-[11px] text-secondary mb-2 block uppercase">REGULATION & LAW</span>
-                        <h3 class="font-headline-sm text-[22px] text-primary mb-3 group-hover:text-secondary transition-colors">
+                        <span class="font-label-caps text-[10px] md:text-[11px] text-secondary mb-1.5 md:mb-2 block uppercase">REGULATION & LAW</span>
+                        <h3 class="font-headline-sm text-[18px] sm:text-[20px] md:text-[22px] text-primary mb-2.5 md:mb-3 group-hover:text-secondary transition-colors">
                             MOH & HCSA Compliance: What luxury clinics must know.
                         </h3>
-                        <p class="font-body-md text-secondary text-xs leading-relaxed mb-6">
+                        <p class="font-body-md text-secondary text-xs sm:text-sm leading-relaxed mb-5 md:mb-6">
                             How to present authoritative clinical expertise and doctor qualifications without violating Singapore's Healthcare Services Act.
                         </p>
                     </div>
-                    <span class="font-label-caps text-[11px] text-primary border-b border-primary pb-0.5 inline-block self-start">
+                    <span class="font-label-caps text-[10px] md:text-[11px] text-primary border-b border-primary pb-0.5 inline-block self-start">
                         READ GUIDE →
                     </span>
                 </article>
@@ -231,37 +257,37 @@
                 <!-- Article 4 -->
                 <article class="ghost-frame p-6 rounded bg-white group cursor-pointer flex flex-col justify-between" onclick="openArticleModal('essay4')">
                     <div>
-                        <div class="aspect-[4/3] bg-surface-variant mb-6 overflow-hidden rounded relative">
+                        <div class="aspect-[4/3] bg-surface-variant mb-5 md:mb-6 overflow-hidden rounded relative">
                             <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Website redesign vs conversion rate optimization" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out grayscale"/>
                         </div>
-                        <span class="font-label-caps text-[11px] text-secondary mb-2 block uppercase">METHODOLOGY</span>
-                        <h3 class="font-headline-sm text-[22px] text-primary mb-3 group-hover:text-secondary transition-colors">
+                        <span class="font-label-caps text-[10px] md:text-[11px] text-secondary mb-1.5 md:mb-2 block uppercase">METHODOLOGY</span>
+                        <h3 class="font-headline-sm text-[18px] sm:text-[20px] md:text-[22px] text-primary mb-2.5 md:mb-3 group-hover:text-secondary transition-colors">
                             Redesign vs Conversion Rate Optimisation (CRO).
                         </h3>
-                        <p class="font-body-md text-secondary text-xs leading-relaxed mb-6">
+                        <p class="font-body-md text-secondary text-xs sm:text-sm leading-relaxed mb-5 md:mb-6">
                             Understanding when your business needs a foundational aesthetic overhaul versus iterative micro-funnel testing.
                         </p>
                     </div>
-                    <span class="font-label-caps text-[11px] text-primary border-b border-primary pb-0.5 inline-block self-start">
+                    <span class="font-label-caps text-[10px] md:text-[11px] text-primary border-b border-primary pb-0.5 inline-block self-start">
                         READ ESSAY →
                     </span>
                 </article>
 
             </div>
 
-            <!-- Asymmetric Rhythm Article (Spans 2 columns) -->
-            <article class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center ghost-frame p-8 rounded bg-white group cursor-pointer" onclick="openArticleModal('essay5')">
-                <div class="lg:col-span-5 mb-6 lg:mb-0">
+            <!-- Asymmetric Article -->
+            <article class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center ghost-frame p-6 sm:p-8 rounded bg-white group cursor-pointer" onclick="openArticleModal('essay5')">
+                <div class="lg:col-span-5 mb-5 lg:mb-0">
                     <div class="aspect-[16/10] overflow-hidden rounded">
                         <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=800&q=80" alt="Psychology of whitespace and quiet luxury" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out grayscale"/>
                     </div>
                 </div>
                 <div class="lg:col-span-7 lg:pl-6">
-                    <span class="font-label-caps text-xs text-secondary mb-2 block uppercase">BRANDING PSYCHOLOGY</span>
-                    <h3 class="font-headline-md text-headline-md text-primary mb-3 group-hover:text-secondary transition-colors">
+                    <span class="font-label-caps text-[10px] md:text-xs text-secondary mb-2 block uppercase">BRANDING PSYCHOLOGY</span>
+                    <h3 class="font-headline-md text-[20px] sm:text-[24px] md:text-headline-md text-primary mb-2 md:mb-3 group-hover:text-secondary transition-colors">
                         The psychology of whitespace: How luxury websites command 3x fees.
                     </h3>
-                    <p class="font-body-md text-secondary text-sm leading-relaxed mb-6">
+                    <p class="font-body-md text-secondary text-xs sm:text-sm leading-relaxed mb-4 md:mb-6">
                         An examination of how visual breathing room, restraint, and deliberate typographic hierarchy alter price elasticity and signal undisputed authority to high-net-worth consumers.
                     </p>
                     <span class="font-label-caps text-label-caps text-primary border-b border-primary pb-1 group-hover:border-secondary transition-colors inline-block">
@@ -273,18 +299,18 @@
         </section>
 
         <!-- Newsletter Signup Section -->
-        <section class="py-16 md:py-24 bg-white border-y border-[#E5E5E5]">
-            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+        <section class="py-12 md:py-24 bg-white border-y border-[#E5E5E5]">
+            <div class="max-w-container-max mx-auto px-5 md:px-margin-desktop text-center">
                 <div class="max-w-xl mx-auto">
-                    <span class="font-label-caps text-label-caps text-secondary mb-3 block">MONTHLY EDITORIAL</span>
-                    <h2 class="font-quote text-quote text-primary mb-4 text-[26px] md:text-[32px]">Subscribe for digital refinement.</h2>
-                    <p class="font-body-md text-secondary text-sm mb-8">
+                    <span class="font-label-caps text-label-caps text-secondary mb-2 md:mb-3 block">MONTHLY EDITORIAL</span>
+                    <h2 class="font-quote text-quote text-primary mb-3 md:mb-4 text-[22px] sm:text-[26px] md:text-[32px]">Subscribe for digital refinement.</h2>
+                    <p class="font-body-md text-secondary text-xs sm:text-sm mb-6 md:mb-8">
                         Join over 800 Singapore doctors, specialists, and founders receiving our private monthly memorandum on digital strategy, conversion telemetry, and quiet luxury.
                     </p>
 
                     <form id="newsletterForm" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-                        <input type="email" id="nlEmail" placeholder="Your email address" required class="flex-grow bg-[#F9F7F2] border border-[#E5E5E5] px-4 py-3 text-sm text-primary placeholder:text-[#747878] focus:border-primary focus:ring-0 rounded"/>
-                        <button type="submit" class="bg-primary text-white px-6 py-3 font-label-caps text-label-caps rounded hover:bg-[#333333] transition-colors shrink-0">
+                        <input type="email" id="nlEmail" placeholder="Your email address" required class="flex-grow bg-[#F9F7F2] border border-[#E5E5E5] px-4 py-3 text-base sm:text-sm text-primary placeholder:text-[#747878] focus:border-primary focus:ring-0 rounded"/>
+                        <button type="submit" class="bg-primary text-white px-6 py-3.5 font-label-caps text-label-caps rounded hover:bg-[#333333] transition-colors shrink-0 w-full sm:w-auto">
                             SUBSCRIBE
                         </button>
                     </form>
@@ -298,10 +324,10 @@
     </main>
 
     <!-- Article Interactive Reader Modal -->
-    <div id="articleModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
-        <div class="bg-white max-w-3xl w-full max-h-[90vh] overflow-y-auto rounded p-8 md:p-12 border border-[#E5E5E5] relative shadow-2xl">
-            <button onclick="closeArticleModal()" class="absolute top-6 right-6 text-secondary hover:text-primary p-2">
-                <span class="material-symbols-outlined text-[28px]">close</span>
+    <div id="articleModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-3 sm:p-4">
+        <div class="bg-white max-w-3xl w-full max-h-[92vh] overflow-y-auto rounded p-6 sm:p-8 md:p-12 border border-[#E5E5E5] relative shadow-2xl">
+            <button onclick="closeArticleModal()" class="absolute top-4 right-4 sm:top-6 sm:right-6 text-secondary hover:text-primary p-2 focus:outline-none" aria-label="Close Reader">
+                <span class="material-symbols-outlined text-[24px] sm:text-[28px]">close</span>
             </button>
             <div id="articleContent">
                 <!-- Injected via JavaScript -->
@@ -310,47 +336,47 @@
     </div>
 
     <!-- Global Footer -->
-    <footer class="bg-white border-t border-[#E5E5E5] w-full pt-16 pb-12">
-        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter">
-            <div class="md:col-span-4 mb-10 md:mb-0">
-                <a class="font-display-lg text-[26px] tracking-tight text-primary block mb-4" href="index.html">
+    <footer class="bg-white border-t border-[#E5E5E5] w-full pt-12 md:pt-16 pb-10 md:pb-12">
+        <div class="max-w-container-max mx-auto px-5 md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-gutter">
+            <div class="md:col-span-4 mb-4 md:mb-0">
+                <a class="font-display-lg text-[22px] md:text-[26px] tracking-tight text-primary block mb-3 md:mb-4" href="index.html">
                     VALENNE DIGITAL
                 </a>
-                <p class="font-body-md text-secondary text-sm max-w-sm mb-6">
-                    Quiet-luxury digital architecture and conversion engineering for private medical practices, luxury aesthetics, and premier enterprises.
+                <p class="font-body-md text-secondary text-sm max-w-sm mb-5">
+                    Quiet-luxury digital architecture and conversion engineering for private medical practices, financial institutions & family offices, and premier SMEs.
                 </p>
                 <p class="text-xs text-secondary font-label-caps">
                     SINGAPORE HQ • SIGLAP / EAST COAST
                 </p>
             </div>
 
-            <div class="md:col-span-2 md:col-start-7 mb-8 md:mb-0">
-                <p class="font-label-caps text-label-caps text-primary mb-4 font-semibold">NAVIGATION</p>
-                <ul class="space-y-3 font-body-md text-sm text-secondary">
-                    <li><a class="hover:text-primary transition-colors" href="services.html">Services & Deliverables</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="pricing.html">Investment & Packages</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="process.html">Methodology</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="about.html">Boutique Philosophy</a></li>
-                </ul>
-            </div>
-
-            <div class="md:col-span-2 mb-8 md:mb-0">
-                <p class="font-label-caps text-label-caps text-primary mb-4 font-semibold">STUDIO</p>
-                <ul class="space-y-3 font-body-md text-sm text-secondary">
-                    <li><a class="hover:text-primary transition-colors" href="about.html">About Studio</a></li>
-                    <li><a class="text-primary font-medium hover:text-primary transition-colors" href="insights.html">Editorial Essays</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="contact.html">Consultation</a></li>
+            <div class="md:col-span-2 md:col-start-7">
+                <p class="font-label-caps text-label-caps text-primary mb-3 md:mb-4 font-semibold">NAVIGATION</p>
+                <ul class="space-y-2.5 font-body-md text-sm text-secondary">
+                    <li><a class="hover:text-primary transition-colors py-1 block" href="services.html">Services & Deliverables</a></li>
+                    <li><a class="hover:text-primary transition-colors py-1 block" href="pricing.html">Investment & Packages</a></li>
+                    <li><a class="hover:text-primary transition-colors py-1 block" href="process.html">Methodology</a></li>
+                    <li><a class="hover:text-primary transition-colors py-1 block" href="about.html">Boutique Philosophy</a></li>
                 </ul>
             </div>
 
             <div class="md:col-span-2">
-                <p class="font-label-caps text-label-caps text-primary mb-4 font-semibold">INQUIRIES</p>
-                <p class="font-body-md text-sm text-secondary mb-2">Singapore Studio</p>
-                <a class="font-body-md text-sm text-primary font-medium hover:underline block mb-4" href="mailto:hello@valennedigital.com">hello@valennedigital.com</a>
-                <p class="text-xs text-secondary">Mon – Fri: 09:00 – 18:00 SGT</p>
+                <p class="font-label-caps text-label-caps text-primary mb-3 md:mb-4 font-semibold">STUDIO</p>
+                <ul class="space-y-2.5 font-body-md text-sm text-secondary">
+                    <li><a class="hover:text-primary transition-colors py-1 block" href="about.html">About Studio</a></li>
+                    <li><a class="text-primary font-medium hover:text-primary transition-colors py-1 block" href="insights.html">Editorial Essays</a></li>
+                    <li><a class="hover:text-primary transition-colors py-1 block" href="contact.html">Consultation</a></li>
+                </ul>
             </div>
 
-            <div class="md:col-span-12 mt-12 pt-8 border-t border-[#E5E5E5] flex flex-col md:flex-row justify-between items-center text-xs text-secondary gap-4">
+            <div class="md:col-span-2">
+                <p class="font-label-caps text-label-caps text-primary mb-3 md:mb-4 font-semibold">INQUIRIES</p>
+                <p class="font-body-md text-sm text-secondary mb-1">Singapore Studio</p>
+                <a class="font-body-md text-sm text-primary font-medium hover:underline block mb-3" href="mailto:hello@valennedigital.com">hello@valennedigital.com</a>
+                <p class="text-xs text-secondary font-mono">Mon – Fri: 09:00 – 18:00 SGT</p>
+            </div>
+
+            <div class="md:col-span-12 mt-8 md:mt-12 pt-6 md:pt-8 border-t border-[#E5E5E5] flex flex-col md:flex-row justify-between items-center text-xs text-secondary gap-4 text-center md:text-left">
                 <p>© 2026 VALENNE DIGITAL. ALL RIGHTS RESERVED.</p>
                 <div class="flex gap-6">
                     <a class="hover:text-primary transition-colors" href="insights.html">HCSA Compliance Guide</a>
@@ -362,12 +388,17 @@
 
     <!-- Interactive Scripts -->
     <script>
-        // Mobile Menu
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileDrawer = document.getElementById('mobileDrawer');
+        const mobileMenuIcon = document.getElementById('mobileMenuIcon');
+        
         if (mobileMenuBtn && mobileDrawer) {
             mobileMenuBtn.addEventListener('click', () => {
+                const isHidden = mobileDrawer.classList.contains('hidden');
                 mobileDrawer.classList.toggle('hidden');
+                if (mobileMenuIcon) {
+                    mobileMenuIcon.textContent = isHidden ? 'close' : 'menu';
+                }
             });
         }
 
@@ -444,16 +475,16 @@
             if (!data) return;
 
             articleContent.innerHTML = `
-                <span class="font-label-caps text-xs text-secondary uppercase tracking-widest block mb-2">${data.category}</span>
-                <h2 class="font-headline-md text-headline-md text-primary mb-2">${data.title}</h2>
-                <p class="text-sm font-medium text-secondary mb-6">${data.subtitle}</p>
-                <hr class="border-t border-[#E5E5E5] mb-6"/>
-                <div class="font-body-md text-secondary text-sm leading-relaxed space-y-4">
+                <span class="font-label-caps text-[10px] sm:text-xs text-secondary uppercase tracking-widest block mb-2">${data.category}</span>
+                <h2 class="font-headline-md text-[20px] sm:text-[24px] md:text-headline-md text-primary mb-2">${data.title}</h2>
+                <p class="text-xs sm:text-sm font-medium text-secondary mb-4 sm:mb-6">${data.subtitle}</p>
+                <hr class="border-t border-[#E5E5E5] mb-4 sm:mb-6"/>
+                <div class="font-body-md text-secondary text-xs sm:text-sm leading-relaxed space-y-4">
                     ${data.content}
                 </div>
-                <div class="mt-8 pt-6 border-t border-[#E5E5E5] flex justify-between items-center">
-                    <span class="text-xs text-secondary font-mono">Valenne Digital Memorandum</span>
-                    <button onclick="closeArticleModal()" class="px-6 py-2.5 bg-primary text-white rounded font-label-caps text-xs hover:bg-[#333333]">Close Reader</button>
+                <div class="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-[#E5E5E5] flex justify-between items-center">
+                    <span class="text-[10px] sm:text-xs text-secondary font-mono">Valenne Digital Memorandum</span>
+                    <button onclick="closeArticleModal()" class="px-5 py-2.5 bg-primary text-white rounded font-label-caps text-xs hover:bg-[#333333]">Close Reader</button>
                 </div>
             `;
             articleModal.classList.remove('hidden');

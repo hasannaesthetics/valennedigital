@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Methodology & Process — VALENNE DIGITAL</title>
-    <meta name="description" content="Our 6-step digital transformation methodology for private clinics, aesthetic practices, and premier brands."/>
+    <title>Methodology & Transformation Process — VALENNE DIGITAL</title>
+    <meta name="description" content="Our 6-step bespoke digital transformation process engineered for Singapore private medical clinics, luxury aesthetics, and premier SMEs."/>
 
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -44,7 +44,7 @@
                     spacing: {
                         "section-padding": "140px",
                         "unit": "8px",
-                        "margin-mobile": "24px",
+                        "margin-mobile": "20px",
                         "gutter": "32px",
                         "container-max": "1440px",
                         "margin-desktop": "80px"
@@ -66,7 +66,7 @@
                         "quote": ["32px", { "lineHeight": "1.4", "fontWeight": "400" }],
                         "display-lg": ["68px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
                         "headline-md": ["38px", { "lineHeight": "1.25", "fontWeight": "500" }],
-                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "display-lg-mobile": ["34px", { "lineHeight": "1.18", "letterSpacing": "-0.01em", "fontWeight": "600" }],
                         "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600" }]
                     }
                 }
@@ -84,8 +84,16 @@
             border: 1px solid #E5E5E5;
             background-color: #FFFFFF;
         }
+        .hairline-divider {
+            border-bottom: 1px solid #E5E5E5;
+        }
         .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        @media (max-width: 768px) {
+            button, a {
+                touch-action: manipulation;
+            }
         }
     </style>
 </head>
@@ -93,9 +101,9 @@
 
     <!-- Top Navigation -->
     <header>
-        <nav class="fixed top-0 w-full z-50 bg-[#F9F7F2]/90 backdrop-blur-md border-b border-[#E5E5E5] transition-all duration-300">
-            <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-5 max-w-container-max mx-auto">
-                <a class="font-display-lg text-[22px] md:text-[28px] tracking-tight text-primary hover:opacity-80 transition-opacity" href="index.html">
+        <nav class="fixed top-0 w-full z-50 bg-[#F9F7F2]/95 backdrop-blur-md border-b border-[#E5E5E5] transition-all duration-300">
+            <div class="flex justify-between items-center px-5 md:px-margin-desktop py-4 md:py-5 max-w-container-max mx-auto">
+                <a class="font-display-lg text-[20px] sm:text-[24px] md:text-[28px] tracking-tight text-primary hover:opacity-80 transition-opacity" href="index.html">
                     VALENNE DIGITAL
                 </a>
 
@@ -109,30 +117,51 @@
                 </div>
 
                 <div class="hidden lg:flex items-center gap-4">
-                    <a class="bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3 rounded hover:bg-[#333333] transition-colors" href="contact.html">
+                    <a class="bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3 rounded hover:bg-[#333333] transition-colors shadow-sm" href="contact.html">
                         Book a Consultation
                     </a>
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobileMenuBtn" class="lg:hidden text-primary p-2 focus:outline-none" aria-label="Toggle Navigation Menu">
-                    <span class="material-symbols-outlined text-[28px]">menu</span>
+                <button id="mobileMenuBtn" class="lg:hidden text-primary p-2 focus:outline-none flex items-center justify-center rounded border border-[#E5E5E5] bg-white/70" aria-label="Toggle Navigation Menu">
+                    <span id="mobileMenuIcon" class="material-symbols-outlined text-[24px]">menu</span>
                 </button>
             </div>
 
             <!-- Mobile Drawer Menu -->
-            <div id="mobileDrawer" class="hidden lg:hidden bg-[#F9F7F2] border-b border-[#E5E5E5] px-margin-mobile py-6 space-y-4 shadow-lg transition-all duration-300">
-                <div class="flex flex-col space-y-4 font-label-caps text-label-caps">
-                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="index.html">Home</a>
-                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="services.html">Services</a>
-                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="pricing.html">Pricing</a>
-                    <a class="text-primary font-semibold py-2 border-b border-[#E5E5E5]/50" href="process.html">Process</a>
-                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="about.html">About</a>
-                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="insights.html">Insights</a>
-                    <a class="text-secondary hover:text-primary py-2" href="contact.html">Contact</a>
+            <div id="mobileDrawer" class="hidden lg:hidden bg-[#F9F7F2] border-b border-[#E5E5E5] px-6 py-8 shadow-2xl transition-all duration-300">
+                <div class="flex flex-col space-y-1 font-label-caps text-label-caps mb-8">
+                    <a class="text-secondary hover:text-primary py-3.5 border-b border-[#E5E5E5] flex items-center justify-between" href="index.html">
+                        <span>HOME</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                    <a class="text-secondary hover:text-primary py-3.5 border-b border-[#E5E5E5] flex items-center justify-between" href="services.html">
+                        <span>SERVICES & CAPABILITIES</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                    <a class="text-secondary hover:text-primary py-3.5 border-b border-[#E5E5E5] flex items-center justify-between" href="pricing.html">
+                        <span>INVESTMENT & PACKAGES</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                    <a class="text-primary font-semibold py-3.5 border-b border-[#E5E5E5] flex items-center justify-between" href="process.html">
+                        <span>METHODOLOGY</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                    <a class="text-secondary hover:text-primary py-3.5 border-b border-[#E5E5E5] flex items-center justify-between" href="about.html">
+                        <span>ABOUT STUDIO</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                    <a class="text-secondary hover:text-primary py-3.5 border-b border-[#E5E5E5] flex items-center justify-between" href="insights.html">
+                        <span>EDITORIAL ESSAYS</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                    <a class="text-secondary hover:text-primary py-3.5 flex items-center justify-between" href="contact.html">
+                        <span>CONTACT</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
                 </div>
-                <div class="pt-4">
-                    <a class="block text-center bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3.5 rounded" href="contact.html">
+                <div class="space-y-3">
+                    <a class="block w-full text-center bg-primary text-on-primary font-label-caps text-label-caps px-6 py-4 rounded shadow-md" href="contact.html">
                         Book a Consultation
                     </a>
                 </div>
@@ -140,212 +169,258 @@
         </nav>
     </header>
 
-    <main class="pt-[90px] md:pt-[110px]">
+    <main class="pt-[78px] md:pt-[110px]">
 
         <!-- Hero Section -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-24 text-center">
-            <div class="max-w-3xl mx-auto">
-                <span class="font-label-caps text-label-caps text-secondary mb-4 block">RIGOROUS METHODOLOGY</span>
-                <h1 class="font-display-lg-mobile md:font-display-lg text-primary mb-6">
-                    A better website starts with a better process.
-                </h1>
-                <p class="font-body-lg text-body-lg text-secondary">
-                    We believe that exceptional digital experiences are born from rigorous strategic discipline, psychological empathy, and uncompromising engineering — not superficial guesswork.
-                </p>
-            </div>
-        </section>
-
-        <!-- Asymmetric 6-Step Timeline Section -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-20">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter relative">
-                <!-- Center Vertical Line (Desktop) -->
-                <div class="hidden md:block absolute left-1/2 top-4 bottom-12 w-[1px] bg-[#E5E5E5] -translate-x-1/2"></div>
-
-                <!-- Step 01 -->
-                <div class="col-span-1 md:col-span-5 md:text-right md:pr-12 relative group mb-16 md:mb-28">
-                    <div class="md:hidden w-8 h-8 rounded-full border border-primary flex items-center justify-center text-primary font-label-caps text-xs mb-4">01</div>
-                    <div class="hidden md:flex absolute -right-[calc(32px+16px)] top-2 w-8 h-8 rounded-full bg-[#F9F7F2] border border-[#E5E5E5] group-hover:border-primary items-center justify-center text-secondary group-hover:text-primary transition-colors font-label-caps text-xs z-10">01</div>
-                    <span class="text-xs font-label-caps text-secondary tracking-widest block mb-2">PHASE 01</span>
-                    <h2 class="font-headline-md text-headline-md text-primary mb-3">Discover</h2>
-                    <p class="font-body-md text-primary font-medium mb-3">Goals, Technical Audit & Clinical Positioning</p>
-                    <p class="font-body-md text-secondary text-sm leading-relaxed">
-                        We begin by deconstructing your current analytics, patient drop-off points, competitor landscape in Singapore, and target high-margin treatment procedures to lay a factual transformation foundation.
-                    </p>
-                </div>
-                <div class="hidden md:block md:col-span-2"></div>
-                <div class="hidden md:block md:col-span-5"></div>
-
-                <!-- Step 02 -->
-                <div class="hidden md:block md:col-span-5"></div>
-                <div class="hidden md:block md:col-span-2"></div>
-                <div class="col-span-1 md:col-span-5 md:text-left md:pl-12 relative group mb-16 md:mb-28">
-                    <div class="md:hidden w-8 h-8 rounded-full border border-primary flex items-center justify-center text-primary font-label-caps text-xs mb-4">02</div>
-                    <div class="hidden md:flex absolute -left-[calc(32px+16px)] top-2 w-8 h-8 rounded-full bg-[#F9F7F2] border border-[#E5E5E5] group-hover:border-primary items-center justify-center text-secondary group-hover:text-primary transition-colors font-label-caps text-xs z-10">02</div>
-                    <span class="text-xs font-label-caps text-secondary tracking-widest block mb-2">PHASE 02</span>
-                    <h2 class="font-headline-md text-headline-md text-primary mb-3">Define</h2>
-                    <p class="font-body-md text-primary font-medium mb-3">Information Architecture & Patient Sitemap</p>
-                    <p class="font-body-md text-secondary text-sm leading-relaxed">
-                        We map the exact path an affluent patient or client takes from first impression to booking. Every navigational node is designed to eliminate cognitive friction and steer users to qualified enquiry channels.
-                    </p>
-                </div>
-
-                <!-- Step 03 -->
-                <div class="col-span-1 md:col-span-5 md:text-right md:pr-12 relative group mb-16 md:mb-28">
-                    <div class="md:hidden w-8 h-8 rounded-full border border-primary flex items-center justify-center text-primary font-label-caps text-xs mb-4">03</div>
-                    <div class="hidden md:flex absolute -right-[calc(32px+16px)] top-2 w-8 h-8 rounded-full bg-[#F9F7F2] border border-[#E5E5E5] group-hover:border-primary items-center justify-center text-secondary group-hover:text-primary transition-colors font-label-caps text-xs z-10">03</div>
-                    <span class="text-xs font-label-caps text-secondary tracking-widest block mb-2">PHASE 03</span>
-                    <h2 class="font-headline-md text-headline-md text-primary mb-3">Design</h2>
-                    <p class="font-body-md text-primary font-medium mb-3">Editorial Identity, Typography & Tactile UX</p>
-                    <p class="font-body-md text-secondary text-sm leading-relaxed">
-                        Crafting high-contrast editorial layouts, custom typography systems (Playfair Display & Inter), generous whitespace, and subtle micro-interactions that evoke understated luxury and medical precision.
-                    </p>
-                </div>
-                <div class="hidden md:block md:col-span-2"></div>
-                <div class="hidden md:block md:col-span-5"></div>
-
-                <!-- Step 04 -->
-                <div class="hidden md:block md:col-span-5"></div>
-                <div class="hidden md:block md:col-span-2"></div>
-                <div class="col-span-1 md:col-span-5 md:text-left md:pl-12 relative group mb-16 md:mb-28">
-                    <div class="md:hidden w-8 h-8 rounded-full border border-primary flex items-center justify-center text-primary font-label-caps text-xs mb-4">04</div>
-                    <div class="hidden md:flex absolute -left-[calc(32px+16px)] top-2 w-8 h-8 rounded-full bg-[#F9F7F2] border border-[#E5E5E5] group-hover:border-primary items-center justify-center text-secondary group-hover:text-primary transition-colors font-label-caps text-xs z-10">04</div>
-                    <span class="text-xs font-label-caps text-secondary tracking-widest block mb-2">PHASE 04</span>
-                    <h2 class="font-headline-md text-headline-md text-primary mb-3">Develop</h2>
-                    <p class="font-body-md text-primary font-medium mb-3">Modern Semantic Stack & Sub-Second Speeds</p>
-                    <p class="font-body-md text-secondary text-sm leading-relaxed">
-                        Writing pristine, accessible code without cumbersome CMS bloat. We optimize every asset for lightning-fast execution across global networks and Singapore's high-speed mobile infrastructure.
-                    </p>
-                </div>
-
-                <!-- Step 05 -->
-                <div class="col-span-1 md:col-span-5 md:text-right md:pr-12 relative group mb-16 md:mb-28">
-                    <div class="md:hidden w-8 h-8 rounded-full border border-primary flex items-center justify-center text-primary font-label-caps text-xs mb-4">05</div>
-                    <div class="hidden md:flex absolute -right-[calc(32px+16px)] top-2 w-8 h-8 rounded-full bg-[#F9F7F2] border border-[#E5E5E5] group-hover:border-primary items-center justify-center text-secondary group-hover:text-primary transition-colors font-label-caps text-xs z-10">05</div>
-                    <span class="text-xs font-label-caps text-secondary tracking-widest block mb-2">PHASE 05</span>
-                    <h2 class="font-headline-md text-headline-md text-primary mb-3">Launch</h2>
-                    <p class="font-body-md text-primary font-medium mb-3">Zero-Downtime Deployment & Analytics Verification</p>
-                    <p class="font-body-md text-secondary text-sm leading-relaxed">
-                        Comprehensive pre-flight checks: MOH compliance verification, 301 redirects to preserve existing SEO authority, SSL certificates, and live WhatsApp concierge testing before flawless cutover.
-                    </p>
-                </div>
-                <div class="hidden md:block md:col-span-2"></div>
-                <div class="hidden md:block md:col-span-5"></div>
-
-                <!-- Step 06 -->
-                <div class="hidden md:block md:col-span-5"></div>
-                <div class="hidden md:block md:col-span-2"></div>
-                <div class="col-span-1 md:col-span-5 md:text-left md:pl-12 relative group mb-8">
-                    <div class="md:hidden w-8 h-8 rounded-full border border-primary flex items-center justify-center text-primary font-label-caps text-xs mb-4">06</div>
-                    <div class="hidden md:flex absolute -left-[calc(32px+16px)] top-2 w-8 h-8 rounded-full bg-[#F9F7F2] border border-[#E5E5E5] group-hover:border-primary items-center justify-center text-secondary group-hover:text-primary transition-colors font-label-caps text-xs z-10">06</div>
-                    <span class="text-xs font-label-caps text-secondary tracking-widest block mb-2">PHASE 06</span>
-                    <h2 class="font-headline-md text-headline-md text-primary mb-3">Optimise</h2>
-                    <p class="font-body-md text-primary font-medium mb-3">Continuous CRO, Telemetry & Growth</p>
-                    <p class="font-body-md text-secondary text-sm leading-relaxed">
-                        A digital flagship is a living commercial asset. Through our Growth Retainer, we analyze live heatmaps and conduct monthly conversion optimization to steadily increase patient acquisition yield.
+        <section class="max-w-container-max mx-auto px-5 md:px-margin-desktop py-12 md:py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+                <div class="lg:col-span-9">
+                    <span class="font-label-caps text-label-caps text-secondary mb-3 md:mb-4 block">THE VALENNE METHOD</span>
+                    <h1 class="font-display-lg-mobile md:font-display-lg text-primary mb-4 md:mb-6 leading-tight">
+                        How we engineer transformation.
+                    </h1>
+                    <p class="font-body-md md:font-body-lg text-secondary max-w-2xl text-[15px] sm:text-base md:text-[20px] leading-relaxed">
+                        A disciplined, 6-step phased delivery model. We reject the uncertainty of protracted agency timelines. Every engagement is executed with rigorous phase gates, zero disruption to your daily operations, and clear architectural accountability.
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- Architectural Photography Editorial Frame -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
-            <div class="w-full bg-white p-4 border border-[#E5E5E5] rounded shadow-sm">
-                <div class="relative h-[480px] md:h-[580px] overflow-hidden rounded bg-[#F9F7F2]">
-                    <img class="w-full h-full object-cover grayscale opacity-90 hover:scale-105 transition-transform duration-1000 ease-out" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80" alt="Architectural Minimalist Structure Singapore"/>
-                    <div class="absolute bottom-6 left-6 bg-white/95 backdrop-blur px-5 py-3 rounded border border-[#E5E5E5] max-w-md">
-                        <p class="font-label-caps text-[10px] text-secondary uppercase tracking-widest mb-1">DESIGN PHILOSOPHY</p>
-                        <p class="text-xs text-primary font-medium">Form follows purpose. We construct architectural skeletons before applying aesthetic skin.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- Divider -->
+        <div class="max-w-container-max mx-auto px-5 md:px-margin-desktop">
+            <hr class="border-t border-[#E5E5E5]"/>
+        </div>
 
-        <!-- Principles Section -->
-        <section class="py-16 md:py-24 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop border-t border-[#E5E5E5]">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-                <div class="md:col-span-4">
-                    <span class="font-label-caps text-label-caps text-secondary mb-3 block">CORE FOUNDATIONS</span>
-                    <h2 class="font-headline-sm text-headline-sm text-primary mb-6">Designed around your commercial reality.</h2>
-                    <p class="font-body-md text-secondary text-sm">Three non-negotiable principles that guide every decision we make in our studio.</p>
-                </div>
-                <div class="md:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 md:mt-0">
-                    <div class="flex flex-col p-6 border border-[#E5E5E5] rounded bg-white">
-                        <span class="material-symbols-outlined text-primary text-[36px] mb-6">architecture</span>
-                        <h3 class="font-headline-sm text-[20px] text-primary mb-2">Strategy before aesthetics</h3>
-                        <p class="font-body-md text-secondary text-xs leading-relaxed">Form follows function. We build the strategic skeleton and conversion path before applying the visual skin.</p>
+        <!-- 6 Step Chronological Timeline -->
+        <section class="max-w-container-max mx-auto px-5 md:px-margin-desktop py-12 md:py-24">
+
+            <!-- Step 01 -->
+            <div class="py-10 md:py-16 hairline-divider">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+                    <div class="lg:col-span-3">
+                        <span class="font-display-lg text-[32px] sm:text-[40px] md:text-[56px] text-primary block leading-none">01</span>
+                        <span class="font-label-caps text-[10px] md:text-[11px] text-secondary mt-1.5 md:mt-2 block uppercase tracking-widest">WEEK 01 • DISCOVERY</span>
                     </div>
-                    <div class="flex flex-col p-6 border border-[#E5E5E5] rounded bg-white">
-                        <span class="material-symbols-outlined text-primary text-[36px] mb-6">clear_all</span>
-                        <h3 class="font-headline-sm text-[20px] text-primary mb-2">Clarity before complexity</h3>
-                        <p class="font-body-md text-secondary text-xs leading-relaxed">Simplifying the complex to guide high-intent patients and clients seamlessly toward their desired consultation.</p>
+                    <div class="lg:col-span-5 mt-3 lg:mt-0">
+                        <h2 class="font-headline-md text-[22px] sm:text-[26px] md:text-headline-md text-primary mb-3 md:mb-4">Digital Audit & Patient Triage Diagnostic</h2>
+                        <p class="font-body-md text-secondary text-sm md:text-base leading-relaxed mb-4">
+                            We perform an exhaustive forensic analysis of your current website telemetry: bounce rates on high-margin procedures, mobile friction bottlenecks, and Singapore MOH / HCSA advertising exposure risks.
+                        </p>
+                        <p class="text-xs text-secondary font-mono">Deliverable: Comprehensive Digital Architecture Brief</p>
                     </div>
-                    <div class="flex flex-col p-6 border border-[#E5E5E5] rounded bg-white">
-                        <span class="material-symbols-outlined text-primary text-[36px] mb-6">speed</span>
-                        <h3 class="font-headline-sm text-[20px] text-primary mb-2">Performance before vanity</h3>
-                        <p class="font-body-md text-secondary text-xs leading-relaxed">A beautiful site must be a fast, compliant, accessible, and high-converting asset that generates measurable return.</p>
+                    <div class="lg:col-span-4 mt-6 lg:mt-0">
+                        <div class="p-5 md:p-6 bg-white border border-[#E5E5E5] rounded ghost-frame">
+                            <span class="font-label-caps text-[10px] text-secondary uppercase tracking-widest block mb-2">KEY FOCUS</span>
+                            <ul class="text-xs md:text-sm space-y-2 text-primary">
+                                <li>• Procedure margin mapping</li>
+                                <li>• Mobile speed diagnostic</li>
+                                <li>• Competitor positioning scan</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Step 02 -->
+            <div class="py-10 md:py-16 hairline-divider">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+                    <div class="lg:col-span-3">
+                        <span class="font-display-lg text-[32px] sm:text-[40px] md:text-[56px] text-primary block leading-none">02</span>
+                        <span class="font-label-caps text-[10px] md:text-[11px] text-secondary mt-1.5 md:mt-2 block uppercase tracking-widest">WEEK 02 • ARCHITECTURE</span>
+                    </div>
+                    <div class="lg:col-span-5 mt-3 lg:mt-0">
+                        <h2 class="font-headline-md text-[22px] sm:text-[26px] md:text-headline-md text-primary mb-3 md:mb-4">Information Architecture & Conversion Flows</h2>
+                        <p class="font-body-md text-secondary text-sm md:text-base leading-relaxed mb-4">
+                            We restructure your sitemap and patient navigation paths. We strip away nested confusion to ensure that prospective high-net-worth clients can evaluate doctor qualifications and book discrete consultations within two taps.
+                        </p>
+                        <p class="text-xs text-secondary font-mono">Deliverable: Interactive Low-Fidelity Conversion Wireframes</p>
+                    </div>
+                    <div class="lg:col-span-4 mt-6 lg:mt-0">
+                        <div class="p-5 md:p-6 bg-white border border-[#E5E5E5] rounded ghost-frame">
+                            <span class="font-label-caps text-[10px] text-secondary uppercase tracking-widest block mb-2">KEY FOCUS</span>
+                            <ul class="text-xs md:text-sm space-y-2 text-primary">
+                                <li>• High-ticket inquiry funnels</li>
+                                <li>• Discrete WhatsApp routing flow</li>
+                                <li>• Doctor biography credentials</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 03 -->
+            <div class="py-10 md:py-16 hairline-divider">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+                    <div class="lg:col-span-3">
+                        <span class="font-display-lg text-[32px] sm:text-[40px] md:text-[56px] text-primary block leading-none">03</span>
+                        <span class="font-label-caps text-[10px] md:text-[11px] text-secondary mt-1.5 md:mt-2 block uppercase tracking-widest">WEEK 03 • ART DIRECTION</span>
+                    </div>
+                    <div class="lg:col-span-5 mt-3 lg:mt-0">
+                        <h2 class="font-headline-md text-[22px] sm:text-[26px] md:text-headline-md text-primary mb-3 md:mb-4">Editorial Visual Identity & UI Design</h2>
+                        <p class="font-body-md text-secondary text-sm md:text-base leading-relaxed mb-4">
+                            We craft the visual flagship layer using warm ivory tones (`#F9F7F2`), stark charcoal typography (`Playfair Display` and `Inter`), intentional whitespace, and ghost borders that exude quiet luxury.
+                        </p>
+                        <p class="text-xs text-secondary font-mono">Deliverable: High-Fidelity Responsive Prototypes (Desktop & Mobile)</p>
+                    </div>
+                    <div class="lg:col-span-4 mt-6 lg:mt-0">
+                        <div class="p-5 md:p-6 bg-white border border-[#E5E5E5] rounded ghost-frame">
+                            <span class="font-label-caps text-[10px] text-secondary uppercase tracking-widest block mb-2">KEY FOCUS</span>
+                            <ul class="text-xs md:text-sm space-y-2 text-primary">
+                                <li>• Bespoke editorial layouts</li>
+                                <li>• Curated photography art direction</li>
+                                <li>• Tactile mobile interaction states</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 04 -->
+            <div class="py-10 md:py-16 hairline-divider">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+                    <div class="lg:col-span-3">
+                        <span class="font-display-lg text-[32px] sm:text-[40px] md:text-[56px] text-primary block leading-none">04</span>
+                        <span class="font-label-caps text-[10px] md:text-[11px] text-secondary mt-1.5 md:mt-2 block uppercase tracking-widest">WEEK 04 • COMPLIANCE</span>
+                    </div>
+                    <div class="lg:col-span-5 mt-3 lg:mt-0">
+                        <h2 class="font-headline-md text-[22px] sm:text-[26px] md:text-headline-md text-primary mb-3 md:mb-4">Content Refinement & MOH / HCSA Audit</h2>
+                        <p class="font-body-md text-secondary text-sm md:text-base leading-relaxed mb-4">
+                            We review every headline, clinical description, and doctor accolade against the Singapore Healthcare Services Act (HCSA) advertising regulations, guaranteeing complete peace of mind before publication.
+                        </p>
+                        <p class="text-xs text-secondary font-mono">Deliverable: Final Regulatory-Approved Copy Vault</p>
+                    </div>
+                    <div class="lg:col-span-4 mt-6 lg:mt-0">
+                        <div class="p-5 md:p-6 bg-white border border-[#E5E5E5] rounded ghost-frame">
+                            <span class="font-label-caps text-[10px] text-secondary uppercase tracking-widest block mb-2">KEY FOCUS</span>
+                            <ul class="text-xs md:text-sm space-y-2 text-primary">
+                                <li>• SMC ethical code compliance</li>
+                                <li>• Scientific clinical positioning</li>
+                                <li>• Patient privacy (PDPA) alignment</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 05 -->
+            <div class="py-10 md:py-16 hairline-divider">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+                    <div class="lg:col-span-3">
+                        <span class="font-display-lg text-[32px] sm:text-[40px] md:text-[56px] text-primary block leading-none">05</span>
+                        <span class="font-label-caps text-[10px] md:text-[11px] text-secondary mt-1.5 md:mt-2 block uppercase tracking-widest">WEEK 05 • ENGINEERING</span>
+                    </div>
+                    <div class="lg:col-span-5 mt-3 lg:mt-0">
+                        <h2 class="font-headline-md text-[22px] sm:text-[26px] md:text-headline-md text-primary mb-3 md:mb-4">Sub-Second Code & Telemetry Integration</h2>
+                        <p class="font-body-md text-secondary text-sm md:text-base leading-relaxed mb-4">
+                            Our engineers build your website with lightweight semantic markup, achieving sub-second load speeds (&lt; 0.8s), perfect 98+ Google Lighthouse scores, and granular event tracking on all consultation triggers.
+                        </p>
+                        <p class="text-xs text-secondary font-mono">Deliverable: Production Staging Environment with Staging Access</p>
+                    </div>
+                    <div class="lg:col-span-4 mt-6 lg:mt-0">
+                        <div class="p-5 md:p-6 bg-white border border-[#E5E5E5] rounded ghost-frame">
+                            <span class="font-label-caps text-[10px] text-secondary uppercase tracking-widest block mb-2">KEY FOCUS</span>
+                            <ul class="text-xs md:text-sm space-y-2 text-primary">
+                                <li>• Zero-bloat semantic build</li>
+                                <li>• Core Web Vitals optimization</li>
+                                <li>• GA4 conversion telemetry</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 06 -->
+            <div class="py-10 md:py-16 hairline-divider">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+                    <div class="lg:col-span-3">
+                        <span class="font-display-lg text-[32px] sm:text-[40px] md:text-[56px] text-primary block leading-none">06</span>
+                        <span class="font-label-caps text-[10px] md:text-[11px] text-secondary mt-1.5 md:mt-2 block uppercase tracking-widest">WEEK 06 • CUTOVER</span>
+                    </div>
+                    <div class="lg:col-span-5 mt-3 lg:mt-0">
+                        <h2 class="font-headline-md text-[22px] sm:text-[26px] md:text-headline-md text-primary mb-3 md:mb-4">Zero-Downtime Launch & Performance Monitoring</h2>
+                        <p class="font-body-md text-secondary text-sm md:text-base leading-relaxed mb-4">
+                            We execute domain DNS cutover during low-traffic clinic hours with zero operational downtime. Following launch, we monitor incoming patient triage telemetry and provide 30 to 90 days of dedicated partner warranty support.
+                        </p>
+                        <p class="text-xs text-secondary font-mono">Deliverable: Live Sovereign Flagship & Post-Launch Telemetry Report</p>
+                    </div>
+                    <div class="lg:col-span-4 mt-6 lg:mt-0">
+                        <div class="p-5 md:p-6 bg-white border border-[#E5E5E5] rounded ghost-frame">
+                            <span class="font-label-caps text-[10px] text-secondary uppercase tracking-widest block mb-2">KEY FOCUS</span>
+                            <ul class="text-xs md:text-sm space-y-2 text-primary">
+                                <li>• Seamless zero-downtime DNS cutover</li>
+                                <li>• Form deliverability verification</li>
+                                <li>• Dedicated warranty coverage</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
         <!-- CTA Section -->
-        <section class="py-20 md:py-28 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center border-t border-[#E5E5E5]">
+        <section class="py-14 md:py-28 max-w-container-max mx-auto px-5 md:px-margin-desktop text-center">
             <div class="max-w-3xl mx-auto">
-                <span class="font-label-caps text-label-caps text-secondary mb-3 block">INITIATE PHASE 01</span>
-                <h2 class="font-display-lg-mobile md:font-display-lg text-primary mb-6">Start your transformation.</h2>
-                <p class="font-body-lg text-body-lg text-secondary mb-10">
-                    Book an initial discovery session with our senior partners to audit your current digital flagship.
+                <span class="font-label-caps text-label-caps text-secondary mb-3 block">INITIATE DISCOVERY</span>
+                <h2 class="font-display-lg-mobile md:font-display-lg text-primary mb-4 md:mb-6">Ready to initiate Step 01?</h2>
+                <p class="font-body-md md:font-body-lg text-secondary mb-8 md:mb-10 text-sm md:text-base">
+                    Schedule a private discovery consultation to review your current digital footprint and discuss phase timing.
                 </p>
-                <a class="bg-primary text-on-primary px-8 py-4 rounded font-label-caps text-label-caps hover:bg-[#333333] transition-colors inline-block" href="contact.html">
-                    Book a Consultation
-                </a>
+                <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+                    <a class="bg-primary text-on-primary font-label-caps text-label-caps px-8 py-4 rounded hover:bg-[#333333] transition-colors w-full sm:w-auto" href="contact.html">
+                        Schedule Discovery Call
+                    </a>
+                    <a class="border border-primary text-primary font-label-caps text-label-caps px-8 py-4 rounded hover:bg-black/5 transition-colors w-full sm:w-auto" href="pricing.html">
+                        Review Investment Packages
+                    </a>
+                </div>
             </div>
         </section>
 
     </main>
 
     <!-- Global Footer -->
-    <footer class="bg-white border-t border-[#E5E5E5] w-full pt-16 pb-12">
-        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter">
-            <div class="md:col-span-4 mb-10 md:mb-0">
-                <a class="font-display-lg text-[26px] tracking-tight text-primary block mb-4" href="index.html">
+    <footer class="bg-white border-t border-[#E5E5E5] w-full pt-12 md:pt-16 pb-10 md:pb-12">
+        <div class="max-w-container-max mx-auto px-5 md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-gutter">
+            <div class="md:col-span-4 mb-4 md:mb-0">
+                <a class="font-display-lg text-[22px] md:text-[26px] tracking-tight text-primary block mb-3 md:mb-4" href="index.html">
                     VALENNE DIGITAL
                 </a>
-                <p class="font-body-md text-secondary text-sm max-w-sm mb-6">
-                    Quiet-luxury digital architecture and conversion engineering for private medical practices, luxury aesthetics, and premier enterprises.
+                <p class="font-body-md text-secondary text-sm max-w-sm mb-5">
+                    Quiet-luxury digital architecture and conversion engineering for private medical practices, financial institutions & family offices, and premier SMEs.
                 </p>
                 <p class="text-xs text-secondary font-label-caps">
                     SINGAPORE HQ • SIGLAP / EAST COAST
                 </p>
             </div>
 
-            <div class="md:col-span-2 md:col-start-7 mb-8 md:mb-0">
-                <p class="font-label-caps text-label-caps text-primary mb-4 font-semibold">NAVIGATION</p>
-                <ul class="space-y-3 font-body-md text-sm text-secondary">
-                    <li><a class="hover:text-primary transition-colors" href="services.html">Services & Deliverables</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="pricing.html">Investment & Packages</a></li>
-                    <li><a class="text-primary font-medium hover:text-primary transition-colors" href="process.html">Methodology</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="about.html">Boutique Philosophy</a></li>
-                </ul>
-            </div>
-
-            <div class="md:col-span-2 mb-8 md:mb-0">
-                <p class="font-label-caps text-label-caps text-primary mb-4 font-semibold">STUDIO</p>
-                <ul class="space-y-3 font-body-md text-sm text-secondary">
-                    <li><a class="hover:text-primary transition-colors" href="about.html">About Studio</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="insights.html">Editorial Essays</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="contact.html">Consultation</a></li>
+            <div class="md:col-span-2 md:col-start-7">
+                <p class="font-label-caps text-label-caps text-primary mb-3 md:mb-4 font-semibold">NAVIGATION</p>
+                <ul class="space-y-2.5 font-body-md text-sm text-secondary">
+                    <li><a class="hover:text-primary transition-colors py-1 block" href="services.html">Services & Deliverables</a></li>
+                    <li><a class="hover:text-primary transition-colors py-1 block" href="pricing.html">Investment & Packages</a></li>
+                    <li><a class="text-primary font-medium hover:text-primary transition-colors py-1 block" href="process.html">Methodology</a></li>
+                    <li><a class="hover:text-primary transition-colors py-1 block" href="about.html">Boutique Philosophy</a></li>
                 </ul>
             </div>
 
             <div class="md:col-span-2">
-                <p class="font-label-caps text-label-caps text-primary mb-4 font-semibold">INQUIRIES</p>
-                <p class="font-body-md text-sm text-secondary mb-2">Singapore Studio</p>
-                <a class="font-body-md text-sm text-primary font-medium hover:underline block mb-4" href="mailto:hello@valennedigital.com">hello@valennedigital.com</a>
-                <p class="text-xs text-secondary">Mon – Fri: 09:00 – 18:00 SGT</p>
+                <p class="font-label-caps text-label-caps text-primary mb-3 md:mb-4 font-semibold">STUDIO</p>
+                <ul class="space-y-2.5 font-body-md text-sm text-secondary">
+                    <li><a class="hover:text-primary transition-colors py-1 block" href="about.html">About Studio</a></li>
+                    <li><a class="hover:text-primary transition-colors py-1 block" href="insights.html">Editorial Essays</a></li>
+                    <li><a class="hover:text-primary transition-colors py-1 block" href="contact.html">Consultation</a></li>
+                </ul>
             </div>
 
-            <div class="md:col-span-12 mt-12 pt-8 border-t border-[#E5E5E5] flex flex-col md:flex-row justify-between items-center text-xs text-secondary gap-4">
+            <div class="md:col-span-2">
+                <p class="font-label-caps text-label-caps text-primary mb-3 md:mb-4 font-semibold">INQUIRIES</p>
+                <p class="font-body-md text-sm text-secondary mb-1">Singapore Studio</p>
+                <a class="font-body-md text-sm text-primary font-medium hover:underline block mb-3" href="mailto:hello@valennedigital.com">hello@valennedigital.com</a>
+                <p class="text-xs text-secondary font-mono">Mon – Fri: 09:00 – 18:00 SGT</p>
+            </div>
+
+            <div class="md:col-span-12 mt-8 md:mt-12 pt-6 md:pt-8 border-t border-[#E5E5E5] flex flex-col md:flex-row justify-between items-center text-xs text-secondary gap-4 text-center md:text-left">
                 <p>© 2026 VALENNE DIGITAL. ALL RIGHTS RESERVED.</p>
                 <div class="flex gap-6">
                     <a class="hover:text-primary transition-colors" href="insights.html">HCSA Compliance Guide</a>
@@ -359,9 +434,15 @@
     <script>
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileDrawer = document.getElementById('mobileDrawer');
+        const mobileMenuIcon = document.getElementById('mobileMenuIcon');
+        
         if (mobileMenuBtn && mobileDrawer) {
             mobileMenuBtn.addEventListener('click', () => {
+                const isHidden = mobileDrawer.classList.contains('hidden');
                 mobileDrawer.classList.toggle('hidden');
+                if (mobileMenuIcon) {
+                    mobileMenuIcon.textContent = isHidden ? 'close' : 'menu';
+                }
             });
         }
     </script>

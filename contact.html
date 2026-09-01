@@ -44,7 +44,7 @@
                     spacing: {
                         "section-padding": "140px",
                         "unit": "8px",
-                        "margin-mobile": "24px",
+                        "margin-mobile": "20px",
                         "gutter": "32px",
                         "container-max": "1440px",
                         "margin-desktop": "80px"
@@ -66,7 +66,7 @@
                         "quote": ["32px", { "lineHeight": "1.4", "fontWeight": "400" }],
                         "display-lg": ["68px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
                         "headline-md": ["38px", { "lineHeight": "1.25", "fontWeight": "500" }],
-                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "display-lg-mobile": ["34px", { "lineHeight": "1.18", "letterSpacing": "-0.01em", "fontWeight": "600" }],
                         "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600" }]
                     }
                 }
@@ -86,8 +86,8 @@
             border-left: 0;
             border-right: 0;
             border-bottom: 1px solid #E5E5E5;
-            padding: 1rem 0;
-            font-size: 0.95rem;
+            padding: 0.85rem 0;
+            font-size: 16px; /* Prevents auto zoom on iOS */
             color: #1A1C1C;
             width: 100%;
             border-radius: 0;
@@ -104,8 +104,8 @@
             border-left: 0;
             border-right: 0;
             border-bottom: 1px solid #E5E5E5;
-            padding: 1rem 0;
-            font-size: 0.95rem;
+            padding: 0.85rem 0;
+            font-size: 16px; /* Prevents auto zoom on iOS */
             color: #1A1C1C;
             width: 100%;
             border-radius: 0;
@@ -128,15 +128,20 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
+        @media (max-width: 768px) {
+            button, a {
+                touch-action: manipulation;
+            }
+        }
     </style>
 </head>
 <body class="bg-[#F9F7F2] text-[#1A1C1C] font-body-md antialiased selection:bg-[#1A1C1C] selection:text-white">
 
     <!-- Top Navigation -->
     <header>
-        <nav class="fixed top-0 w-full z-50 bg-[#F9F7F2]/90 backdrop-blur-md border-b border-[#E5E5E5] transition-all duration-300">
-            <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-5 max-w-container-max mx-auto">
-                <a class="font-display-lg text-[22px] md:text-[28px] tracking-tight text-primary hover:opacity-80 transition-opacity" href="index.html">
+        <nav class="fixed top-0 w-full z-50 bg-[#F9F7F2]/95 backdrop-blur-md border-b border-[#E5E5E5] transition-all duration-300">
+            <div class="flex justify-between items-center px-5 md:px-margin-desktop py-4 md:py-5 max-w-container-max mx-auto">
+                <a class="font-display-lg text-[20px] sm:text-[24px] md:text-[28px] tracking-tight text-primary hover:opacity-80 transition-opacity" href="index.html">
                     VALENNE DIGITAL
                 </a>
 
@@ -150,30 +155,51 @@
                 </div>
 
                 <div class="hidden lg:flex items-center gap-4">
-                    <a class="bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3 rounded hover:bg-[#333333] transition-colors" href="contact.html">
+                    <a class="bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3 rounded hover:bg-[#333333] transition-colors shadow-sm" href="contact.html">
                         Book a Consultation
                     </a>
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobileMenuBtn" class="lg:hidden text-primary p-2 focus:outline-none" aria-label="Toggle Navigation Menu">
-                    <span class="material-symbols-outlined text-[28px]">menu</span>
+                <button id="mobileMenuBtn" class="lg:hidden text-primary p-2 focus:outline-none flex items-center justify-center rounded border border-[#E5E5E5] bg-white/70" aria-label="Toggle Navigation Menu">
+                    <span id="mobileMenuIcon" class="material-symbols-outlined text-[24px]">menu</span>
                 </button>
             </div>
 
             <!-- Mobile Drawer Menu -->
-            <div id="mobileDrawer" class="hidden lg:hidden bg-[#F9F7F2] border-b border-[#E5E5E5] px-margin-mobile py-6 space-y-4 shadow-lg transition-all duration-300">
-                <div class="flex flex-col space-y-4 font-label-caps text-label-caps">
-                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="index.html">Home</a>
-                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="services.html">Services</a>
-                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="pricing.html">Pricing</a>
-                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="process.html">Process</a>
-                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="about.html">About</a>
-                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="insights.html">Insights</a>
-                    <a class="text-primary font-semibold py-2" href="contact.html">Contact</a>
+            <div id="mobileDrawer" class="hidden lg:hidden bg-[#F9F7F2] border-b border-[#E5E5E5] px-6 py-8 shadow-2xl transition-all duration-300">
+                <div class="flex flex-col space-y-1 font-label-caps text-label-caps mb-8">
+                    <a class="text-secondary hover:text-primary py-3.5 border-b border-[#E5E5E5] flex items-center justify-between" href="index.html">
+                        <span>HOME</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                    <a class="text-secondary hover:text-primary py-3.5 border-b border-[#E5E5E5] flex items-center justify-between" href="services.html">
+                        <span>SERVICES & CAPABILITIES</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                    <a class="text-secondary hover:text-primary py-3.5 border-b border-[#E5E5E5] flex items-center justify-between" href="pricing.html">
+                        <span>INVESTMENT & PACKAGES</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                    <a class="text-secondary hover:text-primary py-3.5 border-b border-[#E5E5E5] flex items-center justify-between" href="process.html">
+                        <span>METHODOLOGY</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                    <a class="text-secondary hover:text-primary py-3.5 border-b border-[#E5E5E5] flex items-center justify-between" href="about.html">
+                        <span>ABOUT STUDIO</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                    <a class="text-secondary hover:text-primary py-3.5 border-b border-[#E5E5E5] flex items-center justify-between" href="insights.html">
+                        <span>EDITORIAL ESSAYS</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                    <a class="text-primary font-semibold py-3.5 flex items-center justify-between" href="contact.html">
+                        <span>CONTACT</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
                 </div>
-                <div class="pt-4">
-                    <a class="block text-center bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3.5 rounded" href="contact.html">
+                <div class="space-y-3">
+                    <a class="block w-full text-center bg-primary text-on-primary font-label-caps text-label-caps px-6 py-4 rounded shadow-md" href="contact.html">
                         Book a Consultation
                     </a>
                 </div>
@@ -181,18 +207,18 @@
         </nav>
     </header>
 
-    <main class="pt-[90px] md:pt-[110px] pb-24">
+    <main class="pt-[78px] md:pt-[110px] pb-16 md:pb-24">
 
-        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+        <div class="max-w-container-max mx-auto px-5 md:px-margin-desktop">
 
             <!-- Header Section -->
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter pt-16 pb-12">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter pt-12 pb-8 md:pt-16 md:pb-12">
                 <div class="md:col-span-8">
-                    <span class="font-label-caps text-label-caps text-secondary mb-4 block">STRATEGIC INQUIRY</span>
-                    <h1 class="font-display-lg-mobile md:font-display-lg text-primary mb-6">
+                    <span class="font-label-caps text-label-caps text-secondary mb-3 md:mb-4 block">STRATEGIC INQUIRY</span>
+                    <h1 class="font-display-lg-mobile md:font-display-lg text-primary mb-4 md:mb-6 leading-tight">
                         Let’s talk about your digital presence.
                     </h1>
-                    <p class="font-body-lg text-body-lg text-secondary max-w-2xl">
+                    <p class="font-body-md md:font-body-lg text-secondary max-w-2xl text-[15px] sm:text-base md:text-[20px] leading-relaxed">
                         Tell us where your practice or firm stands today, your high-margin procedure goals, and how you want your brand experienced by discerning clientele.
                     </p>
                 </div>
@@ -203,64 +229,62 @@
 
                 <!-- Contact Form Column -->
                 <div class="lg:col-span-8">
-                    <div class="ghost-frame p-8 md:p-12 rounded border border-[#E5E5E5] bg-white shadow-sm">
+                    <div class="ghost-frame p-6 sm:p-8 md:p-12 rounded border border-[#E5E5E5] bg-white shadow-sm">
                         
-                        <form id="consultationForm" class="space-y-8">
+                        <form id="consultationForm" class="space-y-6 md:space-y-8">
                             
                             <!-- Row 1: Name & Company -->
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                                 <div>
-                                    <label class="block text-xs font-label-caps text-secondary uppercase mb-1" for="name">Your Name *</label>
+                                    <label class="block text-[11px] md:text-xs font-label-caps text-secondary uppercase mb-1" for="name">Your Name *</label>
                                     <input class="form-input-minimal" id="name" name="name" placeholder="Dr. / Mr. / Ms. Full Name" required type="text"/>
                                 </div>
                                 <div>
-                                    <label class="block text-xs font-label-caps text-secondary uppercase mb-1" for="company">Clinic / Practice / Company *</label>
+                                    <label class="block text-[11px] md:text-xs font-label-caps text-secondary uppercase mb-1" for="company">Clinic / Practice / Company *</label>
                                     <input class="form-input-minimal" id="company" name="company" placeholder="e.g. Vance Aesthetic Institute" required type="text"/>
                                 </div>
                             </div>
 
                             <!-- Row 2: Email & Phone -->
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                                 <div>
-                                    <label class="block text-xs font-label-caps text-secondary uppercase mb-1" for="email">Direct Email *</label>
+                                    <label class="block text-[11px] md:text-xs font-label-caps text-secondary uppercase mb-1" for="email">Direct Email *</label>
                                     <input class="form-input-minimal" id="email" name="email" placeholder="principal@practice.com" required type="email"/>
                                 </div>
                                 <div>
-                                    <label class="block text-xs font-label-caps text-secondary uppercase mb-1" for="phone">Phone / WhatsApp *</label>
+                                    <label class="block text-[11px] md:text-xs font-label-caps text-secondary uppercase mb-1" for="phone">Phone / WhatsApp *</label>
                                     <input class="form-input-minimal" id="phone" name="phone" placeholder="+65 9123 4567" required type="tel"/>
                                 </div>
                             </div>
 
                             <!-- Row 3: Website & Industry -->
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                                 <div>
-                                    <label class="block text-xs font-label-caps text-secondary uppercase mb-1" for="website">Current Website URL</label>
+                                    <label class="block text-[11px] md:text-xs font-label-caps text-secondary uppercase mb-1" for="website">Current Website URL</label>
                                     <input class="form-input-minimal" id="website" name="website" placeholder="https://yourclinic.com.sg" type="url"/>
                                 </div>
                                 <div>
-                                    <label class="block text-xs font-label-caps text-secondary uppercase mb-1" for="industry">Discipline / Sector *</label>
+                                    <label class="block text-[11px] md:text-xs font-label-caps text-secondary uppercase mb-1" for="industry">Discipline / Sector *</label>
                                     <select class="form-select-minimal" id="industry" name="industry" required>
                                         <option value="" disabled selected>Select your discipline</option>
-                                        <option value="medical_aesthetics">Private Medical & Luxury Aesthetics</option>
-                                        <option value="dental_surgery">Specialist Dental & Oral Surgery</option>
-                                        <option value="wealth_management">Family Office & Private Wealth</option>
-                                        <option value="luxury_realestate">Prestige Real Estate & GCB</option>
-                                        <option value="corporate_legal">Corporate Law & Professional Services</option>
-                                        <option value="other">Premier SME / Other Sector</option>
+                                        <option value="medical_practices">Private Medical & Specialist Practices</option>
+                                        <option value="financial_familyoffice">Financial Institutions & Family Offices</option>
+                                        <option value="premier_sme">Premier SMEs & Professional Consultancies</option>
+                                        <option value="other">Other High-Value Enterprise</option>
                                     </select>
                                 </div>
                             </div>
 
                             <!-- Improvement Goals Textarea -->
                             <div>
-                                <label class="block text-xs font-label-caps text-secondary uppercase mb-1" for="improvement">What would you like to transform or achieve? *</label>
+                                <label class="block text-[11px] md:text-xs font-label-caps text-secondary uppercase mb-1" for="improvement">What would you like to transform or achieve? *</label>
                                 <textarea class="form-input-minimal resize-none" id="improvement" name="improvement" placeholder="Detail your core objectives (e.g. increase high-margin surgical inquiries, improve mobile luxury feel, MOH compliance review)..." required rows="4"></textarea>
                             </div>
 
                             <!-- Row 4: Budget & Timeline Selectors -->
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                                 <div>
-                                    <label class="block text-xs font-label-caps text-secondary uppercase mb-1" for="budget">Investment Budget (SGD)</label>
+                                    <label class="block text-[11px] md:text-xs font-label-caps text-secondary uppercase mb-1" for="budget">Investment Budget (SGD)</label>
                                     <select class="form-select-minimal" id="budget" name="budget">
                                         <option value="" disabled selected>Select anticipated range</option>
                                         <option value="essential">Essential Package (From $5,800 SGD)</option>
@@ -271,7 +295,7 @@
                                     </select>
                                 </div>
                                 <div>
-                                    <label class="block text-xs font-label-caps text-secondary uppercase mb-1" for="timeline">Target Deployment Timeline</label>
+                                    <label class="block text-[11px] md:text-xs font-label-caps text-secondary uppercase mb-1" for="timeline">Target Deployment Timeline</label>
                                     <select class="form-select-minimal" id="timeline" name="timeline">
                                         <option value="" disabled selected>Target launch window</option>
                                         <option value="asap">Immediate Priority (Within 3-4 Weeks)</option>
@@ -283,11 +307,11 @@
                             </div>
 
                             <!-- Submit Button & Privacy Note -->
-                            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-                                <button class="bg-[#1A1A1A] text-white font-label-caps text-label-caps px-10 py-4 rounded hover:bg-black transition-colors w-full sm:w-auto text-center" type="submit">
+                            <div class="pt-4 md:pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <button class="bg-[#1A1A1A] text-white font-label-caps text-label-caps px-10 py-4 rounded hover:bg-black transition-colors w-full sm:w-auto text-center shadow" type="submit">
                                     Request Strategic Consultation
                                 </button>
-                                <span class="text-xs text-secondary font-mono">
+                                <span class="text-xs text-secondary font-mono text-center sm:text-left">
                                     Confidential. Protected under Singapore PDPA.
                                 </span>
                             </div>
@@ -296,12 +320,12 @@
 
                         <!-- Submission Confirmation State -->
                         <div id="formSuccessState" class="hidden text-center py-12">
-                            <span class="material-symbols-outlined text-primary text-[56px] mb-4">check_circle</span>
-                            <h3 class="font-headline-md text-headline-md text-primary mb-3">Consultation Request Received</h3>
-                            <p class="font-body-md text-secondary max-w-md mx-auto mb-6">
+                            <span class="material-symbols-outlined text-primary text-[48px] md:text-[56px] mb-4">check_circle</span>
+                            <h3 class="font-headline-md text-[24px] sm:text-[28px] md:text-headline-md text-primary mb-3">Consultation Request Received</h3>
+                            <p class="font-body-md text-secondary text-sm md:text-base max-w-md mx-auto mb-6 leading-relaxed">
                                 Thank you. One of our senior partners will review your current digital footprint and connect within 24–48 business hours with preliminary findings.
                             </p>
-                            <a href="index.html" class="inline-block border border-primary text-primary font-label-caps text-label-caps px-6 py-3 rounded hover:bg-black hover:text-white transition-colors">
+                            <a href="index.html" class="inline-block border border-primary text-primary font-label-caps text-label-caps px-6 py-3.5 rounded hover:bg-black hover:text-white transition-colors">
                                 Return to Homepage
                             </a>
                         </div>
@@ -310,27 +334,27 @@
                 </div>
 
                 <!-- Sidebar Information Column -->
-                <div class="lg:col-span-4 mt-8 lg:mt-0 space-y-8">
+                <div class="lg:col-span-4 mt-8 lg:mt-0 space-y-6 md:space-y-8">
                     
                     <!-- Direct Contact Card -->
-                    <div class="ghost-frame p-8 rounded bg-white border border-[#E5E5E5]">
-                        <span class="font-label-caps text-xs text-secondary uppercase tracking-widest block mb-2">DIRECT COMMUNICATION</span>
-                        <h3 class="font-headline-sm text-[22px] text-primary mb-4">Studio Inquiries</h3>
-                        <p class="text-sm text-secondary mb-4">
+                    <div class="ghost-frame p-6 sm:p-8 rounded bg-white border border-[#E5E5E5]">
+                        <span class="font-label-caps text-[10px] md:text-xs text-secondary uppercase tracking-widest block mb-2">DIRECT COMMUNICATION</span>
+                        <h3 class="font-headline-sm text-[20px] md:text-[22px] text-primary mb-3 md:mb-4">Studio Inquiries</h3>
+                        <p class="text-xs sm:text-sm text-secondary mb-3 md:mb-4">
                             For confidential partner discussions, tender briefs, or speaking inquiries:
                         </p>
-                        <a class="font-headline-sm text-[20px] text-primary hover:underline block mb-2 font-medium" href="mailto:hello@valennedigital.com">
+                        <a class="font-headline-sm text-[18px] md:text-[20px] text-primary hover:underline block mb-2 font-medium" href="mailto:hello@valennedigital.com">
                             hello@valennedigital.com
                         </a>
                         <p class="text-xs text-secondary font-mono">Response turnaround: &lt; 24 Hours</p>
                     </div>
 
                     <!-- Singapore Location Card -->
-                    <div class="ghost-frame p-8 rounded bg-white border border-[#E5E5E5]">
-                        <span class="font-label-caps text-xs text-secondary uppercase tracking-widest block mb-2">LOCATION & AVAILABILITY</span>
-                        <h3 class="font-headline-sm text-[22px] text-primary mb-3">Singapore</h3>
+                    <div class="ghost-frame p-6 sm:p-8 rounded bg-white border border-[#E5E5E5]">
+                        <span class="font-label-caps text-[10px] md:text-xs text-secondary uppercase tracking-widest block mb-2">LOCATION & AVAILABILITY</span>
+                        <h3 class="font-headline-sm text-[20px] md:text-[22px] text-primary mb-3">Singapore</h3>
                         <p class="text-sm text-primary font-medium mb-1">Valenne Digital</p>
-                        <p class="text-xs text-secondary leading-relaxed mb-4">
+                        <p class="text-xs text-secondary leading-relaxed mb-3 md:mb-4">
                             Siglap / East Coast, Singapore
                         </p>
                         <p class="text-xs text-secondary font-mono leading-relaxed">
@@ -357,47 +381,47 @@
     </main>
 
     <!-- Global Footer -->
-    <footer class="bg-white border-t border-[#E5E5E5] w-full pt-16 pb-12">
-        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter">
-            <div class="md:col-span-4 mb-10 md:mb-0">
-                <a class="font-display-lg text-[26px] tracking-tight text-primary block mb-4" href="index.html">
+    <footer class="bg-white border-t border-[#E5E5E5] w-full pt-12 md:pt-16 pb-10 md:pb-12">
+        <div class="max-w-container-max mx-auto px-5 md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-gutter">
+            <div class="md:col-span-4 mb-4 md:mb-0">
+                <a class="font-display-lg text-[22px] md:text-[26px] tracking-tight text-primary block mb-3 md:mb-4" href="index.html">
                     VALENNE DIGITAL
                 </a>
-                <p class="font-body-md text-secondary text-sm max-w-sm mb-6">
-                    Quiet-luxury digital architecture and conversion engineering for private medical practices, luxury aesthetics, and premier enterprises.
+                <p class="font-body-md text-secondary text-sm max-w-sm mb-5">
+                    Quiet-luxury digital architecture and conversion engineering for private medical practices, financial institutions & family offices, and premier SMEs.
                 </p>
                 <p class="text-xs text-secondary font-label-caps">
                     SINGAPORE HQ • SIGLAP / EAST COAST
                 </p>
             </div>
 
-            <div class="md:col-span-2 md:col-start-7 mb-8 md:mb-0">
-                <p class="font-label-caps text-label-caps text-primary mb-4 font-semibold">NAVIGATION</p>
-                <ul class="space-y-3 font-body-md text-sm text-secondary">
-                    <li><a class="hover:text-primary transition-colors" href="services.html">Services & Deliverables</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="pricing.html">Investment & Packages</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="process.html">Methodology</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="about.html">Boutique Philosophy</a></li>
-                </ul>
-            </div>
-
-            <div class="md:col-span-2 mb-8 md:mb-0">
-                <p class="font-label-caps text-label-caps text-primary mb-4 font-semibold">STUDIO</p>
-                <ul class="space-y-3 font-body-md text-sm text-secondary">
-                    <li><a class="hover:text-primary transition-colors" href="about.html">About Studio</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="insights.html">Editorial Essays</a></li>
-                    <li><a class="text-primary font-medium hover:text-primary transition-colors" href="contact.html">Consultation</a></li>
+            <div class="md:col-span-2 md:col-start-7">
+                <p class="font-label-caps text-label-caps text-primary mb-3 md:mb-4 font-semibold">NAVIGATION</p>
+                <ul class="space-y-2.5 font-body-md text-sm text-secondary">
+                    <li><a class="hover:text-primary transition-colors py-1 block" href="services.html">Services & Deliverables</a></li>
+                    <li><a class="hover:text-primary transition-colors py-1 block" href="pricing.html">Investment & Packages</a></li>
+                    <li><a class="hover:text-primary transition-colors py-1 block" href="process.html">Methodology</a></li>
+                    <li><a class="hover:text-primary transition-colors py-1 block" href="about.html">Boutique Philosophy</a></li>
                 </ul>
             </div>
 
             <div class="md:col-span-2">
-                <p class="font-label-caps text-label-caps text-primary mb-4 font-semibold">INQUIRIES</p>
-                <p class="font-body-md text-sm text-secondary mb-2">Singapore Studio</p>
-                <a class="font-body-md text-sm text-primary font-medium hover:underline block mb-4" href="mailto:hello@valennedigital.com">hello@valennedigital.com</a>
-                <p class="text-xs text-secondary">Mon – Fri: 09:00 – 18:00 SGT</p>
+                <p class="font-label-caps text-label-caps text-primary mb-3 md:mb-4 font-semibold">STUDIO</p>
+                <ul class="space-y-2.5 font-body-md text-sm text-secondary">
+                    <li><a class="hover:text-primary transition-colors py-1 block" href="about.html">About Studio</a></li>
+                    <li><a class="hover:text-primary transition-colors py-1 block" href="insights.html">Editorial Essays</a></li>
+                    <li><a class="text-primary font-medium hover:text-primary transition-colors py-1 block" href="contact.html">Consultation</a></li>
+                </ul>
             </div>
 
-            <div class="md:col-span-12 mt-12 pt-8 border-t border-[#E5E5E5] flex flex-col md:flex-row justify-between items-center text-xs text-secondary gap-4">
+            <div class="md:col-span-2">
+                <p class="font-label-caps text-label-caps text-primary mb-3 md:mb-4 font-semibold">INQUIRIES</p>
+                <p class="font-body-md text-sm text-secondary mb-1">Singapore Studio</p>
+                <a class="font-body-md text-sm text-primary font-medium hover:underline block mb-3" href="mailto:hello@valennedigital.com">hello@valennedigital.com</a>
+                <p class="text-xs text-secondary font-mono">Mon – Fri: 09:00 – 18:00 SGT</p>
+            </div>
+
+            <div class="md:col-span-12 mt-8 md:mt-12 pt-6 md:pt-8 border-t border-[#E5E5E5] flex flex-col md:flex-row justify-between items-center text-xs text-secondary gap-4 text-center md:text-left">
                 <p>© 2026 VALENNE DIGITAL. ALL RIGHTS RESERVED.</p>
                 <div class="flex gap-6">
                     <a class="hover:text-primary transition-colors" href="insights.html">HCSA Compliance Guide</a>
@@ -409,12 +433,17 @@
 
     <!-- Interactive Navigation & Form Handling Script -->
     <script>
-        // Mobile Menu
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileDrawer = document.getElementById('mobileDrawer');
+        const mobileMenuIcon = document.getElementById('mobileMenuIcon');
+        
         if (mobileMenuBtn && mobileDrawer) {
             mobileMenuBtn.addEventListener('click', () => {
+                const isHidden = mobileDrawer.classList.contains('hidden');
                 mobileDrawer.classList.toggle('hidden');
+                if (mobileMenuIcon) {
+                    mobileMenuIcon.textContent = isHidden ? 'close' : 'menu';
+                }
             });
         }
 

@@ -44,7 +44,7 @@
                     spacing: {
                         "section-padding": "140px",
                         "unit": "8px",
-                        "margin-mobile": "24px",
+                        "margin-mobile": "20px",
                         "gutter": "32px",
                         "container-max": "1440px",
                         "margin-desktop": "80px"
@@ -66,7 +66,7 @@
                         "quote": ["32px", { "lineHeight": "1.4", "fontWeight": "400" }],
                         "display-lg": ["68px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
                         "headline-md": ["38px", { "lineHeight": "1.25", "fontWeight": "500" }],
-                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "display-lg-mobile": ["34px", { "lineHeight": "1.18", "letterSpacing": "-0.01em", "fontWeight": "600" }],
                         "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600" }]
                     }
                 }
@@ -90,15 +90,20 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
+        @media (max-width: 768px) {
+            button, a {
+                touch-action: manipulation;
+            }
+        }
     </style>
 </head>
 <body class="bg-[#F9F7F2] text-[#1A1C1C] font-body-md antialiased selection:bg-[#1A1C1C] selection:text-white">
 
     <!-- Top Navigation -->
     <header>
-        <nav class="fixed top-0 w-full z-50 bg-[#F9F7F2]/90 backdrop-blur-md border-b border-[#E5E5E5] transition-all duration-300">
-            <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-5 max-w-container-max mx-auto">
-                <a class="font-display-lg text-[22px] md:text-[28px] tracking-tight text-primary hover:opacity-80 transition-opacity" href="index.html">
+        <nav class="fixed top-0 w-full z-50 bg-[#F9F7F2]/95 backdrop-blur-md border-b border-[#E5E5E5] transition-all duration-300">
+            <div class="flex justify-between items-center px-5 md:px-margin-desktop py-4 md:py-5 max-w-container-max mx-auto">
+                <a class="font-display-lg text-[20px] sm:text-[24px] md:text-[28px] tracking-tight text-primary hover:opacity-80 transition-opacity" href="index.html">
                     VALENNE DIGITAL
                 </a>
 
@@ -112,30 +117,51 @@
                 </div>
 
                 <div class="hidden lg:flex items-center gap-4">
-                    <a class="bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3 rounded hover:bg-[#333333] transition-colors" href="contact.html">
+                    <a class="bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3 rounded hover:bg-[#333333] transition-colors shadow-sm" href="contact.html">
                         Book a Consultation
                     </a>
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobileMenuBtn" class="lg:hidden text-primary p-2 focus:outline-none" aria-label="Toggle Navigation Menu">
-                    <span class="material-symbols-outlined text-[28px]">menu</span>
+                <button id="mobileMenuBtn" class="lg:hidden text-primary p-2 focus:outline-none flex items-center justify-center rounded border border-[#E5E5E5] bg-white/70" aria-label="Toggle Navigation Menu">
+                    <span id="mobileMenuIcon" class="material-symbols-outlined text-[24px]">menu</span>
                 </button>
             </div>
 
             <!-- Mobile Drawer Menu -->
-            <div id="mobileDrawer" class="hidden lg:hidden bg-[#F9F7F2] border-b border-[#E5E5E5] px-margin-mobile py-6 space-y-4 shadow-lg transition-all duration-300">
-                <div class="flex flex-col space-y-4 font-label-caps text-label-caps">
-                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="index.html">Home</a>
-                    <a class="text-primary font-semibold py-2 border-b border-[#E5E5E5]/50" href="services.html">Services</a>
-                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="pricing.html">Pricing</a>
-                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="process.html">Process</a>
-                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="about.html">About</a>
-                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="insights.html">Insights</a>
-                    <a class="text-secondary hover:text-primary py-2" href="contact.html">Contact</a>
+            <div id="mobileDrawer" class="hidden lg:hidden bg-[#F9F7F2] border-b border-[#E5E5E5] px-6 py-8 shadow-2xl transition-all duration-300">
+                <div class="flex flex-col space-y-1 font-label-caps text-label-caps mb-8">
+                    <a class="text-secondary hover:text-primary py-3.5 border-b border-[#E5E5E5] flex items-center justify-between" href="index.html">
+                        <span>HOME</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                    <a class="text-primary font-semibold py-3.5 border-b border-[#E5E5E5] flex items-center justify-between" href="services.html">
+                        <span>SERVICES & CAPABILITIES</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                    <a class="text-secondary hover:text-primary py-3.5 border-b border-[#E5E5E5] flex items-center justify-between" href="pricing.html">
+                        <span>INVESTMENT & PACKAGES</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                    <a class="text-secondary hover:text-primary py-3.5 border-b border-[#E5E5E5] flex items-center justify-between" href="process.html">
+                        <span>METHODOLOGY</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                    <a class="text-secondary hover:text-primary py-3.5 border-b border-[#E5E5E5] flex items-center justify-between" href="about.html">
+                        <span>ABOUT STUDIO</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                    <a class="text-secondary hover:text-primary py-3.5 border-b border-[#E5E5E5] flex items-center justify-between" href="insights.html">
+                        <span>EDITORIAL ESSAYS</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                    <a class="text-secondary hover:text-primary py-3.5 flex items-center justify-between" href="contact.html">
+                        <span>CONTACT</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
                 </div>
-                <div class="pt-4">
-                    <a class="block text-center bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3.5 rounded" href="contact.html">
+                <div class="space-y-3">
+                    <a class="block w-full text-center bg-primary text-on-primary font-label-caps text-label-caps px-6 py-4 rounded shadow-md" href="contact.html">
                         Book a Consultation
                     </a>
                 </div>
@@ -143,22 +169,22 @@
         </nav>
     </header>
 
-    <main class="pt-[90px] md:pt-[110px]">
+    <main class="pt-[78px] md:pt-[110px]">
 
         <!-- Hero Section -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-24">
+        <section class="max-w-container-max mx-auto px-5 md:px-margin-desktop py-12 md:py-24">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-end">
                 <div class="lg:col-span-8">
-                    <span class="font-label-caps text-label-caps text-secondary mb-4 block">SERVICES & METHODOLOGY</span>
-                    <h1 class="font-display-lg-mobile md:font-display-lg text-primary mb-6">
+                    <span class="font-label-caps text-label-caps text-secondary mb-3 md:mb-4 block">SERVICES & METHODOLOGY</span>
+                    <h1 class="font-display-lg-mobile md:font-display-lg text-primary mb-4 md:mb-6 leading-tight">
                         Digital experiences, thoughtfully transformed.
                     </h1>
-                    <p class="font-body-lg text-body-lg text-secondary max-w-2xl">
+                    <p class="font-body-md md:font-body-lg text-secondary max-w-2xl text-[15px] sm:text-base md:text-[20px] leading-relaxed">
                         Not every established business requires a total restart. Often, the most profound revenue outcomes arise from eliminating friction, refining editorial hierarchy, and positioning your digital flagship to command the trust of high-net-worth clientele.
                     </p>
                 </div>
-                <div class="lg:col-span-4 lg:text-right mt-8 lg:mt-0">
-                    <a class="inline-flex items-center gap-2 bg-primary text-white font-label-caps text-label-caps px-6 py-3.5 rounded hover:bg-[#333333] transition-colors" href="pricing.html">
+                <div class="lg:col-span-4 lg:text-right mt-6 lg:mt-0">
+                    <a class="inline-flex items-center justify-center gap-2 bg-primary text-white font-label-caps text-label-caps px-6 py-4 rounded hover:bg-[#333333] transition-colors w-full sm:w-auto shadow-sm" href="pricing.html">
                         View Investment Packages
                         <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
                     </a>
@@ -167,36 +193,36 @@
         </section>
 
         <!-- Divider -->
-        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+        <div class="max-w-container-max mx-auto px-5 md:px-margin-desktop">
             <hr class="border-t border-[#E5E5E5]"/>
         </div>
 
         <!-- 3 Core Services Detailed Breakdown -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+        <section class="max-w-container-max mx-auto px-5 md:px-margin-desktop">
 
             <!-- Service 01 -->
-            <div class="py-16 md:py-24 hairline-divider">
+            <div class="py-12 md:py-24 hairline-divider">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
                     <div class="lg:col-span-2">
-                        <span class="font-display-lg text-[48px] md:text-[64px] text-primary block leading-none">01</span>
-                        <span class="font-label-caps text-[11px] text-secondary mt-2 block tracking-widest">FOUNDATIONAL LAYER</span>
+                        <span class="font-display-lg text-[36px] md:text-[64px] text-primary block leading-none">01</span>
+                        <span class="font-label-caps text-[10px] md:text-[11px] text-secondary mt-1.5 md:mt-2 block tracking-widest">FOUNDATIONAL LAYER</span>
                     </div>
-                    <div class="lg:col-span-5 lg:pr-6 mt-6 lg:mt-0">
-                        <h2 class="font-headline-md text-headline-md text-primary mb-6">Website Transformation</h2>
-                        <p class="font-body-md text-secondary mb-6 leading-relaxed">
+                    <div class="lg:col-span-5 lg:pr-6 mt-4 lg:mt-0">
+                        <h2 class="font-headline-md text-[24px] sm:text-[30px] md:text-headline-md text-primary mb-4 md:mb-6">Website Transformation</h2>
+                        <p class="font-body-md text-secondary mb-4 md:mb-6 text-sm md:text-base leading-relaxed">
                             We dismantle obsolete, bloated templates and re-engineer your visual layer from the ground up. By stripping away distracting noise and introducing disciplined typography, vast intentional whitespace, and instantaneous sub-second speeds, your website commands immediate prestige.
                         </p>
-                        <p class="font-body-md text-secondary mb-8 leading-relaxed">
+                        <p class="font-body-md text-secondary mb-6 md:mb-8 text-sm md:text-base leading-relaxed">
                             Ideal for solo specialist doctors, private dental surgeons, boutique asset managers, and elite professional consultancies whose current websites do not reflect their true caliber.
                         </p>
-                        <a class="inline-flex items-center gap-2 border border-primary text-primary font-label-caps text-label-caps px-6 py-3 rounded hover:bg-primary hover:text-white transition-colors" href="contact.html?service=transformation">
-                            Inquire about Website Transformation
+                        <a class="inline-flex items-center justify-center gap-2 border border-primary text-primary font-label-caps text-label-caps px-6 py-3.5 rounded hover:bg-primary hover:text-white transition-colors w-full sm:w-auto" href="contact.html?service=transformation">
+                            Inquire about Transformation
                         </a>
                     </div>
                     <div class="lg:col-span-4 lg:col-start-9 mt-8 lg:mt-0">
-                        <div class="ghost-frame p-8 rounded border border-[#E5E5E5] shadow-sm">
+                        <div class="ghost-frame p-6 md:p-8 rounded border border-[#E5E5E5] shadow-sm">
                             <h3 class="font-label-caps text-label-caps text-primary mb-4 pb-2 border-b border-[#E5E5E5]">DELIVERABLES INCLUDED</h3>
-                            <ul class="space-y-3 font-body-md text-sm text-secondary mb-8">
+                            <ul class="space-y-3 font-body-md text-xs sm:text-sm text-secondary mb-6 md:mb-8">
                                 <li class="flex items-center gap-2">
                                     <span class="material-symbols-outlined text-primary text-[18px]">check</span>
                                     Custom Editorial Design & Typography Grid
@@ -221,7 +247,7 @@
                             
                             <div class="bg-[#F9F7F2] p-4 rounded border border-[#E5E5E5]/70">
                                 <p class="font-label-caps text-[10px] text-secondary uppercase tracking-widest mb-1">DESIGN TARGET</p>
-                                <p class="text-sm font-semibold text-primary">Eliminate visual friction and establish immediate institutional trust.</p>
+                                <p class="text-xs sm:text-sm font-semibold text-primary">Eliminate visual friction and establish immediate institutional trust.</p>
                             </div>
                         </div>
                     </div>
@@ -229,28 +255,28 @@
             </div>
 
             <!-- Service 02 -->
-            <div class="py-16 md:py-24 hairline-divider">
+            <div class="py-12 md:py-24 hairline-divider">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
                     <div class="lg:col-span-2">
-                        <span class="font-display-lg text-[48px] md:text-[64px] text-primary block leading-none">02</span>
-                        <span class="font-label-caps text-[11px] text-secondary mt-2 block tracking-widest">COMMERCIAL ENGINE</span>
+                        <span class="font-display-lg text-[36px] md:text-[64px] text-primary block leading-none">02</span>
+                        <span class="font-label-caps text-[10px] md:text-[11px] text-secondary mt-1.5 md:mt-2 block tracking-widest">COMMERCIAL ENGINE</span>
                     </div>
-                    <div class="lg:col-span-5 lg:pr-6 mt-6 lg:mt-0">
-                        <h2 class="font-headline-md text-headline-md text-primary mb-6">UX & Patient Conversion</h2>
-                        <p class="font-body-md text-secondary mb-6 leading-relaxed">
+                    <div class="lg:col-span-5 lg:pr-6 mt-4 lg:mt-0">
+                        <h2 class="font-headline-md text-[24px] sm:text-[30px] md:text-headline-md text-primary mb-4 md:mb-6">UX & Patient Conversion</h2>
+                        <p class="font-body-md text-secondary mb-4 md:mb-6 text-sm md:text-base leading-relaxed">
                             Traffic without conversion is vanity. We map clinical and client decision-making journeys with psychological precision. We engineer frictionless inquiry flows, bespoke triage protocols for high-margin procedures, and discrete WhatsApp concierge integrations.
                         </p>
-                        <p class="font-body-md text-secondary mb-8 leading-relaxed">
+                        <p class="font-body-md text-secondary mb-6 md:mb-8 text-sm md:text-base leading-relaxed">
                             Whether booking a specialist surgical procedure or a confidential private consultation, your digital gateway filters qualified prospects while maintaining extreme discretion.
                         </p>
-                        <a class="inline-flex items-center gap-2 border border-primary text-primary font-label-caps text-label-caps px-6 py-3 rounded hover:bg-primary hover:text-white transition-colors" href="contact.html?service=conversion">
+                        <a class="inline-flex items-center justify-center gap-2 border border-primary text-primary font-label-caps text-label-caps px-6 py-3.5 rounded hover:bg-primary hover:text-white transition-colors w-full sm:w-auto" href="contact.html?service=conversion">
                             Inquire about UX & Conversion
                         </a>
                     </div>
                     <div class="lg:col-span-4 lg:col-start-9 mt-8 lg:mt-0">
-                        <div class="ghost-frame p-8 rounded border border-[#E5E5E5] shadow-sm">
+                        <div class="ghost-frame p-6 md:p-8 rounded border border-[#E5E5E5] shadow-sm">
                             <h3 class="font-label-caps text-label-caps text-primary mb-4 pb-2 border-b border-[#E5E5E5]">DELIVERABLES INCLUDED</h3>
-                            <ul class="space-y-3 font-body-md text-sm text-secondary mb-8">
+                            <ul class="space-y-3 font-body-md text-xs sm:text-sm text-secondary mb-6 md:mb-8">
                                 <li class="flex items-center gap-2">
                                     <span class="material-symbols-outlined text-primary text-[18px]">check</span>
                                     High-Margin Procedure Landing Funnels
@@ -275,7 +301,7 @@
 
                             <div class="bg-[#F9F7F2] p-4 rounded border border-[#E5E5E5]/70">
                                 <p class="font-label-caps text-[10px] text-secondary uppercase tracking-widest mb-1">CONVERSION TARGET</p>
-                                <p class="text-sm font-semibold text-primary">Maximize high-intent consultation requests from qualified prospects.</p>
+                                <p class="text-xs sm:text-sm font-semibold text-primary">Maximize high-intent consultation requests from qualified prospects.</p>
                             </div>
                         </div>
                     </div>
@@ -283,28 +309,28 @@
             </div>
 
             <!-- Service 03 -->
-            <div class="py-16 md:py-24 hairline-divider">
+            <div class="py-12 md:py-24 hairline-divider">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
                     <div class="lg:col-span-2">
-                        <span class="font-display-lg text-[48px] md:text-[64px] text-primary block leading-none">03</span>
-                        <span class="font-label-caps text-[11px] text-secondary mt-2 block tracking-widest">POSITIONING & GOVERNANCE</span>
+                        <span class="font-display-lg text-[36px] md:text-[64px] text-primary block leading-none">03</span>
+                        <span class="font-label-caps text-[10px] md:text-[11px] text-secondary mt-1.5 md:mt-2 block tracking-widest">POSITIONING & GOVERNANCE</span>
                     </div>
-                    <div class="lg:col-span-5 lg:pr-6 mt-6 lg:mt-0">
-                        <h2 class="font-headline-md text-headline-md text-primary mb-6">Brand Refinement & MOH Alignment</h2>
-                        <p class="font-body-md text-secondary mb-6 leading-relaxed">
+                    <div class="lg:col-span-5 lg:pr-6 mt-4 lg:mt-0">
+                        <h2 class="font-headline-md text-[24px] sm:text-[30px] md:text-headline-md text-primary mb-4 md:mb-6">Brand Refinement & MOH Alignment</h2>
+                        <p class="font-body-md text-secondary mb-4 md:mb-6 text-sm md:text-base leading-relaxed">
                             In Singapore, medical and dental practitioners must adhere to stringent Ministry of Health (MOH) Healthcare Services Act (HCSA) advertising regulations. We provide meticulous digital compliance audits while elevating your clinical narrative.
                         </p>
-                        <p class="font-body-md text-secondary mb-8 leading-relaxed">
+                        <p class="font-body-md text-secondary mb-6 md:mb-8 text-sm md:text-base leading-relaxed">
                             We curate doctor biographies, clinical credentials, scientific peer reviews, and discrete patient education frameworks that inspire authoritative confidence without risking regulatory sanctions.
                         </p>
-                        <a class="inline-flex items-center gap-2 border border-primary text-primary font-label-caps text-label-caps px-6 py-3 rounded hover:bg-primary hover:text-white transition-colors" href="contact.html?service=branding">
+                        <a class="inline-flex items-center justify-center gap-2 border border-primary text-primary font-label-caps text-label-caps px-6 py-3.5 rounded hover:bg-primary hover:text-white transition-colors w-full sm:w-auto" href="contact.html?service=branding">
                             Inquire about Brand Refinement
                         </a>
                     </div>
                     <div class="lg:col-span-4 lg:col-start-9 mt-8 lg:mt-0">
-                        <div class="ghost-frame p-8 rounded border border-[#E5E5E5] shadow-sm">
+                        <div class="ghost-frame p-6 md:p-8 rounded border border-[#E5E5E5] shadow-sm">
                             <h3 class="font-label-caps text-label-caps text-primary mb-4 pb-2 border-b border-[#E5E5E5]">DELIVERABLES INCLUDED</h3>
-                            <ul class="space-y-3 font-body-md text-sm text-secondary mb-8">
+                            <ul class="space-y-3 font-body-md text-xs sm:text-sm text-secondary mb-6 md:mb-8">
                                 <li class="flex items-center gap-2">
                                     <span class="material-symbols-outlined text-primary text-[18px]">check</span>
                                     MOH / HCSA Advertising Compliance Audit
@@ -329,7 +355,7 @@
 
                             <div class="bg-[#F9F7F2] p-4 rounded border border-[#E5E5E5]/70">
                                 <p class="font-label-caps text-[10px] text-secondary uppercase tracking-widest mb-1">GOVERNANCE TARGET</p>
-                                <p class="text-sm font-semibold text-primary">100% regulatory safety with unmatched editorial caliber.</p>
+                                <p class="text-xs sm:text-sm font-semibold text-primary">100% regulatory safety with unmatched editorial caliber.</p>
                             </div>
                         </div>
                     </div>
@@ -339,36 +365,36 @@
         </section>
 
         <!-- Our Technical & Aesthetic Standards -->
-        <section class="py-16 md:py-24 bg-white border-b border-[#E5E5E5]">
-            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-                <div class="text-center max-w-2xl mx-auto mb-16">
-                    <span class="font-label-caps text-label-caps text-secondary mb-3 block">ENGINEERING EXCELLENCE</span>
-                    <h2 class="font-headline-md text-headline-md text-primary mb-4">The Valenne Technical Standard</h2>
-                    <p class="font-body-md text-secondary">Every digital flagship we construct adheres to strict architectural benchmarks.</p>
+        <section class="py-12 md:py-24 bg-white border-b border-[#E5E5E5]">
+            <div class="max-w-container-max mx-auto px-5 md:px-margin-desktop">
+                <div class="text-center max-w-2xl mx-auto mb-10 md:mb-16">
+                    <span class="font-label-caps text-label-caps text-secondary mb-2 md:mb-3 block">ENGINEERING EXCELLENCE</span>
+                    <h2 class="font-headline-md text-[24px] sm:text-[30px] md:text-headline-md text-primary mb-3 md:mb-4">The Valenne Technical Standard</h2>
+                    <p class="font-body-md text-secondary text-sm md:text-base">Every digital flagship we construct adheres to strict architectural benchmarks.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
                     <div class="p-6 border border-[#E5E5E5] rounded bg-[#F9F7F2]/40">
-                        <span class="material-symbols-outlined text-primary text-[32px] mb-4">bolt</span>
-                        <h3 class="font-headline-sm text-[20px] text-primary mb-2">Sub-Second Load</h3>
+                        <span class="material-symbols-outlined text-primary text-[28px] md:text-[32px] mb-3 md:mb-4">bolt</span>
+                        <h3 class="font-headline-sm text-[18px] md:text-[20px] text-primary mb-2">Sub-Second Load</h3>
                         <p class="text-xs text-secondary leading-relaxed">Engineered without cumbersome frameworks for 98+ Google Core Web Vitals score.</p>
                     </div>
 
                     <div class="p-6 border border-[#E5E5E5] rounded bg-[#F9F7F2]/40">
-                        <span class="material-symbols-outlined text-primary text-[32px] mb-4">verified_user</span>
-                        <h3 class="font-headline-sm text-[20px] text-primary mb-2">Privacy & MOH Ready</h3>
+                        <span class="material-symbols-outlined text-primary text-[28px] md:text-[32px] mb-3 md:mb-4">verified_user</span>
+                        <h3 class="font-headline-sm text-[18px] md:text-[20px] text-primary mb-2">Privacy & MOH Ready</h3>
                         <p class="text-xs text-secondary leading-relaxed">Full PDPA and Singapore Healthcare Services Act advertising alignment built-in.</p>
                     </div>
 
                     <div class="p-6 border border-[#E5E5E5] rounded bg-[#F9F7F2]/40">
-                        <span class="material-symbols-outlined text-primary text-[32px] mb-4">phone_iphone</span>
-                        <h3 class="font-headline-sm text-[20px] text-primary mb-2">Mobile Luxury First</h3>
+                        <span class="material-symbols-outlined text-primary text-[28px] md:text-[32px] mb-3 md:mb-4">phone_iphone</span>
+                        <h3 class="font-headline-sm text-[18px] md:text-[20px] text-primary mb-2">Mobile Luxury First</h3>
                         <p class="text-xs text-secondary leading-relaxed">75%+ of affluent Singaporeans browse on mobile; we design for tactile thumb flow.</p>
                     </div>
 
                     <div class="p-6 border border-[#E5E5E5] rounded bg-[#F9F7F2]/40">
-                        <span class="material-symbols-outlined text-primary text-[32px] mb-4">insights</span>
-                        <h3 class="font-headline-sm text-[20px] text-primary mb-2">Conversion Telemetry</h3>
+                        <span class="material-symbols-outlined text-primary text-[28px] md:text-[32px] mb-3 md:mb-4">insights</span>
+                        <h3 class="font-headline-sm text-[18px] md:text-[20px] text-primary mb-2">Conversion Telemetry</h3>
                         <p class="text-xs text-secondary leading-relaxed">Precision tracking of button taps, form interactions, and phone/WhatsApp triage.</p>
                     </div>
                 </div>
@@ -376,18 +402,18 @@
         </section>
 
         <!-- CTA Section -->
-        <section class="py-20 md:py-28 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+        <section class="py-14 md:py-28 max-w-container-max mx-auto px-5 md:px-margin-desktop text-center">
             <div class="max-w-3xl mx-auto">
                 <span class="font-label-caps text-label-caps text-secondary mb-3 block">DISCOVER YOUR OPPORTUNITY</span>
-                <h2 class="font-display-lg-mobile md:font-display-lg text-primary mb-6">Ready to elevate your flagship?</h2>
-                <p class="font-body-lg text-body-lg text-secondary mb-10">
+                <h2 class="font-display-lg-mobile md:font-display-lg text-primary mb-4 md:mb-6">Ready to elevate your flagship?</h2>
+                <p class="font-body-md md:font-body-lg text-secondary mb-8 md:mb-10 text-sm md:text-base">
                     Explore our transparent Singapore SGD investment packages or book a preliminary discovery discussion.
                 </p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a class="bg-primary text-on-primary font-label-caps text-label-caps px-8 py-4 rounded hover:bg-[#333333] transition-colors" href="pricing.html">
+                <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+                    <a class="bg-primary text-on-primary font-label-caps text-label-caps px-8 py-4 rounded hover:bg-[#333333] transition-colors w-full sm:w-auto" href="pricing.html">
                         View Investment Packages
                     </a>
-                    <a class="border border-primary text-primary font-label-caps text-label-caps px-8 py-4 rounded hover:bg-black/5 transition-colors" href="contact.html">
+                    <a class="border border-primary text-primary font-label-caps text-label-caps px-8 py-4 rounded hover:bg-black/5 transition-colors w-full sm:w-auto" href="contact.html">
                         Book a Consultation
                     </a>
                 </div>
@@ -397,47 +423,47 @@
     </main>
 
     <!-- Global Footer -->
-    <footer class="bg-white border-t border-[#E5E5E5] w-full pt-16 pb-12">
-        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter">
-            <div class="md:col-span-4 mb-10 md:mb-0">
-                <a class="font-display-lg text-[26px] tracking-tight text-primary block mb-4" href="index.html">
+    <footer class="bg-white border-t border-[#E5E5E5] w-full pt-12 md:pt-16 pb-10 md:pb-12">
+        <div class="max-w-container-max mx-auto px-5 md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-gutter">
+            <div class="md:col-span-4 mb-4 md:mb-0">
+                <a class="font-display-lg text-[22px] md:text-[26px] tracking-tight text-primary block mb-3 md:mb-4" href="index.html">
                     VALENNE DIGITAL
                 </a>
-                <p class="font-body-md text-secondary text-sm max-w-sm mb-6">
-                    Quiet-luxury digital architecture and conversion engineering for private medical practices, luxury aesthetics, and premier enterprises.
+                <p class="font-body-md text-secondary text-sm max-w-sm mb-5">
+                    Quiet-luxury digital architecture and conversion engineering for private medical practices, financial institutions & family offices, and premier SMEs.
                 </p>
                 <p class="text-xs text-secondary font-label-caps">
                     SINGAPORE HQ • SIGLAP / EAST COAST
                 </p>
             </div>
 
-            <div class="md:col-span-2 md:col-start-7 mb-8 md:mb-0">
-                <p class="font-label-caps text-label-caps text-primary mb-4 font-semibold">NAVIGATION</p>
-                <ul class="space-y-3 font-body-md text-sm text-secondary">
-                    <li><a class="text-primary font-medium hover:text-primary transition-colors" href="services.html">Services & Deliverables</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="pricing.html">Investment & Packages</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="process.html">Methodology</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="about.html">Boutique Philosophy</a></li>
-                </ul>
-            </div>
-
-            <div class="md:col-span-2 mb-8 md:mb-0">
-                <p class="font-label-caps text-label-caps text-primary mb-4 font-semibold">STUDIO</p>
-                <ul class="space-y-3 font-body-md text-sm text-secondary">
-                    <li><a class="hover:text-primary transition-colors" href="about.html">Boutique Philosophy</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="insights.html">Editorial Essays</a></li>
-                    <li><a class="hover:text-primary transition-colors" href="contact.html">Consultation</a></li>
+            <div class="md:col-span-2 md:col-start-7">
+                <p class="font-label-caps text-label-caps text-primary mb-3 md:mb-4 font-semibold">NAVIGATION</p>
+                <ul class="space-y-2.5 font-body-md text-sm text-secondary">
+                    <li><a class="text-primary font-medium hover:text-primary transition-colors py-1 block" href="services.html">Services & Deliverables</a></li>
+                    <li><a class="hover:text-primary transition-colors py-1 block" href="pricing.html">Investment & Packages</a></li>
+                    <li><a class="hover:text-primary transition-colors py-1 block" href="process.html">Methodology</a></li>
+                    <li><a class="hover:text-primary transition-colors py-1 block" href="about.html">Boutique Philosophy</a></li>
                 </ul>
             </div>
 
             <div class="md:col-span-2">
-                <p class="font-label-caps text-label-caps text-primary mb-4 font-semibold">INQUIRIES</p>
-                <p class="font-body-md text-sm text-secondary mb-2">Singapore Studio</p>
-                <a class="font-body-md text-sm text-primary font-medium hover:underline block mb-4" href="mailto:hello@valennedigital.com">hello@valennedigital.com</a>
-                <p class="text-xs text-secondary">Mon – Fri: 09:00 – 18:00 SGT</p>
+                <p class="font-label-caps text-label-caps text-primary mb-3 md:mb-4 font-semibold">STUDIO</p>
+                <ul class="space-y-2.5 font-body-md text-sm text-secondary">
+                    <li><a class="hover:text-primary transition-colors py-1 block" href="about.html">Boutique Philosophy</a></li>
+                    <li><a class="hover:text-primary transition-colors py-1 block" href="insights.html">Editorial Essays</a></li>
+                    <li><a class="hover:text-primary transition-colors py-1 block" href="contact.html">Consultation</a></li>
+                </ul>
             </div>
 
-            <div class="md:col-span-12 mt-12 pt-8 border-t border-[#E5E5E5] flex flex-col md:flex-row justify-between items-center text-xs text-secondary gap-4">
+            <div class="md:col-span-2">
+                <p class="font-label-caps text-label-caps text-primary mb-3 md:mb-4 font-semibold">INQUIRIES</p>
+                <p class="font-body-md text-sm text-secondary mb-1">Singapore Studio</p>
+                <a class="font-body-md text-sm text-primary font-medium hover:underline block mb-3" href="mailto:hello@valennedigital.com">hello@valennedigital.com</a>
+                <p class="text-xs text-secondary font-mono">Mon – Fri: 09:00 – 18:00 SGT</p>
+            </div>
+
+            <div class="md:col-span-12 mt-8 md:mt-12 pt-6 md:pt-8 border-t border-[#E5E5E5] flex flex-col md:flex-row justify-between items-center text-xs text-secondary gap-4 text-center md:text-left">
                 <p>© 2026 VALENNE DIGITAL. ALL RIGHTS RESERVED.</p>
                 <div class="flex gap-6">
                     <a class="hover:text-primary transition-colors" href="insights.html">HCSA Compliance Guide</a>
@@ -451,9 +477,15 @@
     <script>
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileDrawer = document.getElementById('mobileDrawer');
+        const mobileMenuIcon = document.getElementById('mobileMenuIcon');
+        
         if (mobileMenuBtn && mobileDrawer) {
             mobileMenuBtn.addEventListener('click', () => {
+                const isHidden = mobileDrawer.classList.contains('hidden');
                 mobileDrawer.classList.toggle('hidden');
+                if (mobileMenuIcon) {
+                    mobileMenuIcon.textContent = isHidden ? 'close' : 'menu';
+                }
             });
         }
     </script>
