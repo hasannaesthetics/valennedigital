@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html class="light scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>About & Philosophy — VALENNE DIGITAL</title>
+    <meta name="description" content="Why Valenne Digital stays intentionally small to deliver quiet-luxury digital flagships with unmatched strategic craft in Singapore."/>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#000000",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1a1c1c",
+                        "secondary": "#5e5e5b",
+                        "secondary-container": "#e1dfdb",
+                        "surface": "#f9f9f9",
+                        "surface-variant": "#e2e2e2",
+                        "surface-container": "#eeeeee",
+                        "surface-container-low": "#f4f3f3",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#5f5e5e",
+                        "outline": "#747878",
+                        "outline-variant": "#c4c7c7",
+                        "background": "#F9F7F2"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "section-padding": "140px",
+                        "unit": "8px",
+                        "margin-mobile": "24px",
+                        "gutter": "32px",
+                        "container-max": "1440px",
+                        "margin-desktop": "80px"
+                    },
+                    fontFamily: {
+                        "body-lg": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "headline-sm": ["Playfair Display", "serif"],
+                        "quote": ["Playfair Display", "serif"],
+                        "display-lg": ["Playfair Display", "serif"],
+                        "headline-md": ["Playfair Display", "serif"],
+                        "display-lg-mobile": ["Playfair Display", "serif"],
+                        "label-caps": ["Inter", "sans-serif"]
+                    },
+                    fontSize: {
+                        "body-lg": ["20px", { "lineHeight": "1.7", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-sm": ["28px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "quote": ["32px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "display-lg": ["68px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-md": ["38px", { "lineHeight": "1.25", "fontWeight": "500" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F9F7F2;
+            color: #1A1C1C;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .ghost-frame {
+            border: 1px solid #E5E5E5;
+            background-color: #FFFFFF;
+        }
+        .hairline-divider {
+            border-bottom: 1px solid #E5E5E5;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-[#F9F7F2] text-[#1A1C1C] font-body-md antialiased selection:bg-[#1A1C1C] selection:text-white">
+
+    <!-- Top Navigation -->
+    <header>
+        <nav class="fixed top-0 w-full z-50 bg-[#F9F7F2]/90 backdrop-blur-md border-b border-[#E5E5E5] transition-all duration-300">
+            <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-5 max-w-container-max mx-auto">
+                <a class="font-display-lg text-[22px] md:text-[28px] tracking-tight text-primary hover:opacity-80 transition-opacity" href="index.html">
+                    VALENNE DIGITAL
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center gap-8 font-label-caps text-label-caps">
+                    <a class="text-secondary hover:text-primary transition-colors py-1" href="work.html">Work</a>
+                    <a class="text-secondary hover:text-primary transition-colors py-1" href="services.html">Services</a>
+                    <a class="text-secondary hover:text-primary transition-colors py-1" href="pricing.html">Pricing</a>
+                    <a class="text-secondary hover:text-primary transition-colors py-1" href="process.html">Process</a>
+                    <a class="text-primary font-semibold border-b border-primary py-1" href="about.html">About</a>
+                    <a class="text-secondary hover:text-primary transition-colors py-1" href="insights.html">Insights</a>
+                </div>
+
+                <div class="hidden lg:flex items-center gap-4">
+                    <a class="bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3 rounded hover:bg-[#333333] transition-colors" href="contact.html">
+                        Book a Consultation
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="lg:hidden text-primary p-2 focus:outline-none" aria-label="Toggle Navigation Menu">
+                    <span class="material-symbols-outlined text-[28px]">menu</span>
+                </button>
+            </div>
+
+            <!-- Mobile Drawer Menu -->
+            <div id="mobileDrawer" class="hidden lg:hidden bg-[#F9F7F2] border-b border-[#E5E5E5] px-margin-mobile py-6 space-y-4 shadow-lg transition-all duration-300">
+                <div class="flex flex-col space-y-4 font-label-caps text-label-caps">
+                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="index.html">Home</a>
+                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="work.html">Work</a>
+                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="services.html">Services</a>
+                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="pricing.html">Pricing</a>
+                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="process.html">Process</a>
+                    <a class="text-primary font-semibold py-2 border-b border-[#E5E5E5]/50" href="about.html">About</a>
+                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="insights.html">Insights</a>
+                    <a class="text-secondary hover:text-primary py-2" href="contact.html">Contact</a>
+                </div>
+                <div class="pt-4">
+                    <a class="block text-center bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3.5 rounded" href="contact.html">
+                        Book a Consultation
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-[90px] md:pt-[110px]">
+
+        <!-- Hero Section -->
+        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-24 text-center">
+            <div class="max-w-3xl mx-auto">
+                <span class="font-label-caps text-label-caps text-secondary mb-4 block">OUR PHILOSOPHY</span>
+                <h1 class="font-display-lg-mobile md:font-display-lg text-primary mb-6">
+                    We believe good businesses deserve great digital experiences.
+                </h1>
+                <p class="font-body-lg text-body-lg text-secondary">
+                    Valenne Digital was founded on a simple conviction: the world's most accomplished doctors, surgeons, wealth advisers, and founders should have digital flagships that match the sovereign standard of their physical craft.
+                </p>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <hr class="border-t border-[#E5E5E5]"/>
+        </div>
+
+        <!-- Story Section -->
+        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+                <div class="lg:col-span-5 mb-10 lg:mb-0">
+                    <div class="ghost-frame p-2 rounded overflow-hidden border border-[#E5E5E5]">
+                        <img class="w-full h-auto object-cover rounded grayscale hover:grayscale-0 transition-all duration-700" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=80" alt="Valenne Digital Boutique Studio Singapore"/>
+                    </div>
+                    <p class="text-xs text-secondary font-label-caps mt-3 text-center">VALENNE DIGITAL STUDIO • DUXTON HILL, SINGAPORE</p>
+                </div>
+                <div class="lg:col-span-6 lg:col-start-7 space-y-6">
+                    <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest block">INTENTIONAL ARCHITECTURE</span>
+                    <h2 class="font-headline-md text-headline-md text-primary">The Boutique Approach</h2>
+                    <p class="font-body-lg text-body-lg text-secondary leading-relaxed">
+                        Valenne Digital operates as an intentionally small studio. We purposely reject the assembly-line model of traditional agencies, where work is sold by senior executives and immediately delegated to junior designers using cookie-cutter templates.
+                    </p>
+                    <p class="font-body-md text-secondary leading-relaxed">
+                        When you engage Valenne Digital, you partner directly with senior architects who immerse themselves in your clinical procedures, patient demographics, and regulatory parameters in Singapore. We treat every flagship website as a sovereign piece of commercial architecture.
+                    </p>
+                    <div class="pt-4 border-t border-[#E5E5E5] grid grid-cols-2 gap-6">
+                        <div>
+                            <p class="font-display-lg text-[32px] text-primary font-bold">Max 4</p>
+                            <p class="text-xs text-secondary font-label-caps">Flagships per quarter</p>
+                        </div>
+                        <div>
+                            <p class="font-display-lg text-[32px] text-primary font-bold">100%</p>
+                            <p class="text-xs text-secondary font-label-caps">In-house Singapore craft</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The 4 Studio Pillars -->
+        <section class="bg-white border-y border-[#E5E5E5] py-16 md:py-24">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="max-w-2xl mb-16">
+                    <span class="font-label-caps text-label-caps text-secondary mb-3 block">CORNERSTONES</span>
+                    <h2 class="font-headline-md text-headline-md text-primary mb-4">What defines our craft.</h2>
+                    <p class="font-body-md text-secondary">Four operational pillars that guarantee consistent excellence across every flagship we release.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="p-6 border border-[#E5E5E5] rounded bg-[#F9F7F2]/40">
+                        <span class="font-display-lg text-[32px] text-primary block mb-4">01</span>
+                        <h3 class="font-headline-sm text-[20px] text-primary mb-2">Intentional Scale</h3>
+                        <p class="text-xs text-secondary leading-relaxed">We cap our client roster strictly to maintain intense focus, deep partnership, and meticulous attention to detail.</p>
+                    </div>
+
+                    <div class="p-6 border border-[#E5E5E5] rounded bg-[#F9F7F2]/40">
+                        <span class="font-display-lg text-[32px] text-primary block mb-4">02</span>
+                        <h3 class="font-headline-sm text-[20px] text-primary mb-2">Sovereign Craft</h3>
+                        <p class="text-xs text-secondary leading-relaxed">No generic off-the-shelf themes. Every layout is bespoke, crafted with editorial precision in Playfair Display and Inter.</p>
+                    </div>
+
+                    <div class="p-6 border border-[#E5E5E5] rounded bg-[#F9F7F2]/40">
+                        <span class="font-display-lg text-[32px] text-primary block mb-4">03</span>
+                        <h3 class="font-headline-sm text-[20px] text-primary mb-2">Commercial Precision</h3>
+                        <p class="text-xs text-secondary leading-relaxed">Aesthetic beauty is meaningless without conversion. We engineer frictionless inquiry flows for high-ticket clients.</p>
+                    </div>
+
+                    <div class="p-6 border border-[#E5E5E5] rounded bg-[#F9F7F2]/40">
+                        <span class="font-display-lg text-[32px] text-primary block mb-4">04</span>
+                        <h3 class="font-headline-sm text-[20px] text-primary mb-2">Regulatory Mastery</h3>
+                        <p class="text-xs text-secondary leading-relaxed">Deep native expertise in Singapore MOH, HCSA, and PDPA privacy requirements for medical and dental clinics.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Singapore Studio & Global Reach -->
+        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+                <div class="lg:col-span-6 lg:pr-8">
+                    <span class="font-label-caps text-label-caps text-secondary mb-3 block">LOCATION & ACCESSIBILITY</span>
+                    <h2 class="font-headline-md text-headline-md text-primary mb-6">Headquartered in Singapore. Available globally.</h2>
+                    <p class="font-body-md text-secondary mb-6 leading-relaxed">
+                        Operating from our studio in Duxton Hill / Marina Bay, we are immersed in Singapore's vibrant private medical and financial ecosystem. We regularly partner with clinics in Mount Elizabeth, Paragon Orchard, Novena Medical Centre, and financial firms across the CBD.
+                    </p>
+                    <p class="font-body-md text-secondary leading-relaxed mb-8">
+                        We also collaborate seamlessly with premier international practices across Hong Kong, London, Sydney, and Zürich via secure digital collaboration.
+                    </p>
+                    <a class="inline-flex items-center gap-2 font-label-caps text-label-caps text-primary hover:underline" href="contact.html">
+                        Visit our Singapore studio or book a virtual call
+                        <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                    </a>
+                </div>
+                <div class="lg:col-span-6 mt-8 lg:mt-0">
+                    <div class="ghost-frame p-2 rounded overflow-hidden border border-[#E5E5E5]">
+                        <div class="aspect-[16/10] overflow-hidden rounded bg-[#F9F7F2]">
+                            <img class="w-full h-full object-cover grayscale opacity-90 hover:scale-105 transition-transform duration-700 ease-out" src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=1200&q=80" alt="Singapore Marina Bay Skyline Architectural View"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 md:py-28 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center border-t border-[#E5E5E5]">
+            <div class="max-w-3xl mx-auto">
+                <span class="font-label-caps text-label-caps text-secondary mb-3 block">ELEVATE YOUR STANDARD</span>
+                <h2 class="font-display-lg-mobile md:font-display-lg text-primary mb-6">Partner with our studio.</h2>
+                <p class="font-body-lg text-body-lg text-secondary mb-10">
+                    Schedule a private consultation to discuss how we can transform your digital flagship into a high-converting asset.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a class="bg-primary text-on-primary font-label-caps text-label-caps px-8 py-4 rounded hover:bg-[#333333] transition-colors" href="contact.html">
+                        Schedule a Consultation
+                    </a>
+                    <a class="border border-primary text-primary font-label-caps text-label-caps px-8 py-4 rounded hover:bg-black/5 transition-colors" href="work.html">
+                        Inspect Our Work
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="bg-white border-t border-[#E5E5E5] w-full pt-16 pb-12">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter">
+            <div class="md:col-span-4 mb-10 md:mb-0">
+                <a class="font-display-lg text-[26px] tracking-tight text-primary block mb-4" href="index.html">
+                    VALENNE DIGITAL
+                </a>
+                <p class="font-body-md text-secondary text-sm max-w-sm mb-6">
+                    Quiet-luxury digital architecture and conversion engineering for private medical practices, luxury aesthetics, and premier enterprises.
+                </p>
+                <p class="text-xs text-secondary font-label-caps">
+                    SINGAPORE HQ • DUXTON HILL / MARINA BAY
+                </p>
+            </div>
+
+            <div class="md:col-span-2 md:col-start-7 mb-8 md:mb-0">
+                <p class="font-label-caps text-label-caps text-primary mb-4 font-semibold">NAVIGATION</p>
+                <ul class="space-y-3 font-body-md text-sm text-secondary">
+                    <li><a class="hover:text-primary transition-colors" href="work.html">Selected Work</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="services.html">Services & Deliverables</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="pricing.html">Investment & Packages</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="process.html">Methodology</a></li>
+                </ul>
+            </div>
+
+            <div class="md:col-span-2 mb-8 md:mb-0">
+                <p class="font-label-caps text-label-caps text-primary mb-4 font-semibold">STUDIO</p>
+                <ul class="space-y-3 font-body-md text-sm text-secondary">
+                    <li><a class="text-primary font-medium hover:text-primary transition-colors" href="about.html">Boutique Philosophy</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="insights.html">Editorial Essays</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="contact.html">Consultation</a></li>
+                </ul>
+            </div>
+
+            <div class="md:col-span-2">
+                <p class="font-label-caps text-label-caps text-primary mb-4 font-semibold">INQUIRIES</p>
+                <p class="font-body-md text-sm text-secondary mb-2">Singapore Studio</p>
+                <a class="font-body-md text-sm text-primary font-medium hover:underline block mb-4" href="mailto:hello@valennedigital.com">hello@valennedigital.com</a>
+                <p class="text-xs text-secondary">Mon – Fri: 09:00 – 18:00 SGT</p>
+            </div>
+
+            <div class="md:col-span-12 mt-12 pt-8 border-t border-[#E5E5E5] flex flex-col md:flex-row justify-between items-center text-xs text-secondary gap-4">
+                <p>© 2026 VALENNE DIGITAL PTE. LTD. (UEN: 202488910G). ALL RIGHTS RESERVED.</p>
+                <div class="flex gap-6">
+                    <a class="hover:text-primary transition-colors" href="insights.html">HCSA Compliance Guide</a>
+                    <a class="hover:text-primary transition-colors" href="contact.html">Privacy & Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Navigation Scripts -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileDrawer = document.getElementById('mobileDrawer');
+        if (mobileMenuBtn && mobileDrawer) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileDrawer.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

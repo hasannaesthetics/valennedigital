@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html class="light scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Investment & Packages — VALENNE DIGITAL</title>
+    <meta name="description" content="Transparent Singapore SGD investment packages for website transformations, patient acquisition funnels, and ongoing digital growth retainers."/>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#000000",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1a1c1c",
+                        "secondary": "#5e5e5b",
+                        "secondary-container": "#e1dfdb",
+                        "surface": "#f9f9f9",
+                        "surface-variant": "#e2e2e2",
+                        "surface-container": "#eeeeee",
+                        "surface-container-low": "#f4f3f3",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#5f5e5e",
+                        "outline": "#747878",
+                        "outline-variant": "#c4c7c7",
+                        "background": "#F9F7F2"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "section-padding": "140px",
+                        "unit": "8px",
+                        "margin-mobile": "24px",
+                        "gutter": "32px",
+                        "container-max": "1440px",
+                        "margin-desktop": "80px"
+                    },
+                    fontFamily: {
+                        "body-lg": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "headline-sm": ["Playfair Display", "serif"],
+                        "quote": ["Playfair Display", "serif"],
+                        "display-lg": ["Playfair Display", "serif"],
+                        "headline-md": ["Playfair Display", "serif"],
+                        "display-lg-mobile": ["Playfair Display", "serif"],
+                        "label-caps": ["Inter", "sans-serif"]
+                    },
+                    fontSize: {
+                        "body-lg": ["20px", { "lineHeight": "1.7", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-sm": ["28px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "quote": ["32px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "display-lg": ["68px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-md": ["38px", { "lineHeight": "1.25", "fontWeight": "500" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F9F7F2;
+            color: #1A1C1C;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .ghost-frame {
+            border: 1px solid #E5E5E5;
+            background-color: #FFFFFF;
+        }
+        .hairline-divider {
+            border-bottom: 1px solid #E5E5E5;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-[#F9F7F2] text-[#1A1C1C] font-body-md antialiased selection:bg-[#1A1C1C] selection:text-white">
+
+    <!-- Top Navigation -->
+    <header>
+        <nav class="fixed top-0 w-full z-50 bg-[#F9F7F2]/90 backdrop-blur-md border-b border-[#E5E5E5] transition-all duration-300">
+            <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-5 max-w-container-max mx-auto">
+                <a class="font-display-lg text-[22px] md:text-[28px] tracking-tight text-primary hover:opacity-80 transition-opacity" href="index.html">
+                    VALENNE DIGITAL
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center gap-8 font-label-caps text-label-caps">
+                    <a class="text-secondary hover:text-primary transition-colors py-1" href="work.html">Work</a>
+                    <a class="text-secondary hover:text-primary transition-colors py-1" href="services.html">Services</a>
+                    <a class="text-primary font-semibold border-b border-primary py-1" href="pricing.html">Pricing</a>
+                    <a class="text-secondary hover:text-primary transition-colors py-1" href="process.html">Process</a>
+                    <a class="text-secondary hover:text-primary transition-colors py-1" href="about.html">About</a>
+                    <a class="text-secondary hover:text-primary transition-colors py-1" href="insights.html">Insights</a>
+                </div>
+
+                <div class="hidden lg:flex items-center gap-4">
+                    <a class="bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3 rounded hover:bg-[#333333] transition-colors" href="contact.html">
+                        Book a Consultation
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="lg:hidden text-primary p-2 focus:outline-none" aria-label="Toggle Navigation Menu">
+                    <span class="material-symbols-outlined text-[28px]">menu</span>
+                </button>
+            </div>
+
+            <!-- Mobile Drawer Menu -->
+            <div id="mobileDrawer" class="hidden lg:hidden bg-[#F9F7F2] border-b border-[#E5E5E5] px-margin-mobile py-6 space-y-4 shadow-lg transition-all duration-300">
+                <div class="flex flex-col space-y-4 font-label-caps text-label-caps">
+                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="index.html">Home</a>
+                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="work.html">Work</a>
+                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="services.html">Services</a>
+                    <a class="text-primary font-semibold py-2 border-b border-[#E5E5E5]/50" href="pricing.html">Pricing</a>
+                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="process.html">Process</a>
+                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="about.html">About</a>
+                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="insights.html">Insights</a>
+                    <a class="text-secondary hover:text-primary py-2" href="contact.html">Contact</a>
+                </div>
+                <div class="pt-4">
+                    <a class="block text-center bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3.5 rounded" href="contact.html">
+                        Book a Consultation
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-[90px] md:pt-[110px]">
+
+        <!-- Hero Section -->
+        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+                <div class="lg:col-span-10">
+                    <span class="font-label-caps text-label-caps text-secondary mb-4 block">PRICING & CAPITAL ALLOCATION</span>
+                    <h1 class="font-display-lg-mobile md:font-display-lg text-primary mb-6">
+                        An investment in how your business is experienced.
+                    </h1>
+                    <p class="font-body-lg text-body-lg text-secondary max-w-2xl">
+                        Transparent, fixed-scope engagements in Singapore Dollars. We do not sell open-ended hourly billing. You invest in definitive commercial outcomes, clinical prestige, and enduring technical excellence.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3 High-Ticket Packages Grid -->
+        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-24">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+
+                <!-- Package 1: ESSENTIAL -->
+                <div class="ghost-frame p-8 md:p-10 rounded border border-[#E5E5E5] flex flex-col justify-between hover:shadow-lg transition-all duration-300 bg-white">
+                    <div>
+                        <div class="mb-6">
+                            <span class="font-label-caps text-[11px] text-secondary uppercase tracking-widest block mb-2">TIER 01 • SOLO PRACTICES</span>
+                            <h2 class="font-headline-md text-headline-md text-primary mb-2">ESSENTIAL</h2>
+                            <p class="text-sm text-secondary">For established solo specialists & private firms establishing an authoritative flagship presence.</p>
+                        </div>
+
+                        <div class="py-6 border-y border-[#E5E5E5] mb-8">
+                            <p class="font-label-caps text-xs text-secondary mb-1">FIXED INVESTMENT</p>
+                            <p class="font-display-lg text-[36px] text-primary font-bold">From $5,800 <span class="text-sm font-normal text-secondary">SGD</span></p>
+                            <p class="text-xs text-secondary mt-1">Timeline: 3 to 4 Weeks</p>
+                        </div>
+
+                        <div class="space-y-4 mb-8">
+                            <p class="font-label-caps text-xs text-primary font-semibold tracking-wider">CORE DELIVERABLES</p>
+                            <ul class="space-y-3 text-sm text-secondary">
+                                <li class="flex items-start gap-2.5">
+                                    <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check</span>
+                                    <span>Up to 5 bespoke editorial flagship pages</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check</span>
+                                    <span>Sub-second page speeds (<0.8s load)</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check</span>
+                                    <span>Refined Playfair/Inter typography system</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check</span>
+                                    <span>Discrete patient / client inquiry funnel</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check</span>
+                                    <span>Basic Singapore MOH advertising check</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check</span>
+                                    <span>30 days post-launch warranty support</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div>
+                        <a class="inline-flex w-full bg-white text-primary border border-primary px-6 py-4 font-label-caps text-label-caps hover:bg-black hover:text-white transition-colors duration-300 items-center justify-center rounded text-center" href="contact.html?package=essential">
+                            Inquire for Essential
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Package 2: TRANSFORM (Signature) -->
+                <div class="ghost-frame p-8 md:p-10 rounded border-2 border-primary flex flex-col justify-between shadow-xl relative bg-white lg:-translate-y-2">
+                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-primary text-white text-[11px] font-label-caps px-4 py-1 rounded shadow">
+                        ⭐ SIGNATURE / MOST POPULAR
+                    </div>
+
+                    <div>
+                        <div class="mb-6 pt-2">
+                            <span class="font-label-caps text-[11px] text-secondary uppercase tracking-widest block mb-2">TIER 02 • HIGH-GROWTH FLAGSHIP</span>
+                            <h2 class="font-headline-md text-headline-md text-primary mb-2">TRANSFORM</h2>
+                            <p class="text-sm text-secondary">High-growth patient & client acquisition funnel for clinics expanding their procedure margins.</p>
+                        </div>
+
+                        <div class="py-6 border-y border-[#E5E5E5] mb-8 bg-[#F9F7F2]/50 -mx-8 px-8">
+                            <p class="font-label-caps text-xs text-secondary mb-1">FIXED INVESTMENT</p>
+                            <p class="font-display-lg text-[36px] text-primary font-bold">From $9,800 <span class="text-sm font-normal text-secondary">SGD</span></p>
+                            <p class="text-xs text-secondary mt-1">Timeline: 4 to 6 Weeks</p>
+                        </div>
+
+                        <div class="space-y-4 mb-8">
+                            <p class="font-label-caps text-xs text-primary font-semibold tracking-wider">EVERYTHING IN ESSENTIAL PLUS</p>
+                            <ul class="space-y-3 text-sm text-primary">
+                                <li class="flex items-start gap-2.5">
+                                    <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check</span>
+                                    <span><strong>Up to 12 custom flagship & procedure pages</strong></span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check</span>
+                                    <span><strong>High-margin procedure landing funnels</strong></span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check</span>
+                                    <span><strong>Direct WhatsApp clinical triage protocol</strong></span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check</span>
+                                    <span><strong>Full MOH & HCSA compliance review</strong></span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check</span>
+                                    <span><strong>Custom micro-interactions & motion design</strong></span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check</span>
+                                    <span><strong>Conversion telemetry & funnel heatmapping</strong></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div>
+                        <a class="inline-flex w-full bg-primary text-white border border-primary px-6 py-4 font-label-caps text-label-caps hover:bg-[#333333] transition-colors duration-300 items-center justify-center rounded text-center shadow" href="contact.html?package=transform">
+                            Select Transform Package
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Package 3: SIGNATURE (Multi-Branch & Group) -->
+                <div class="ghost-frame p-8 md:p-10 rounded border border-[#E5E5E5] flex flex-col justify-between hover:shadow-lg transition-all duration-300 bg-white">
+                    <div>
+                        <div class="mb-6">
+                            <span class="font-label-caps text-[11px] text-secondary uppercase tracking-widest block mb-2">TIER 03 • LUXURY GROUPS</span>
+                            <h2 class="font-headline-md text-headline-md text-primary mb-2">SIGNATURE</h2>
+                            <p class="text-sm text-secondary">Complete digital infrastructure for multi-branch clinics, aesthetic groups, and regional medical tourism.</p>
+                        </div>
+
+                        <div class="py-6 border-y border-[#E5E5E5] mb-8">
+                            <p class="font-label-caps text-xs text-secondary mb-1">FIXED INVESTMENT</p>
+                            <p class="font-display-lg text-[36px] text-primary font-bold">From $16,500 <span class="text-sm font-normal text-secondary">SGD</span></p>
+                            <p class="text-xs text-secondary mt-1">Timeline: 6 to 8 Weeks</p>
+                        </div>
+
+                        <div class="space-y-4 mb-8">
+                            <p class="font-label-caps text-xs text-primary font-semibold tracking-wider">ENTERPRISE DELIVERABLES</p>
+                            <ul class="space-y-3 text-sm text-secondary">
+                                <li class="flex items-start gap-2.5">
+                                    <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check</span>
+                                    <span>Comprehensive multi-branch routing architecture</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check</span>
+                                    <span>Multilingual localization (ID Bahasa / Mandarin)</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check</span>
+                                    <span>Bespoke doctor profiles & appointment routing</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check</span>
+                                    <span>Custom editorial photoshoot art direction</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check</span>
+                                    <span>Direct senior partner architectural lead</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check</span>
+                                    <span>90-day comprehensive performance guarantee</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div>
+                        <a class="inline-flex w-full bg-white text-primary border border-primary px-6 py-4 font-label-caps text-label-caps hover:bg-black hover:text-white transition-colors duration-300 items-center justify-center rounded text-center" href="contact.html?package=signature">
+                            Inquire for Signature
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Retainer Add-on Banner -->
+            <div class="mt-12 p-8 md:p-12 border border-[#E5E5E5] bg-white rounded flex flex-col lg:flex-row justify-between items-center gap-8">
+                <div class="max-w-2xl">
+                    <span class="font-label-caps text-xs text-secondary uppercase tracking-widest block mb-2">CONTINUOUS OPTIMISATION</span>
+                    <h3 class="font-headline-sm text-headline-sm text-primary mb-3">GROWTH RETAINER (From $1,800 SGD/mo)</h3>
+                    <p class="text-sm text-secondary leading-relaxed">
+                        Dedicated monthly design hours, ongoing conversion rate split testing, SEO ranking defence, procedure page additions, and rapid technical triage. Strictly limited to 6 retainer partners simultaneously.
+                    </p>
+                </div>
+                <a class="shrink-0 bg-white border border-primary text-primary px-8 py-4 rounded font-label-caps text-label-caps hover:bg-primary hover:text-white transition-colors" href="contact.html?package=retainer">
+                    Inquire for Growth Retainer
+                </a>
+            </div>
+        </section>
+
+        <!-- Interactive ROI Calculator Widget -->
+        <section class="py-16 md:py-24 bg-white border-y border-[#E5E5E5]">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-12">
+                        <span class="font-label-caps text-label-caps text-secondary mb-3 block">COMMERCIAL JUSTIFICATION</span>
+                        <h2 class="font-headline-md text-headline-md text-primary mb-4">Interactive Transformation ROI Calculator</h2>
+                        <p class="font-body-md text-secondary">
+                            A refined digital flagship pays for itself by capturing high-intent patients who otherwise bounce to competitors.
+                        </p>
+                    </div>
+
+                    <div class="p-8 md:p-10 border border-[#E5E5E5] rounded bg-[#F9F7F2]/60">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                            <div>
+                                <label class="block text-xs font-label-caps text-secondary mb-2 uppercase">Monthly Website Visitors</label>
+                                <input id="roiVisitors" type="range" min="500" max="15000" step="250" value="2500" class="w-full accent-primary h-2 bg-[#E5E5E5] rounded-lg cursor-pointer mb-2"/>
+                                <div class="flex justify-between text-xs font-mono text-secondary">
+                                    <span>500</span>
+                                    <span id="roiVisitorsVal" class="text-base font-bold text-primary">2,500 visitors/mo</span>
+                                    <span>15,000+</span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-label-caps text-secondary mb-2 uppercase">Avg. Procedure / Client Value (SGD)</label>
+                                <input id="roiTicket" type="range" min="1000" max="30000" step="500" value="4500" class="w-full accent-primary h-2 bg-[#E5E5E5] rounded-lg cursor-pointer mb-2"/>
+                                <div class="flex justify-between text-xs font-mono text-secondary">
+                                    <span>$1,000</span>
+                                    <span id="roiTicketVal" class="text-base font-bold text-primary">$4,500 SGD</span>
+                                    <span>$30,000</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Result Display -->
+                        <div class="bg-white p-6 md:p-8 rounded border border-[#E5E5E5] grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+                            <div>
+                                <p class="text-xs font-label-caps text-secondary mb-1">CONSERVATIVE INQUIRY LIFT</p>
+                                <p class="font-display-lg text-[28px] md:text-[32px] text-primary font-semibold">+1.8% Lift</p>
+                                <p class="text-xs text-secondary mt-1">~38 extra consultations/yr</p>
+                            </div>
+                            <div class="border-t sm:border-t-0 sm:border-x border-[#E5E5E5] pt-4 sm:pt-0">
+                                <p class="text-xs font-label-caps text-secondary mb-1">PROJECTED ANNUAL REVENUE LIFT</p>
+                                <p id="roiAnnualGain" class="font-display-lg text-[32px] md:text-[38px] text-primary font-bold text-black">$171,000 SGD</p>
+                                <p class="text-xs text-secondary mt-1">Based on 40% close rate</p>
+                            </div>
+                            <div class="border-t sm:border-t-0 border-[#E5E5E5] pt-4 sm:pt-0">
+                                <p class="text-xs font-label-caps text-secondary mb-1">ESTIMATED FIRST-YEAR ROI</p>
+                                <p id="roiMultiple" class="font-display-lg text-[28px] md:text-[32px] text-primary font-semibold">17.4x</p>
+                                <p class="text-xs text-secondary mt-1">On Transform Package</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive FAQ Accordion -->
+        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+                <div class="lg:col-span-4 mb-10 lg:mb-0">
+                    <span class="font-label-caps text-label-caps text-secondary mb-3 block">CLEAR ANSWERS</span>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-4">Frequently Asked Questions</h3>
+                    <p class="font-body-md text-secondary mb-6">Everything you need to understand our terms, structure, and operational guarantees.</p>
+                    <a class="inline-flex items-center gap-2 font-label-caps text-label-caps text-primary hover:underline" href="contact.html">
+                        Have a specific query? Contact us
+                        <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                    </a>
+                </div>
+
+                <div class="lg:col-span-8 space-y-4" id="faqAccordion">
+
+                    <!-- FAQ 1 -->
+                    <div class="ghost-frame p-6 rounded border border-[#E5E5E5] cursor-pointer faq-item">
+                        <div class="flex justify-between items-center">
+                            <h4 class="font-body-lg text-primary font-medium">How do you structure payment terms in Singapore?</h4>
+                            <span class="material-symbols-outlined text-secondary transition-transform duration-300 faq-icon">add</span>
+                        </div>
+                        <div class="faq-content hidden mt-4 pt-4 border-t border-[#E5E5E5] text-sm text-secondary leading-relaxed">
+                            We operate on milestone-based predictability: 50% upon project commissioning to secure studio capacity, and 50% upon final acceptance and domain DNS cutover. For our Growth Retainer, billing is processed monthly with no lock-in contract beyond a 30-day notice period.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="ghost-frame p-6 rounded border border-[#E5E5E5] cursor-pointer faq-item">
+                        <div class="flex justify-between items-center">
+                            <h4 class="font-body-lg text-primary font-medium">How do you navigate Singapore MOH / HCSA medical advertising rules?</h4>
+                            <span class="material-symbols-outlined text-secondary transition-transform duration-300 faq-icon">add</span>
+                        </div>
+                        <div class="faq-content hidden mt-4 pt-4 border-t border-[#E5E5E5] text-sm text-secondary leading-relaxed">
+                            We are well-versed in the Ministry of Health's Healthcare Services Act (HCSA) and SMC Ethical Code guidelines. We ensure prohibited superlative claims (e.g. "Singapore's best plastic surgeon") and illicit promotional pricing hooks are avoided, structuring your site around scientific clarity, doctor credentials, and discrete patient education.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="ghost-frame p-6 rounded border border-[#E5E5E5] cursor-pointer faq-item">
+                        <div class="flex justify-between items-center">
+                            <h4 class="font-body-lg text-primary font-medium">Can we migrate existing patient booking systems and WhatsApp numbers?</h4>
+                            <span class="material-symbols-outlined text-secondary transition-transform duration-300 faq-icon">add</span>
+                        </div>
+                        <div class="faq-content hidden mt-4 pt-4 border-t border-[#E5E5E5] text-sm text-secondary leading-relaxed">
+                            Yes. We seamlessly connect with your existing clinical management systems (such as ClinicSoft, Plato, or custom EMRs) and embed deep WhatsApp Business routing logic with customized pre-filled message parameters for specific procedures.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="ghost-frame p-6 rounded border border-[#E5E5E5] cursor-pointer faq-item">
+                        <div class="flex justify-between items-center">
+                            <h4 class="font-body-lg text-primary font-medium">How long does a typical transformation take from kickoff to launch?</h4>
+                            <span class="material-symbols-outlined text-secondary transition-transform duration-300 faq-icon">add</span>
+                        </div>
+                        <div class="faq-content hidden mt-4 pt-4 border-t border-[#E5E5E5] text-sm text-secondary leading-relaxed">
+                            Essential packages deploy in 3 to 4 weeks. The Transform package takes 4 to 6 weeks. Signature enterprise multi-branch builds take 6 to 8 weeks. We work with strict phase deliverables so there is zero drift or prolonged delays.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 md:py-28 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center border-t border-[#E5E5E5]">
+            <div class="max-w-3xl mx-auto">
+                <span class="font-label-caps text-label-caps text-secondary mb-3 block">INITIATE CONSULTATION</span>
+                <h2 class="font-display-lg-mobile md:font-display-lg text-primary mb-6">Schedule your preliminary discovery.</h2>
+                <p class="font-body-lg text-body-lg text-secondary mb-10">
+                    Discuss your practice's digital goals with our senior partners and receive a clear scope recommendation within 48 hours.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a class="bg-primary text-on-primary font-label-caps text-label-caps px-8 py-4 rounded hover:bg-[#333333] transition-colors" href="contact.html">
+                        Schedule a Discovery Call
+                    </a>
+                    <a class="border border-primary text-primary font-label-caps text-label-caps px-8 py-4 rounded hover:bg-black/5 transition-colors" href="work.html">
+                        Inspect Case Studies
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="bg-white border-t border-[#E5E5E5] w-full pt-16 pb-12">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter">
+            <div class="md:col-span-4 mb-10 md:mb-0">
+                <a class="font-display-lg text-[26px] tracking-tight text-primary block mb-4" href="index.html">
+                    VALENNE DIGITAL
+                </a>
+                <p class="font-body-md text-secondary text-sm max-w-sm mb-6">
+                    Quiet-luxury digital architecture and conversion engineering for private medical practices, luxury aesthetics, and premier enterprises.
+                </p>
+                <p class="text-xs text-secondary font-label-caps">
+                    SINGAPORE HQ • DUXTON HILL / MARINA BAY
+                </p>
+            </div>
+
+            <div class="md:col-span-2 md:col-start-7 mb-8 md:mb-0">
+                <p class="font-label-caps text-label-caps text-primary mb-4 font-semibold">NAVIGATION</p>
+                <ul class="space-y-3 font-body-md text-sm text-secondary">
+                    <li><a class="hover:text-primary transition-colors" href="work.html">Selected Work</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="services.html">Services & Deliverables</a></li>
+                    <li><a class="text-primary font-medium hover:text-primary transition-colors" href="pricing.html">Investment & Packages</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="process.html">Methodology</a></li>
+                </ul>
+            </div>
+
+            <div class="md:col-span-2 mb-8 md:mb-0">
+                <p class="font-label-caps text-label-caps text-primary mb-4 font-semibold">STUDIO</p>
+                <ul class="space-y-3 font-body-md text-sm text-secondary">
+                    <li><a class="hover:text-primary transition-colors" href="about.html">Boutique Philosophy</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="insights.html">Editorial Essays</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="contact.html">Consultation</a></li>
+                </ul>
+            </div>
+
+            <div class="md:col-span-2">
+                <p class="font-label-caps text-label-caps text-primary mb-4 font-semibold">INQUIRIES</p>
+                <p class="font-body-md text-sm text-secondary mb-2">Singapore Studio</p>
+                <a class="font-body-md text-sm text-primary font-medium hover:underline block mb-4" href="mailto:hello@valennedigital.com">hello@valennedigital.com</a>
+                <p class="text-xs text-secondary">Mon – Fri: 09:00 – 18:00 SGT</p>
+            </div>
+
+            <div class="md:col-span-12 mt-12 pt-8 border-t border-[#E5E5E5] flex flex-col md:flex-row justify-between items-center text-xs text-secondary gap-4">
+                <p>© 2026 VALENNE DIGITAL PTE. LTD. (UEN: 202488910G). ALL RIGHTS RESERVED.</p>
+                <div class="flex gap-6">
+                    <a class="hover:text-primary transition-colors" href="insights.html">HCSA Compliance Guide</a>
+                    <a class="hover:text-primary transition-colors" href="contact.html">Privacy & Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts for ROI Calculator & FAQ -->
+    <script>
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileDrawer = document.getElementById('mobileDrawer');
+        if (mobileMenuBtn && mobileDrawer) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileDrawer.classList.toggle('hidden');
+            });
+        }
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const content = item.querySelector('.faq-content');
+                const icon = item.querySelector('.faq-icon');
+                const isHidden = content.classList.contains('hidden');
+                
+                // Close all
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-icon').forEach(i => i.textContent = 'add');
+                
+                if (isHidden) {
+                    content.classList.remove('hidden');
+                    icon.textContent = 'remove';
+                }
+            });
+        });
+
+        // ROI Calculator
+        const roiVisitors = document.getElementById('roiVisitors');
+        const roiTicket = document.getElementById('roiTicket');
+        const roiVisitorsVal = document.getElementById('roiVisitorsVal');
+        const roiTicketVal = document.getElementById('roiTicketVal');
+        const roiAnnualGain = document.getElementById('roiAnnualGain');
+        const roiMultiple = document.getElementById('roiMultiple');
+
+        function updateROI() {
+            const visitors = parseInt(roiVisitors.value);
+            const ticket = parseInt(roiTicket.value);
+
+            roiVisitorsVal.textContent = visitors.toLocaleString() + ' visitors/mo';
+            roiTicketVal.textContent = '$' + ticket.toLocaleString() + ' SGD';
+
+            // Additional inquiries per month assuming +1.5% conversion improvement
+            const extraInquiriesPerMonth = visitors * 0.015;
+            // 35% close rate on high-ticket leads
+            const extraClientsPerMonth = extraInquiriesPerMonth * 0.35;
+            const extraAnnualRevenue = extraClientsPerMonth * ticket * 12;
+
+            roiAnnualGain.textContent = '$' + Math.round(extraAnnualRevenue).toLocaleString() + ' SGD';
+
+            // ROI relative to $9,800 package
+            const multiple = (extraAnnualRevenue / 9800).toFixed(1);
+            roiMultiple.textContent = multiple + 'x';
+        }
+
+        if (roiVisitors && roiTicket) {
+            roiVisitors.addEventListener('input', updateROI);
+            roiTicket.addEventListener('input', updateROI);
+            updateROI();
+        }
+    </script>
+</body>
+</html>

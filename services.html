@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html class="light scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Services & Capabilities — VALENNE DIGITAL</title>
+    <meta name="description" content="Digital architecture, UX conversion engineering, and MOH compliance refinement for private medical practices, luxury aesthetics clinics, and premier SMEs in Singapore."/>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#000000",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1a1c1c",
+                        "secondary": "#5e5e5b",
+                        "secondary-container": "#e1dfdb",
+                        "surface": "#f9f9f9",
+                        "surface-variant": "#e2e2e2",
+                        "surface-container": "#eeeeee",
+                        "surface-container-low": "#f4f3f3",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#5f5e5e",
+                        "outline": "#747878",
+                        "outline-variant": "#c4c7c7",
+                        "background": "#F9F7F2"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "section-padding": "140px",
+                        "unit": "8px",
+                        "margin-mobile": "24px",
+                        "gutter": "32px",
+                        "container-max": "1440px",
+                        "margin-desktop": "80px"
+                    },
+                    fontFamily: {
+                        "body-lg": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "headline-sm": ["Playfair Display", "serif"],
+                        "quote": ["Playfair Display", "serif"],
+                        "display-lg": ["Playfair Display", "serif"],
+                        "headline-md": ["Playfair Display", "serif"],
+                        "display-lg-mobile": ["Playfair Display", "serif"],
+                        "label-caps": ["Inter", "sans-serif"]
+                    },
+                    fontSize: {
+                        "body-lg": ["20px", { "lineHeight": "1.7", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-sm": ["28px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "quote": ["32px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "display-lg": ["68px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-md": ["38px", { "lineHeight": "1.25", "fontWeight": "500" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F9F7F2;
+            color: #1A1C1C;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .ghost-frame {
+            border: 1px solid #E5E5E5;
+            background-color: #FFFFFF;
+        }
+        .hairline-divider {
+            border-bottom: 1px solid #E5E5E5;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-[#F9F7F2] text-[#1A1C1C] font-body-md antialiased selection:bg-[#1A1C1C] selection:text-white">
+
+    <!-- Top Navigation -->
+    <header>
+        <nav class="fixed top-0 w-full z-50 bg-[#F9F7F2]/90 backdrop-blur-md border-b border-[#E5E5E5] transition-all duration-300">
+            <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-5 max-w-container-max mx-auto">
+                <a class="font-display-lg text-[22px] md:text-[28px] tracking-tight text-primary hover:opacity-80 transition-opacity" href="index.html">
+                    VALENNE DIGITAL
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center gap-8 font-label-caps text-label-caps">
+                    <a class="text-secondary hover:text-primary transition-colors py-1" href="work.html">Work</a>
+                    <a class="text-primary font-semibold border-b border-primary py-1" href="services.html">Services</a>
+                    <a class="text-secondary hover:text-primary transition-colors py-1" href="pricing.html">Pricing</a>
+                    <a class="text-secondary hover:text-primary transition-colors py-1" href="process.html">Process</a>
+                    <a class="text-secondary hover:text-primary transition-colors py-1" href="about.html">About</a>
+                    <a class="text-secondary hover:text-primary transition-colors py-1" href="insights.html">Insights</a>
+                </div>
+
+                <div class="hidden lg:flex items-center gap-4">
+                    <a class="bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3 rounded hover:bg-[#333333] transition-colors" href="contact.html">
+                        Book a Consultation
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="lg:hidden text-primary p-2 focus:outline-none" aria-label="Toggle Navigation Menu">
+                    <span class="material-symbols-outlined text-[28px]">menu</span>
+                </button>
+            </div>
+
+            <!-- Mobile Drawer Menu -->
+            <div id="mobileDrawer" class="hidden lg:hidden bg-[#F9F7F2] border-b border-[#E5E5E5] px-margin-mobile py-6 space-y-4 shadow-lg transition-all duration-300">
+                <div class="flex flex-col space-y-4 font-label-caps text-label-caps">
+                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="index.html">Home</a>
+                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="work.html">Work</a>
+                    <a class="text-primary font-semibold py-2 border-b border-[#E5E5E5]/50" href="services.html">Services</a>
+                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="pricing.html">Pricing</a>
+                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="process.html">Process</a>
+                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="about.html">About</a>
+                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="insights.html">Insights</a>
+                    <a class="text-secondary hover:text-primary py-2" href="contact.html">Contact</a>
+                </div>
+                <div class="pt-4">
+                    <a class="block text-center bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3.5 rounded" href="contact.html">
+                        Book a Consultation
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-[90px] md:pt-[110px]">
+
+        <!-- Hero Section -->
+        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-end">
+                <div class="lg:col-span-8">
+                    <span class="font-label-caps text-label-caps text-secondary mb-4 block">SERVICES & METHODOLOGY</span>
+                    <h1 class="font-display-lg-mobile md:font-display-lg text-primary mb-6">
+                        Digital experiences, thoughtfully transformed.
+                    </h1>
+                    <p class="font-body-lg text-body-lg text-secondary max-w-2xl">
+                        Not every established business requires a total restart. Often, the most profound revenue outcomes arise from eliminating friction, refining editorial hierarchy, and positioning your digital flagship to command the trust of high-net-worth clientele.
+                    </p>
+                </div>
+                <div class="lg:col-span-4 lg:text-right mt-8 lg:mt-0">
+                    <a class="inline-flex items-center gap-2 bg-primary text-white font-label-caps text-label-caps px-6 py-3.5 rounded hover:bg-[#333333] transition-colors" href="pricing.html">
+                        View Investment Packages
+                        <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <hr class="border-t border-[#E5E5E5]"/>
+        </div>
+
+        <!-- 3 Core Services Detailed Breakdown -->
+        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+
+            <!-- Service 01 -->
+            <div class="py-16 md:py-24 hairline-divider">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+                    <div class="lg:col-span-2">
+                        <span class="font-display-lg text-[48px] md:text-[64px] text-primary block leading-none">01</span>
+                        <span class="font-label-caps text-[11px] text-secondary mt-2 block tracking-widest">FOUNDATIONAL LAYER</span>
+                    </div>
+                    <div class="lg:col-span-5 lg:pr-6 mt-6 lg:mt-0">
+                        <h2 class="font-headline-md text-headline-md text-primary mb-6">Website Transformation</h2>
+                        <p class="font-body-md text-secondary mb-6 leading-relaxed">
+                            We dismantle obsolete, bloated templates and re-engineer your visual layer from the ground up. By stripping away distracting noise and introducing disciplined typography, vast intentional whitespace, and instantaneous sub-second speeds, your website commands immediate prestige.
+                        </p>
+                        <p class="font-body-md text-secondary mb-8 leading-relaxed">
+                            Ideal for solo specialist doctors, private dental surgeons, boutique asset managers, and elite professional consultancies whose current websites do not reflect their true caliber.
+                        </p>
+                        <a class="inline-flex items-center gap-2 border border-primary text-primary font-label-caps text-label-caps px-6 py-3 rounded hover:bg-primary hover:text-white transition-colors" href="contact.html?service=transformation">
+                            Inquire about Website Transformation
+                        </a>
+                    </div>
+                    <div class="lg:col-span-4 lg:col-start-9 mt-8 lg:mt-0">
+                        <div class="ghost-frame p-8 rounded border border-[#E5E5E5] shadow-sm">
+                            <h3 class="font-label-caps text-label-caps text-primary mb-4 pb-2 border-b border-[#E5E5E5]">DELIVERABLES INCLUDED</h3>
+                            <ul class="space-y-3 font-body-md text-sm text-secondary mb-8">
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-[18px]">check</span>
+                                    Custom Editorial Design & Typography Grid
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-[18px]">check</span>
+                                    Sub-second Server Response (<0.8s)
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-[18px]">check</span>
+                                    Bespoke Mobile Architecture (iOS / Android)
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-[18px]">check</span>
+                                    Technical SEO & Schema Markup
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-[18px]">check</span>
+                                    WCAG 2.1 AA Accessibility Standards
+                                </li>
+                            </ul>
+                            
+                            <div class="bg-[#F9F7F2] p-4 rounded border border-[#E5E5E5]/70">
+                                <p class="font-label-caps text-[10px] text-secondary uppercase tracking-widest mb-1">PROVEN IMPACT</p>
+                                <p class="text-sm font-semibold text-primary">54% decrease in bounce rate & 3.2x mobile engagement duration.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 02 -->
+            <div class="py-16 md:py-24 hairline-divider">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+                    <div class="lg:col-span-2">
+                        <span class="font-display-lg text-[48px] md:text-[64px] text-primary block leading-none">02</span>
+                        <span class="font-label-caps text-[11px] text-secondary mt-2 block tracking-widest">COMMERCIAL ENGINE</span>
+                    </div>
+                    <div class="lg:col-span-5 lg:pr-6 mt-6 lg:mt-0">
+                        <h2 class="font-headline-md text-headline-md text-primary mb-6">UX & Patient Conversion</h2>
+                        <p class="font-body-md text-secondary mb-6 leading-relaxed">
+                            Traffic without conversion is vanity. We map clinical and client decision-making journeys with psychological precision. We engineer frictionless inquiry flows, bespoke triage protocols for high-margin procedures, and discrete WhatsApp concierge integrations.
+                        </p>
+                        <p class="font-body-md text-secondary mb-8 leading-relaxed">
+                            Whether booking a $15,000 surgical procedure or a confidential family office consultation, your digital gateway filters qualified prospects while maintaining extreme discretion.
+                        </p>
+                        <a class="inline-flex items-center gap-2 border border-primary text-primary font-label-caps text-label-caps px-6 py-3 rounded hover:bg-primary hover:text-white transition-colors" href="contact.html?service=conversion">
+                            Inquire about UX & Conversion
+                        </a>
+                    </div>
+                    <div class="lg:col-span-4 lg:col-start-9 mt-8 lg:mt-0">
+                        <div class="ghost-frame p-8 rounded border border-[#E5E5E5] shadow-sm">
+                            <h3 class="font-label-caps text-label-caps text-primary mb-4 pb-2 border-b border-[#E5E5E5]">DELIVERABLES INCLUDED</h3>
+                            <ul class="space-y-3 font-body-md text-sm text-secondary mb-8">
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-[18px]">check</span>
+                                    High-Margin Procedure Landing Funnels
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-[18px]">check</span>
+                                    Direct WhatsApp Triage & Routing
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-[18px]">check</span>
+                                    Confidential Consultation Vaults
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-[18px]">check</span>
+                                    Form Abandonment Prevention Architecture
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-[18px]">check</span>
+                                    End-to-End GA4 & Server-Side Telemetry
+                                </li>
+                            </ul>
+
+                            <div class="bg-[#F9F7F2] p-4 rounded border border-[#E5E5E5]/70">
+                                <p class="font-label-caps text-[10px] text-secondary uppercase tracking-widest mb-1">PROVEN IMPACT</p>
+                                <p class="text-sm font-semibold text-primary">+45% to +62% increase in qualified consultation inquiries.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 03 -->
+            <div class="py-16 md:py-24 hairline-divider">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+                    <div class="lg:col-span-2">
+                        <span class="font-display-lg text-[48px] md:text-[64px] text-primary block leading-none">03</span>
+                        <span class="font-label-caps text-[11px] text-secondary mt-2 block tracking-widest">POSITIONING & GOVERNANCE</span>
+                    </div>
+                    <div class="lg:col-span-5 lg:pr-6 mt-6 lg:mt-0">
+                        <h2 class="font-headline-md text-headline-md text-primary mb-6">Brand Refinement & MOH Alignment</h2>
+                        <p class="font-body-md text-secondary mb-6 leading-relaxed">
+                            In Singapore, medical and dental practitioners must adhere to stringent Ministry of Health (MOH) Healthcare Services Act (HCSA) advertising regulations. We provide meticulous digital compliance audits while elevating your clinical narrative.
+                        </p>
+                        <p class="font-body-md text-secondary mb-8 leading-relaxed">
+                            We curate doctor biographies, clinical credentials, scientific peer reviews, and discrete patient education frameworks that inspire authoritative confidence without risking regulatory sanctions.
+                        </p>
+                        <a class="inline-flex items-center gap-2 border border-primary text-primary font-label-caps text-label-caps px-6 py-3 rounded hover:bg-primary hover:text-white transition-colors" href="contact.html?service=branding">
+                            Inquire about Brand Refinement
+                        </a>
+                    </div>
+                    <div class="lg:col-span-4 lg:col-start-9 mt-8 lg:mt-0">
+                        <div class="ghost-frame p-8 rounded border border-[#E5E5E5] shadow-sm">
+                            <h3 class="font-label-caps text-label-caps text-primary mb-4 pb-2 border-b border-[#E5E5E5]">DELIVERABLES INCLUDED</h3>
+                            <ul class="space-y-3 font-body-md text-sm text-secondary mb-8">
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-[18px]">check</span>
+                                    MOH / HCSA Advertising Compliance Audit
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-[18px]">check</span>
+                                    Clinical Copywriting & Editorial Positioning
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-[18px]">check</span>
+                                    Digital Brand Styleguide & Type Hierarchy
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-[18px]">check</span>
+                                    Multi-lingual Structure (Indonesian / Mandarin)
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-[18px]">check</span>
+                                    Curated Art Direction & Photography Guidance
+                                </li>
+                            </ul>
+
+                            <div class="bg-[#F9F7F2] p-4 rounded border border-[#E5E5E5]/70">
+                                <p class="font-label-caps text-[10px] text-secondary uppercase tracking-widest mb-1">PROVEN IMPACT</p>
+                                <p class="text-sm font-semibold text-primary">100% regulatory compliance with 3x perceived brand prestige.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Our Technical & Aesthetic Standards -->
+        <section class="py-16 md:py-24 bg-white border-b border-[#E5E5E5]">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="font-label-caps text-label-caps text-secondary mb-3 block">ENGINEERING EXCELLENCE</span>
+                    <h2 class="font-headline-md text-headline-md text-primary mb-4">The Valenne Technical Standard</h2>
+                    <p class="font-body-md text-secondary">Every digital flagship we construct adheres to strict architectural benchmarks.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="p-6 border border-[#E5E5E5] rounded bg-[#F9F7F2]/40">
+                        <span class="material-symbols-outlined text-primary text-[32px] mb-4">bolt</span>
+                        <h3 class="font-headline-sm text-[20px] text-primary mb-2">Sub-Second Load</h3>
+                        <p class="text-xs text-secondary leading-relaxed">Engineered without cumbersome frameworks for 98+ Google Core Web Vitals score.</p>
+                    </div>
+
+                    <div class="p-6 border border-[#E5E5E5] rounded bg-[#F9F7F2]/40">
+                        <span class="material-symbols-outlined text-primary text-[32px] mb-4">verified_user</span>
+                        <h3 class="font-headline-sm text-[20px] text-primary mb-2">Privacy & MOH Ready</h3>
+                        <p class="text-xs text-secondary leading-relaxed">Full PDPA and Singapore Healthcare Services Act advertising alignment built-in.</p>
+                    </div>
+
+                    <div class="p-6 border border-[#E5E5E5] rounded bg-[#F9F7F2]/40">
+                        <span class="material-symbols-outlined text-primary text-[32px] mb-4">phone_iphone</span>
+                        <h3 class="font-headline-sm text-[20px] text-primary mb-2">Mobile Luxury First</h3>
+                        <p class="text-xs text-secondary leading-relaxed">75%+ of affluent Singaporeans browse on mobile; we design for tactile thumb flow.</p>
+                    </div>
+
+                    <div class="p-6 border border-[#E5E5E5] rounded bg-[#F9F7F2]/40">
+                        <span class="material-symbols-outlined text-primary text-[32px] mb-4">insights</span>
+                        <h3 class="font-headline-sm text-[20px] text-primary mb-2">Conversion Telemetry</h3>
+                        <p class="text-xs text-secondary leading-relaxed">Precision tracking of button taps, form interactions, and phone/WhatsApp triage.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 md:py-28 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+            <div class="max-w-3xl mx-auto">
+                <span class="font-label-caps text-label-caps text-secondary mb-3 block">DISCOVER YOUR OPPORTUNITY</span>
+                <h2 class="font-display-lg-mobile md:font-display-lg text-primary mb-6">Ready to elevate your flagship?</h2>
+                <p class="font-body-lg text-body-lg text-secondary mb-10">
+                    Explore our transparent Singapore SGD investment packages or book a preliminary discovery discussion.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a class="bg-primary text-on-primary font-label-caps text-label-caps px-8 py-4 rounded hover:bg-[#333333] transition-colors" href="pricing.html">
+                        View Investment Packages
+                    </a>
+                    <a class="border border-primary text-primary font-label-caps text-label-caps px-8 py-4 rounded hover:bg-black/5 transition-colors" href="contact.html">
+                        Book a Consultation
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="bg-white border-t border-[#E5E5E5] w-full pt-16 pb-12">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter">
+            <div class="md:col-span-4 mb-10 md:mb-0">
+                <a class="font-display-lg text-[26px] tracking-tight text-primary block mb-4" href="index.html">
+                    VALENNE DIGITAL
+                </a>
+                <p class="font-body-md text-secondary text-sm max-w-sm mb-6">
+                    Quiet-luxury digital architecture and conversion engineering for private medical practices, luxury aesthetics, and premier enterprises.
+                </p>
+                <p class="text-xs text-secondary font-label-caps">
+                    SINGAPORE HQ • DUXTON HILL / MARINA BAY
+                </p>
+            </div>
+
+            <div class="md:col-span-2 md:col-start-7 mb-8 md:mb-0">
+                <p class="font-label-caps text-label-caps text-primary mb-4 font-semibold">NAVIGATION</p>
+                <ul class="space-y-3 font-body-md text-sm text-secondary">
+                    <li><a class="hover:text-primary transition-colors" href="work.html">Selected Work</a></li>
+                    <li><a class="text-primary font-medium hover:text-primary transition-colors" href="services.html">Services & Deliverables</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="pricing.html">Investment & Packages</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="process.html">Methodology</a></li>
+                </ul>
+            </div>
+
+            <div class="md:col-span-2 mb-8 md:mb-0">
+                <p class="font-label-caps text-label-caps text-primary mb-4 font-semibold">STUDIO</p>
+                <ul class="space-y-3 font-body-md text-sm text-secondary">
+                    <li><a class="hover:text-primary transition-colors" href="about.html">Boutique Philosophy</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="insights.html">Editorial Essays</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="contact.html">Consultation</a></li>
+                </ul>
+            </div>
+
+            <div class="md:col-span-2">
+                <p class="font-label-caps text-label-caps text-primary mb-4 font-semibold">INQUIRIES</p>
+                <p class="font-body-md text-sm text-secondary mb-2">Singapore Studio</p>
+                <a class="font-body-md text-sm text-primary font-medium hover:underline block mb-4" href="mailto:hello@valennedigital.com">hello@valennedigital.com</a>
+                <p class="text-xs text-secondary">Mon – Fri: 09:00 – 18:00 SGT</p>
+            </div>
+
+            <div class="md:col-span-12 mt-12 pt-8 border-t border-[#E5E5E5] flex flex-col md:flex-row justify-between items-center text-xs text-secondary gap-4">
+                <p>© 2026 VALENNE DIGITAL PTE. LTD. (UEN: 202488910G). ALL RIGHTS RESERVED.</p>
+                <div class="flex gap-6">
+                    <a class="hover:text-primary transition-colors" href="insights.html">HCSA Compliance Guide</a>
+                    <a class="hover:text-primary transition-colors" href="contact.html">Privacy & Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Navigation Scripts -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileDrawer = document.getElementById('mobileDrawer');
+        if (mobileMenuBtn && mobileDrawer) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileDrawer.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html class="light scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Book a Consultation — VALENNE DIGITAL</title>
+    <meta name="description" content="Schedule a strategic digital transformation consultation with Valenne Digital Singapore."/>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#000000",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1a1c1c",
+                        "secondary": "#5e5e5b",
+                        "secondary-container": "#e1dfdb",
+                        "surface": "#f9f9f9",
+                        "surface-variant": "#e2e2e2",
+                        "surface-container": "#eeeeee",
+                        "surface-container-low": "#f4f3f3",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#5f5e5e",
+                        "outline": "#747878",
+                        "outline-variant": "#c4c7c7",
+                        "background": "#F9F7F2"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "section-padding": "140px",
+                        "unit": "8px",
+                        "margin-mobile": "24px",
+                        "gutter": "32px",
+                        "container-max": "1440px",
+                        "margin-desktop": "80px"
+                    },
+                    fontFamily: {
+                        "body-lg": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "headline-sm": ["Playfair Display", "serif"],
+                        "quote": ["Playfair Display", "serif"],
+                        "display-lg": ["Playfair Display", "serif"],
+                        "headline-md": ["Playfair Display", "serif"],
+                        "display-lg-mobile": ["Playfair Display", "serif"],
+                        "label-caps": ["Inter", "sans-serif"]
+                    },
+                    fontSize: {
+                        "body-lg": ["20px", { "lineHeight": "1.7", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-sm": ["28px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "quote": ["32px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "display-lg": ["68px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-md": ["38px", { "lineHeight": "1.25", "fontWeight": "500" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F9F7F2;
+            color: #1A1C1C;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .form-input-minimal {
+            background: transparent;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            border-bottom: 1px solid #E5E5E5;
+            padding: 1rem 0;
+            font-size: 0.95rem;
+            color: #1A1C1C;
+            width: 100%;
+            border-radius: 0;
+            transition: border-color 0.3s ease;
+        }
+        .form-input-minimal:focus {
+            outline: none;
+            box-shadow: none;
+            border-color: #000000;
+        }
+        .form-select-minimal {
+            background: transparent;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            border-bottom: 1px solid #E5E5E5;
+            padding: 1rem 0;
+            font-size: 0.95rem;
+            color: #1A1C1C;
+            width: 100%;
+            border-radius: 0;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%231a1c1c' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 0 center;
+            background-repeat: no-repeat;
+            background-size: 1.25em 1.25em;
+            transition: border-color 0.3s ease;
+        }
+        .form-select-minimal:focus {
+            outline: none;
+            box-shadow: none;
+            border-color: #000000;
+        }
+        .ghost-frame {
+            border: 1px solid #E5E5E5;
+            background-color: #FFFFFF;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-[#F9F7F2] text-[#1A1C1C] font-body-md antialiased selection:bg-[#1A1C1C] selection:text-white">
+
+    <!-- Top Navigation -->
+    <header>
+        <nav class="fixed top-0 w-full z-50 bg-[#F9F7F2]/90 backdrop-blur-md border-b border-[#E5E5E5] transition-all duration-300">
+            <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-5 max-w-container-max mx-auto">
+                <a class="font-display-lg text-[22px] md:text-[28px] tracking-tight text-primary hover:opacity-80 transition-opacity" href="index.html">
+                    VALENNE DIGITAL
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center gap-8 font-label-caps text-label-caps">
+                    <a class="text-secondary hover:text-primary transition-colors py-1" href="work.html">Work</a>
+                    <a class="text-secondary hover:text-primary transition-colors py-1" href="services.html">Services</a>
+                    <a class="text-secondary hover:text-primary transition-colors py-1" href="pricing.html">Pricing</a>
+                    <a class="text-secondary hover:text-primary transition-colors py-1" href="process.html">Process</a>
+                    <a class="text-secondary hover:text-primary transition-colors py-1" href="about.html">About</a>
+                    <a class="text-secondary hover:text-primary transition-colors py-1" href="insights.html">Insights</a>
+                </div>
+
+                <div class="hidden lg:flex items-center gap-4">
+                    <a class="bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3 rounded hover:bg-[#333333] transition-colors" href="contact.html">
+                        Book a Consultation
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="lg:hidden text-primary p-2 focus:outline-none" aria-label="Toggle Navigation Menu">
+                    <span class="material-symbols-outlined text-[28px]">menu</span>
+                </button>
+            </div>
+
+            <!-- Mobile Drawer Menu -->
+            <div id="mobileDrawer" class="hidden lg:hidden bg-[#F9F7F2] border-b border-[#E5E5E5] px-margin-mobile py-6 space-y-4 shadow-lg transition-all duration-300">
+                <div class="flex flex-col space-y-4 font-label-caps text-label-caps">
+                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="index.html">Home</a>
+                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="work.html">Work</a>
+                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="services.html">Services</a>
+                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="pricing.html">Pricing</a>
+                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="process.html">Process</a>
+                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="about.html">About</a>
+                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="insights.html">Insights</a>
+                    <a class="text-primary font-semibold py-2" href="contact.html">Contact</a>
+                </div>
+                <div class="pt-4">
+                    <a class="block text-center bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3.5 rounded" href="contact.html">
+                        Book a Consultation
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-[90px] md:pt-[110px] pb-24">
+
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+
+            <!-- Header Section -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter pt-16 pb-12">
+                <div class="md:col-span-8">
+                    <span class="font-label-caps text-label-caps text-secondary mb-4 block">STRATEGIC INQUIRY</span>
+                    <h1 class="font-display-lg-mobile md:font-display-lg text-primary mb-6">
+                        Let’s talk about your digital presence.
+                    </h1>
+                    <p class="font-body-lg text-body-lg text-secondary max-w-2xl">
+                        Tell us where your practice or firm stands today, your high-margin procedure goals, and how you want your brand experienced by discerning clientele.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Two-Column Layout (Form & Sidebar) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+
+                <!-- Contact Form Column -->
+                <div class="lg:col-span-8">
+                    <div class="ghost-frame p-8 md:p-12 rounded border border-[#E5E5E5] bg-white shadow-sm">
+                        
+                        <form id="consultationForm" class="space-y-8">
+                            
+                            <!-- Row 1: Name & Company -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div>
+                                    <label class="block text-xs font-label-caps text-secondary uppercase mb-1" for="name">Your Name *</label>
+                                    <input class="form-input-minimal" id="name" name="name" placeholder="Dr. / Mr. / Ms. Full Name" required type="text"/>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-label-caps text-secondary uppercase mb-1" for="company">Clinic / Practice / Company *</label>
+                                    <input class="form-input-minimal" id="company" name="company" placeholder="e.g. Vance Aesthetic Institute" required type="text"/>
+                                </div>
+                            </div>
+
+                            <!-- Row 2: Email & Phone -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div>
+                                    <label class="block text-xs font-label-caps text-secondary uppercase mb-1" for="email">Direct Email *</label>
+                                    <input class="form-input-minimal" id="email" name="email" placeholder="principal@practice.com" required type="email"/>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-label-caps text-secondary uppercase mb-1" for="phone">Phone / WhatsApp *</label>
+                                    <input class="form-input-minimal" id="phone" name="phone" placeholder="+65 9123 4567" required type="tel"/>
+                                </div>
+                            </div>
+
+                            <!-- Row 3: Website & Industry -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div>
+                                    <label class="block text-xs font-label-caps text-secondary uppercase mb-1" for="website">Current Website URL</label>
+                                    <input class="form-input-minimal" id="website" name="website" placeholder="https://yourclinic.com.sg" type="url"/>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-label-caps text-secondary uppercase mb-1" for="industry">Discipline / Sector *</label>
+                                    <select class="form-select-minimal" id="industry" name="industry" required>
+                                        <option value="" disabled selected>Select your discipline</option>
+                                        <option value="medical_aesthetics">Private Medical & Luxury Aesthetics</option>
+                                        <option value="dental_surgery">Specialist Dental & Oral Surgery</option>
+                                        <option value="wealth_management">Family Office & Private Wealth</option>
+                                        <option value="luxury_realestate">Prestige Real Estate & GCB</option>
+                                        <option value="corporate_legal">Corporate Law & Professional Services</option>
+                                        <option value="other">Premier SME / Other Sector</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Improvement Goals Textarea -->
+                            <div>
+                                <label class="block text-xs font-label-caps text-secondary uppercase mb-1" for="improvement">What would you like to transform or achieve? *</label>
+                                <textarea class="form-input-minimal resize-none" id="improvement" name="improvement" placeholder="Detail your core objectives (e.g. increase high-margin rhinoplasty inquiries, improve mobile luxury feel, MOH compliance review)..." required rows="4"></textarea>
+                            </div>
+
+                            <!-- Row 4: Budget & Timeline Selectors -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div>
+                                    <label class="block text-xs font-label-caps text-secondary uppercase mb-1" for="budget">Investment Budget (SGD)</label>
+                                    <select class="form-select-minimal" id="budget" name="budget">
+                                        <option value="" disabled selected>Select anticipated range</option>
+                                        <option value="essential">Essential Package (From $5,800 SGD)</option>
+                                        <option value="transform" selected>Transform Package (From $9,800 SGD)</option>
+                                        <option value="signature">Signature Multi-Branch ($16,500+ SGD)</option>
+                                        <option value="retainer">Growth Retainer ($1,800/mo SGD)</option>
+                                        <option value="enterprise">Bespoke Enterprise ($25,000+ SGD)</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-label-caps text-secondary uppercase mb-1" for="timeline">Target Deployment Timeline</label>
+                                    <select class="form-select-minimal" id="timeline" name="timeline">
+                                        <option value="" disabled selected>Target launch window</option>
+                                        <option value="asap">Immediate Priority (Within 3-4 Weeks)</option>
+                                        <option value="1_2_months" selected>1 to 2 Months</option>
+                                        <option value="3_months">Next Quarter</option>
+                                        <option value="flexible">Strategic Planning / Flexible</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button & Privacy Note -->
+                            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <button class="bg-[#1A1A1A] text-white font-label-caps text-label-caps px-10 py-4 rounded hover:bg-black transition-colors w-full sm:w-auto text-center" type="submit">
+                                    Request Strategic Consultation
+                                </button>
+                                <span class="text-xs text-secondary font-mono">
+                                    Confidential. Protected under Singapore PDPA.
+                                </span>
+                            </div>
+
+                        </form>
+
+                        <!-- Submission Confirmation State -->
+                        <div id="formSuccessState" class="hidden text-center py-12">
+                            <span class="material-symbols-outlined text-primary text-[56px] mb-4">check_circle</span>
+                            <h3 class="font-headline-md text-headline-md text-primary mb-3">Consultation Request Received</h3>
+                            <p class="font-body-md text-secondary max-w-md mx-auto mb-6">
+                                Thank you. One of our senior partners will review your current digital footprint and connect within 24–48 business hours with preliminary findings.
+                            </p>
+                            <a href="index.html" class="inline-block border border-primary text-primary font-label-caps text-label-caps px-6 py-3 rounded hover:bg-black hover:text-white transition-colors">
+                                Return to Homepage
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Sidebar Information Column -->
+                <div class="lg:col-span-4 mt-8 lg:mt-0 space-y-8">
+                    
+                    <!-- Direct Contact Card -->
+                    <div class="ghost-frame p-8 rounded bg-white border border-[#E5E5E5]">
+                        <span class="font-label-caps text-xs text-secondary uppercase tracking-widest block mb-2">DIRECT COMMUNICATION</span>
+                        <h3 class="font-headline-sm text-[22px] text-primary mb-4">Studio Inquiries</h3>
+                        <p class="text-sm text-secondary mb-4">
+                            For confidential partner discussions, tender briefs, or speaking inquiries:
+                        </p>
+                        <a class="font-headline-sm text-[20px] text-primary hover:underline block mb-2 font-medium" href="mailto:hello@valennedigital.com">
+                            hello@valennedigital.com
+                        </a>
+                        <p class="text-xs text-secondary font-mono">Response turnaround: < 24 Hours</p>
+                    </div>
+
+                    <!-- Singapore Headquarters Card -->
+                    <div class="ghost-frame p-8 rounded bg-white border border-[#E5E5E5]">
+                        <span class="font-label-caps text-xs text-secondary uppercase tracking-widest block mb-2">LOCATION</span>
+                        <h3 class="font-headline-sm text-[22px] text-primary mb-3">Singapore Headquarters</h3>
+                        <p class="text-sm text-primary font-medium mb-1">Valenne Digital Pte. Ltd.</p>
+                        <p class="text-xs text-secondary leading-relaxed mb-4">
+                            Duxton Hill & Marina Bay Financial Centre<br/>
+                            Singapore 089596 / 018981
+                        </p>
+                        <p class="text-xs text-secondary font-mono">
+                            Available for in-person meetings at Paragon Orchard, Mount Elizabeth, or virtual conference.
+                        </p>
+                    </div>
+
+                    <!-- Studio Visual Image Frame -->
+                    <div class="ghost-frame p-2 rounded overflow-hidden border border-[#E5E5E5]">
+                        <div class="relative aspect-[16/10] overflow-hidden rounded bg-[#F9F7F2]">
+                            <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=800&q=80" alt="Singapore Architecture Marina Bay Studio" class="w-full h-full object-cover grayscale opacity-90"/>
+                            <div class="absolute bottom-3 left-3 bg-white/90 backdrop-blur px-3 py-1 rounded text-[10px] font-label-caps text-primary">
+                                SINGAPORE HQ
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="bg-white border-t border-[#E5E5E5] w-full pt-16 pb-12">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter">
+            <div class="md:col-span-4 mb-10 md:mb-0">
+                <a class="font-display-lg text-[26px] tracking-tight text-primary block mb-4" href="index.html">
+                    VALENNE DIGITAL
+                </a>
+                <p class="font-body-md text-secondary text-sm max-w-sm mb-6">
+                    Quiet-luxury digital architecture and conversion engineering for private medical practices, luxury aesthetics, and premier enterprises.
+                </p>
+                <p class="text-xs text-secondary font-label-caps">
+                    SINGAPORE HQ • DUXTON HILL / MARINA BAY
+                </p>
+            </div>
+
+            <div class="md:col-span-2 md:col-start-7 mb-8 md:mb-0">
+                <p class="font-label-caps text-label-caps text-primary mb-4 font-semibold">NAVIGATION</p>
+                <ul class="space-y-3 font-body-md text-sm text-secondary">
+                    <li><a class="hover:text-primary transition-colors" href="work.html">Selected Work</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="services.html">Services & Deliverables</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="pricing.html">Investment & Packages</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="process.html">Methodology</a></li>
+                </ul>
+            </div>
+
+            <div class="md:col-span-2 mb-8 md:mb-0">
+                <p class="font-label-caps text-label-caps text-primary mb-4 font-semibold">STUDIO</p>
+                <ul class="space-y-3 font-body-md text-sm text-secondary">
+                    <li><a class="hover:text-primary transition-colors" href="about.html">Boutique Philosophy</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="insights.html">Editorial Essays</a></li>
+                    <li><a class="text-primary font-medium hover:text-primary transition-colors" href="contact.html">Consultation</a></li>
+                </ul>
+            </div>
+
+            <div class="md:col-span-2">
+                <p class="font-label-caps text-label-caps text-primary mb-4 font-semibold">INQUIRIES</p>
+                <p class="font-body-md text-sm text-secondary mb-2">Singapore Studio</p>
+                <a class="font-body-md text-sm text-primary font-medium hover:underline block mb-4" href="mailto:hello@valennedigital.com">hello@valennedigital.com</a>
+                <p class="text-xs text-secondary">Mon – Fri: 09:00 – 18:00 SGT</p>
+            </div>
+
+            <div class="md:col-span-12 mt-12 pt-8 border-t border-[#E5E5E5] flex flex-col md:flex-row justify-between items-center text-xs text-secondary gap-4">
+                <p>© 2026 VALENNE DIGITAL PTE. LTD. (UEN: 202488910G). ALL RIGHTS RESERVED.</p>
+                <div class="flex gap-6">
+                    <a class="hover:text-primary transition-colors" href="insights.html">HCSA Compliance Guide</a>
+                    <a class="hover:text-primary transition-colors" href="contact.html">Privacy & Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Navigation & Form Handling Script -->
+    <script>
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileDrawer = document.getElementById('mobileDrawer');
+        if (mobileMenuBtn && mobileDrawer) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileDrawer.classList.toggle('hidden');
+            });
+        }
+
+        // Auto-select package or service if provided in URL parameter
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const packageParam = urlParams.get('package');
+            const serviceParam = urlParams.get('service');
+
+            const budgetSelect = document.getElementById('budget');
+            const industrySelect = document.getElementById('industry');
+
+            if (packageParam && budgetSelect) {
+                if (packageParam === 'essential') budgetSelect.value = 'essential';
+                else if (packageParam === 'transform') budgetSelect.value = 'transform';
+                else if (packageParam === 'signature') budgetSelect.value = 'signature';
+                else if (packageParam === 'retainer') budgetSelect.value = 'retainer';
+            }
+
+            if (serviceParam && industrySelect) {
+                if (serviceParam === 'conversion') industrySelect.value = 'medical_aesthetics';
+                else if (serviceParam === 'branding') industrySelect.value = 'medical_aesthetics';
+            }
+        });
+
+        // Form Submit Simulation
+        const form = document.getElementById('consultationForm');
+        const successState = document.getElementById('formSuccessState');
+
+        if (form && successState) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                form.classList.add('hidden');
+                successState.classList.remove('hidden');
+                window.scrollTo({ top: form.offsetTop - 100, behavior: 'smooth' });
+            });
+        }
+    </script>
+</body>
+</html>

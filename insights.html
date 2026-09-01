@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html class="light scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Insights & Editorial Essays — VALENNE DIGITAL</title>
+    <meta name="description" content="Perspectives on high-converting quiet luxury design, Singapore medical advertising regulations, and conversion architecture."/>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#000000",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1a1c1c",
+                        "secondary": "#5e5e5b",
+                        "secondary-container": "#e1dfdb",
+                        "surface": "#f9f9f9",
+                        "surface-variant": "#e2e2e2",
+                        "surface-container": "#eeeeee",
+                        "surface-container-low": "#f4f3f3",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#5f5e5e",
+                        "outline": "#747878",
+                        "outline-variant": "#c4c7c7",
+                        "background": "#F9F7F2"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "section-padding": "140px",
+                        "unit": "8px",
+                        "margin-mobile": "24px",
+                        "gutter": "32px",
+                        "container-max": "1440px",
+                        "margin-desktop": "80px"
+                    },
+                    fontFamily: {
+                        "body-lg": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "headline-sm": ["Playfair Display", "serif"],
+                        "quote": ["Playfair Display", "serif"],
+                        "display-lg": ["Playfair Display", "serif"],
+                        "headline-md": ["Playfair Display", "serif"],
+                        "display-lg-mobile": ["Playfair Display", "serif"],
+                        "label-caps": ["Inter", "sans-serif"]
+                    },
+                    fontSize: {
+                        "body-lg": ["20px", { "lineHeight": "1.7", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-sm": ["28px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "quote": ["32px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "display-lg": ["68px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-md": ["38px", { "lineHeight": "1.25", "fontWeight": "500" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F9F7F2;
+            color: #1A1C1C;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .ghost-frame {
+            border: 1px solid #E5E5E5;
+            background-color: #FFFFFF;
+        }
+        .hairline-divider {
+            border-bottom: 1px solid #E5E5E5;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-[#F9F7F2] text-[#1A1C1C] font-body-md antialiased selection:bg-[#1A1C1C] selection:text-white">
+
+    <!-- Top Navigation -->
+    <header>
+        <nav class="fixed top-0 w-full z-50 bg-[#F9F7F2]/90 backdrop-blur-md border-b border-[#E5E5E5] transition-all duration-300">
+            <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-5 max-w-container-max mx-auto">
+                <a class="font-display-lg text-[22px] md:text-[28px] tracking-tight text-primary hover:opacity-80 transition-opacity" href="index.html">
+                    VALENNE DIGITAL
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center gap-8 font-label-caps text-label-caps">
+                    <a class="text-secondary hover:text-primary transition-colors py-1" href="work.html">Work</a>
+                    <a class="text-secondary hover:text-primary transition-colors py-1" href="services.html">Services</a>
+                    <a class="text-secondary hover:text-primary transition-colors py-1" href="pricing.html">Pricing</a>
+                    <a class="text-secondary hover:text-primary transition-colors py-1" href="process.html">Process</a>
+                    <a class="text-secondary hover:text-primary transition-colors py-1" href="about.html">About</a>
+                    <a class="text-primary font-semibold border-b border-primary py-1" href="insights.html">Insights</a>
+                </div>
+
+                <div class="hidden lg:flex items-center gap-4">
+                    <a class="bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3 rounded hover:bg-[#333333] transition-colors" href="contact.html">
+                        Book a Consultation
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="lg:hidden text-primary p-2 focus:outline-none" aria-label="Toggle Navigation Menu">
+                    <span class="material-symbols-outlined text-[28px]">menu</span>
+                </button>
+            </div>
+
+            <!-- Mobile Drawer Menu -->
+            <div id="mobileDrawer" class="hidden lg:hidden bg-[#F9F7F2] border-b border-[#E5E5E5] px-margin-mobile py-6 space-y-4 shadow-lg transition-all duration-300">
+                <div class="flex flex-col space-y-4 font-label-caps text-label-caps">
+                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="index.html">Home</a>
+                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="work.html">Work</a>
+                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="services.html">Services</a>
+                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="pricing.html">Pricing</a>
+                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="process.html">Process</a>
+                    <a class="text-secondary hover:text-primary py-2 border-b border-[#E5E5E5]/50" href="about.html">About</a>
+                    <a class="text-primary font-semibold py-2 border-b border-[#E5E5E5]/50" href="insights.html">Insights</a>
+                    <a class="text-secondary hover:text-primary py-2" href="contact.html">Contact</a>
+                </div>
+                <div class="pt-4">
+                    <a class="block text-center bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3.5 rounded" href="contact.html">
+                        Book a Consultation
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-[90px] md:pt-[110px]">
+
+        <!-- Hero Section -->
+        <header class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-16 pb-12">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+                <div class="md:col-span-10">
+                    <span class="font-label-caps text-label-caps text-secondary mb-4 block">ESSAYS & STRATEGY PERSPECTIVES</span>
+                    <h1 class="font-display-lg-mobile md:font-display-lg text-primary mb-6">
+                        Perspectives on better digital experiences.
+                    </h1>
+                    <p class="font-body-lg text-body-lg text-secondary max-w-2xl">
+                        Authoritative essays on quiet-luxury digital design, Singapore healthcare advertising regulations (HCSA), conversion psychology, and high-margin client acquisition.
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Article Grid (Asymmetric Editorial Style) -->
+        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 border-t border-[#E5E5E5]">
+
+            <!-- Featured Article (Wide Spanning) -->
+            <article class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-20 items-center group cursor-pointer" onclick="openArticleModal('essay1')">
+                <div class="lg:col-span-7 mb-8 lg:mb-0 relative overflow-hidden">
+                    <div class="aspect-[16/10] bg-surface-variant relative rounded overflow-hidden ghost-frame">
+                        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80" alt="Why your website matters more than you think" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out grayscale"/>
+                        <div class="absolute top-4 left-4 bg-white px-3 py-1 rounded text-xs font-label-caps text-primary shadow">
+                            FEATURED ESSAY
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-4 lg:col-start-9">
+                    <span class="font-label-caps text-xs text-secondary mb-3 block">STRATEGY & POSITIONING</span>
+                    <h2 class="font-headline-md text-headline-md text-primary mb-4 group-hover:text-secondary transition-colors">
+                        Why your website matters more than you think.
+                    </h2>
+                    <p class="font-body-md text-secondary mb-6 leading-relaxed">
+                        In a market saturated with generic templates, a meticulously crafted digital flagship is not merely a utility; it is the silent ambassador of your caliber and the decisive factor in whether an affluent patient or client initiates contact.
+                    </p>
+                    <span class="font-label-caps text-label-caps text-primary border-b border-primary pb-1 group-hover:border-secondary transition-colors inline-block">
+                        READ ESSAY →
+                    </span>
+                </div>
+            </article>
+
+            <!-- Standard Grid (3 Columns) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+
+                <!-- Article 2 -->
+                <article class="ghost-frame p-6 rounded bg-white group cursor-pointer flex flex-col justify-between" onclick="openArticleModal('essay2')">
+                    <div>
+                        <div class="aspect-[4/3] bg-surface-variant mb-6 overflow-hidden rounded relative">
+                            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Private clinic website transformation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out grayscale"/>
+                        </div>
+                        <span class="font-label-caps text-[11px] text-secondary mb-2 block uppercase">CLINICAL TRIAGE</span>
+                        <h3 class="font-headline-sm text-[22px] text-primary mb-3 group-hover:text-secondary transition-colors">
+                            7 signs your private clinic is losing high-margin patients.
+                        </h3>
+                        <p class="font-body-md text-secondary text-xs leading-relaxed mb-6">
+                            Recognizing the subtle conversion leaks that cause discerning patients in Singapore to bounce before requesting a consultation.
+                        </p>
+                    </div>
+                    <span class="font-label-caps text-[11px] text-primary border-b border-primary pb-0.5 inline-block self-start">
+                        READ ANALYSIS →
+                    </span>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="ghost-frame p-6 rounded bg-white group cursor-pointer flex flex-col justify-between" onclick="openArticleModal('essay3')">
+                    <div>
+                        <div class="aspect-[4/3] bg-surface-variant mb-6 overflow-hidden rounded relative">
+                            <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80" alt="MOH and HCSA Medical advertising compliance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out grayscale"/>
+                        </div>
+                        <span class="font-label-caps text-[11px] text-secondary mb-2 block uppercase">REGULATION & LAW</span>
+                        <h3 class="font-headline-sm text-[22px] text-primary mb-3 group-hover:text-secondary transition-colors">
+                            MOH & HCSA Compliance: What luxury clinics must know.
+                        </h3>
+                        <p class="font-body-md text-secondary text-xs leading-relaxed mb-6">
+                            How to present authoritative clinical expertise and doctor qualifications without violating Singapore's Healthcare Services Act.
+                        </p>
+                    </div>
+                    <span class="font-label-caps text-[11px] text-primary border-b border-primary pb-0.5 inline-block self-start">
+                        READ GUIDE →
+                    </span>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="ghost-frame p-6 rounded bg-white group cursor-pointer flex flex-col justify-between" onclick="openArticleModal('essay4')">
+                    <div>
+                        <div class="aspect-[4/3] bg-surface-variant mb-6 overflow-hidden rounded relative">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Website redesign vs conversion rate optimization" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out grayscale"/>
+                        </div>
+                        <span class="font-label-caps text-[11px] text-secondary mb-2 block uppercase">METHODOLOGY</span>
+                        <h3 class="font-headline-sm text-[22px] text-primary mb-3 group-hover:text-secondary transition-colors">
+                            Redesign vs Conversion Rate Optimisation (CRO).
+                        </h3>
+                        <p class="font-body-md text-secondary text-xs leading-relaxed mb-6">
+                            Understanding when your business needs a foundational aesthetic overhaul versus iterative micro-funnel testing.
+                        </p>
+                    </div>
+                    <span class="font-label-caps text-[11px] text-primary border-b border-primary pb-0.5 inline-block self-start">
+                        READ ESSAY →
+                    </span>
+                </article>
+
+            </div>
+
+            <!-- Asymmetric Rhythm Article (Spans 2 columns) -->
+            <article class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center ghost-frame p-8 rounded bg-white group cursor-pointer" onclick="openArticleModal('essay5')">
+                <div class="lg:col-span-5 mb-6 lg:mb-0">
+                    <div class="aspect-[16/10] overflow-hidden rounded">
+                        <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=800&q=80" alt="Psychology of whitespace and quiet luxury" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out grayscale"/>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 lg:pl-6">
+                    <span class="font-label-caps text-xs text-secondary mb-2 block uppercase">BRANDING PSYCHOLOGY</span>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-3 group-hover:text-secondary transition-colors">
+                        The psychology of whitespace: How luxury websites command 3x fees.
+                    </h3>
+                    <p class="font-body-md text-secondary text-sm leading-relaxed mb-6">
+                        An examination of how visual breathing room, restraint, and deliberate typographic hierarchy alter price elasticity and signal undisputed authority to high-net-worth consumers.
+                    </p>
+                    <span class="font-label-caps text-label-caps text-primary border-b border-primary pb-1 group-hover:border-secondary transition-colors inline-block">
+                        READ ESSAY →
+                    </span>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- Newsletter Signup Section -->
+        <section class="py-16 md:py-24 bg-white border-y border-[#E5E5E5]">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+                <div class="max-w-xl mx-auto">
+                    <span class="font-label-caps text-label-caps text-secondary mb-3 block">MONTHLY EDITORIAL</span>
+                    <h2 class="font-quote text-quote text-primary mb-4 text-[26px] md:text-[32px]">Subscribe for digital refinement.</h2>
+                    <p class="font-body-md text-secondary text-sm mb-8">
+                        Join over 800 Singapore doctors, specialists, and founders receiving our private monthly memorandum on digital strategy, conversion telemetry, and quiet luxury.
+                    </p>
+
+                    <form id="newsletterForm" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                        <input type="email" id="nlEmail" placeholder="Your email address" required class="flex-grow bg-[#F9F7F2] border border-[#E5E5E5] px-4 py-3 text-sm text-primary placeholder:text-[#747878] focus:border-primary focus:ring-0 rounded"/>
+                        <button type="submit" class="bg-primary text-white px-6 py-3 font-label-caps text-label-caps rounded hover:bg-[#333333] transition-colors shrink-0">
+                            SUBSCRIBE
+                        </button>
+                    </form>
+                    <div id="newsletterSuccess" class="hidden mt-4 p-3 bg-[#F9F7F2] text-xs text-primary font-medium rounded border border-[#E5E5E5]">
+                        ✓ Thank you. You have been added to our private editorial dispatch.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Article Interactive Reader Modal -->
+    <div id="articleModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-white max-w-3xl w-full max-h-[90vh] overflow-y-auto rounded p-8 md:p-12 border border-[#E5E5E5] relative shadow-2xl">
+            <button onclick="closeArticleModal()" class="absolute top-6 right-6 text-secondary hover:text-primary p-2">
+                <span class="material-symbols-outlined text-[28px]">close</span>
+            </button>
+            <div id="articleContent">
+                <!-- Injected via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Global Footer -->
+    <footer class="bg-white border-t border-[#E5E5E5] w-full pt-16 pb-12">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter">
+            <div class="md:col-span-4 mb-10 md:mb-0">
+                <a class="font-display-lg text-[26px] tracking-tight text-primary block mb-4" href="index.html">
+                    VALENNE DIGITAL
+                </a>
+                <p class="font-body-md text-secondary text-sm max-w-sm mb-6">
+                    Quiet-luxury digital architecture and conversion engineering for private medical practices, luxury aesthetics, and premier enterprises.
+                </p>
+                <p class="text-xs text-secondary font-label-caps">
+                    SINGAPORE HQ • DUXTON HILL / MARINA BAY
+                </p>
+            </div>
+
+            <div class="md:col-span-2 md:col-start-7 mb-8 md:mb-0">
+                <p class="font-label-caps text-label-caps text-primary mb-4 font-semibold">NAVIGATION</p>
+                <ul class="space-y-3 font-body-md text-sm text-secondary">
+                    <li><a class="hover:text-primary transition-colors" href="work.html">Selected Work</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="services.html">Services & Deliverables</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="pricing.html">Investment & Packages</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="process.html">Methodology</a></li>
+                </ul>
+            </div>
+
+            <div class="md:col-span-2 mb-8 md:mb-0">
+                <p class="font-label-caps text-label-caps text-primary mb-4 font-semibold">STUDIO</p>
+                <ul class="space-y-3 font-body-md text-sm text-secondary">
+                    <li><a class="hover:text-primary transition-colors" href="about.html">Boutique Philosophy</a></li>
+                    <li><a class="text-primary font-medium hover:text-primary transition-colors" href="insights.html">Editorial Essays</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="contact.html">Consultation</a></li>
+                </ul>
+            </div>
+
+            <div class="md:col-span-2">
+                <p class="font-label-caps text-label-caps text-primary mb-4 font-semibold">INQUIRIES</p>
+                <p class="font-body-md text-sm text-secondary mb-2">Singapore Studio</p>
+                <a class="font-body-md text-sm text-primary font-medium hover:underline block mb-4" href="mailto:hello@valennedigital.com">hello@valennedigital.com</a>
+                <p class="text-xs text-secondary">Mon – Fri: 09:00 – 18:00 SGT</p>
+            </div>
+
+            <div class="md:col-span-12 mt-12 pt-8 border-t border-[#E5E5E5] flex flex-col md:flex-row justify-between items-center text-xs text-secondary gap-4">
+                <p>© 2026 VALENNE DIGITAL PTE. LTD. (UEN: 202488910G). ALL RIGHTS RESERVED.</p>
+                <div class="flex gap-6">
+                    <a class="hover:text-primary transition-colors" href="insights.html">HCSA Compliance Guide</a>
+                    <a class="hover:text-primary transition-colors" href="contact.html">Privacy & Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileDrawer = document.getElementById('mobileDrawer');
+        if (mobileMenuBtn && mobileDrawer) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileDrawer.classList.toggle('hidden');
+            });
+        }
+
+        // Newsletter Form
+        const newsletterForm = document.getElementById('newsletterForm');
+        const newsletterSuccess = document.getElementById('newsletterSuccess');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                newsletterForm.classList.add('hidden');
+                newsletterSuccess.classList.remove('hidden');
+            });
+        }
+
+        // Article Data
+        const articles = {
+            essay1: {
+                category: "STRATEGY & POSITIONING",
+                title: "Why your website matters more than you think.",
+                subtitle: "The unseen cost of a digital presence that lags behind your physical reputation.",
+                content: `
+                    <p class="mb-4">When a high-net-worth prospective patient or wealth client hears your name, their first instinctive action is not to dial your clinic or visit your physical office. It is to open their mobile browser and search for your digital presence.</p>
+                    <p class="mb-4">In less than three seconds, an irreversible subconscious judgment is formed. If your website takes four seconds to load, features cluttered visual noise, or resembles a generic template, their confidence diminishes instantly.</p>
+                    <p class="mb-4">True digital luxury does not shout with flashy gimmicks or aggressive pop-ups. It commands respect through rigorous restraint: intentional whitespace, sub-second execution, and a clear conversion architecture that respects the intelligence of the visitor.</p>
+                    <p class="mb-4">Investing in your digital flagship is an investment in protecting your price elasticity, positioning your clinical prestige, and filtering for the exact tier of high-margin inquiries you desire.</p>
+                `
+            },
+            essay2: {
+                category: "CLINICAL TRIAGE",
+                title: "7 signs your private clinic website is losing high-margin patients.",
+                subtitle: "Subtle friction points that cause affluent patients to seek alternative specialists.",
+                content: `
+                    <p class="mb-4">1. <strong>Mobile Latency:</strong> 75%+ of medical inquiries in Singapore occur on mobile devices. A delay of over 1.5 seconds creates immediate abandonment.</p>
+                    <p class="mb-4">2. <strong>Generic Procedure Pages:</strong> High-ticket aesthetic procedures (e.g. rhinoplasty, deep-plane facelifts) require deep clinical education, recovery timelines, and scientific methodology—not generic 2-paragraph summaries.</p>
+                    <p class="mb-4">3. <strong>Lack of WhatsApp Concierge:</strong> Affluent clients prefer discrete, direct messaging channels rather than cumbersome 10-field static contact forms.</p>
+                    <p class="mb-4">4. <strong>Uncurated Typography:</strong> Cheap font choices communicate discount care.</p>
+                    <p class="mb-4">5. <strong>Hidden Doctor Credentials:</strong> Specialist training, fellowships, and scientific publications should be front and centre.</p>
+                `
+            },
+            essay3: {
+                category: "REGULATION & COMPLIANCE",
+                title: "MOH & HCSA Compliance: What luxury clinics must know.",
+                subtitle: "Navigating Singapore Ministry of Health advertising guidelines without sacrificing elegance.",
+                content: `
+                    <p class="mb-4">The Singapore Healthcare Services Act (HCSA) and the Singapore Medical Council (SMC) Ethical Code enforce rigorous boundaries on medical advertising. Clinics cannot make unverifiable superiority claims or use manipulative promotional pricing schemes.</p>
+                    <p class="mb-4">Our studio approaches compliance as an architectural advantage. By focusing on scientific accuracy, peer-reviewed clinical data, and transparent doctor biographies, we build flagships that project immense authority while remaining 100% compliant with MOH auditors.</p>
+                `
+            },
+            essay4: {
+                category: "METHODOLOGY",
+                title: "Website redesign vs continuous conversion rate optimisation (CRO).",
+                subtitle: "Why an initial architectural rebuild must be paired with continuous data telemetry.",
+                content: `
+                    <p class="mb-4">A complete website redesign creates a new baseline of aesthetic authority, speed, and clean information architecture. However, patient behavior evolves continuously.</p>
+                    <p class="mb-4">Through our Growth Retainer, we analyze heatmaps, button tap flows, and procedure page engagement on a monthly basis, adjusting copy nuances and inquiry pathways to continuously lower customer acquisition costs.</p>
+                `
+            },
+            essay5: {
+                category: "BRANDING PSYCHOLOGY",
+                title: "The psychology of whitespace: How luxury websites command 3x fees.",
+                subtitle: "Why crowded interfaces signal bargain positioning while breathing room signals sovereignty.",
+                content: `
+                    <p class="mb-4">Mass-market websites cram every pixel with banners, badges, urgency counters, and stock photos. In contrast, iconic luxury brands—from Patek Philippe to Aman Resorts—understand that whitespace is an expression of confidence.</p>
+                    <p class="mb-4">When a medical clinic or family office grants its content room to breathe, it communicates stability, unhurried mastery, and sovereign quality. Discerning patients naturally associate this aesthetic with superior clinical outcomes.</p>
+                `
+            }
+        };
+
+        const articleModal = document.getElementById('articleModal');
+        const articleContent = document.getElementById('articleContent');
+
+        function openArticleModal(id) {
+            const data = articles[id];
+            if (!data) return;
+
+            articleContent.innerHTML = `
+                <span class="font-label-caps text-xs text-secondary uppercase tracking-widest block mb-2">${data.category}</span>
+                <h2 class="font-headline-md text-headline-md text-primary mb-2">${data.title}</h2>
+                <p class="text-sm font-medium text-secondary mb-6">${data.subtitle}</p>
+                <hr class="border-t border-[#E5E5E5] mb-6"/>
+                <div class="font-body-md text-secondary text-sm leading-relaxed space-y-4">
+                    ${data.content}
+                </div>
+                <div class="mt-8 pt-6 border-t border-[#E5E5E5] flex justify-between items-center">
+                    <span class="text-xs text-secondary font-mono">Valenne Digital Memorandum</span>
+                    <button onclick="closeArticleModal()" class="px-6 py-2.5 bg-primary text-white rounded font-label-caps text-xs hover:bg-[#333333]">Close Reader</button>
+                </div>
+            `;
+            articleModal.classList.remove('hidden');
+            articleModal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeArticleModal() {
+            articleModal.classList.add('hidden');
+            articleModal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        articleModal.addEventListener('click', (e) => {
+            if (e.target === articleModal) {
+                closeArticleModal();
+            }
+        });
+    </script>
+</body>
+</html>
