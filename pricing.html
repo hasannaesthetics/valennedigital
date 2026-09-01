@@ -344,66 +344,8 @@
             </div>
         </section>
 
-        <!-- Interactive Opportunity Model Calculator Widget -->
-        <section class="py-16 md:py-24 bg-white border-y border-[#E5E5E5]">
-            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-                <div class="max-w-4xl mx-auto">
-                    <div class="text-center mb-12">
-                        <span class="font-label-caps text-label-caps text-secondary mb-3 block">FINANCIAL MODELING</span>
-                        <h2 class="font-headline-md text-headline-md text-primary mb-4">Practice Growth Modeling Calculator</h2>
-                        <p class="font-body-md text-secondary">
-                            Estimate the commercial return of eliminating friction and capturing qualified patients who visit your site.
-                        </p>
-                    </div>
-
-                    <div class="p-8 md:p-10 border border-[#E5E5E5] rounded bg-[#F9F7F2]/60">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                            <div>
-                                <label class="block text-xs font-label-caps text-secondary mb-2 uppercase">Monthly Website Visitors</label>
-                                <input id="roiVisitors" type="range" min="500" max="15000" step="250" value="2500" class="w-full accent-primary h-2 bg-[#E5E5E5] rounded-lg cursor-pointer mb-2"/>
-                                <div class="flex justify-between text-xs font-mono text-secondary">
-                                    <span>500</span>
-                                    <span id="roiVisitorsVal" class="text-base font-bold text-primary">2,500 visitors/mo</span>
-                                    <span>15,000+</span>
-                                </div>
-                            </div>
-
-                            <div>
-                                <label class="block text-xs font-label-caps text-secondary mb-2 uppercase">Avg. Procedure / Client Value (SGD)</label>
-                                <input id="roiTicket" type="range" min="1000" max="30000" step="500" value="4500" class="w-full accent-primary h-2 bg-[#E5E5E5] rounded-lg cursor-pointer mb-2"/>
-                                <div class="flex justify-between text-xs font-mono text-secondary">
-                                    <span>$1,000</span>
-                                    <span id="roiTicketVal" class="text-base font-bold text-primary">$4,500 SGD</span>
-                                    <span>$30,000</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Result Display -->
-                        <div class="bg-white p-6 md:p-8 rounded border border-[#E5E5E5] grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
-                            <div>
-                                <p class="text-xs font-label-caps text-secondary mb-1">TARGET CONVERSION GAIN</p>
-                                <p class="font-display-lg text-[28px] md:text-[32px] text-primary font-semibold">+1.5% Lift</p>
-                                <p class="text-xs text-secondary mt-1">~38 extra consultations/yr</p>
-                            </div>
-                            <div class="border-t sm:border-t-0 sm:border-x border-[#E5E5E5] pt-4 sm:pt-0">
-                                <p class="text-xs font-label-caps text-secondary mb-1">PROJECTED ANNUAL VALUE</p>
-                                <p id="roiAnnualGain" class="font-display-lg text-[32px] md:text-[38px] text-primary font-bold text-black">$171,000 SGD</p>
-                                <p class="text-xs text-secondary mt-1">Based on 35% close rate</p>
-                            </div>
-                            <div class="border-t sm:border-t-0 border-[#E5E5E5] pt-4 sm:pt-0">
-                                <p class="text-xs font-label-caps text-secondary mb-1">ESTIMATED CAPITAL MULTIPLE</p>
-                                <p id="roiMultiple" class="font-display-lg text-[28px] md:text-[32px] text-primary font-semibold">17.4x</p>
-                                <p class="text-xs text-secondary mt-1">Relative to Transform tier</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Interactive FAQ Accordion -->
-        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-24">
+        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-24 border-t border-[#E5E5E5]">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
                 <div class="lg:col-span-4 mb-10 lg:mb-0">
                     <span class="font-label-caps text-label-caps text-secondary mb-3 block">CLEAR ANSWERS</span>
@@ -497,7 +439,7 @@
                     Quiet-luxury digital architecture and conversion engineering for private medical practices, luxury aesthetics, and premier enterprises.
                 </p>
                 <p class="text-xs text-secondary font-label-caps">
-                    SINGAPORE HQ • DUXTON HILL / MARINA BAY
+                    SINGAPORE HQ • SIGLAP / EAST COAST
                 </p>
             </div>
 
@@ -528,7 +470,7 @@
             </div>
 
             <div class="md:col-span-12 mt-12 pt-8 border-t border-[#E5E5E5] flex flex-col md:flex-row justify-between items-center text-xs text-secondary gap-4">
-                <p>© 2026 VALENNE DIGITAL PTE. LTD. (UEN: 202488910G). ALL RIGHTS RESERVED.</p>
+                <p>© 2026 VALENNE DIGITAL. ALL RIGHTS RESERVED.</p>
                 <div class="flex gap-6">
                     <a class="hover:text-primary transition-colors" href="insights.html">HCSA Compliance Guide</a>
                     <a class="hover:text-primary transition-colors" href="contact.html">Privacy & Terms</a>
@@ -537,7 +479,7 @@
         </div>
     </footer>
 
-    <!-- Interactive Scripts for ROI Calculator & FAQ -->
+    <!-- Interactive Scripts for FAQ -->
     <script>
         // Mobile Menu
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -565,40 +507,6 @@
                 }
             });
         });
-
-        // ROI Calculator
-        const roiVisitors = document.getElementById('roiVisitors');
-        const roiTicket = document.getElementById('roiTicket');
-        const roiVisitorsVal = document.getElementById('roiVisitorsVal');
-        const roiTicketVal = document.getElementById('roiTicketVal');
-        const roiAnnualGain = document.getElementById('roiAnnualGain');
-        const roiMultiple = document.getElementById('roiMultiple');
-
-        function updateROI() {
-            const visitors = parseInt(roiVisitors.value);
-            const ticket = parseInt(roiTicket.value);
-
-            roiVisitorsVal.textContent = visitors.toLocaleString() + ' visitors/mo';
-            roiTicketVal.textContent = '$' + ticket.toLocaleString() + ' SGD';
-
-            // Additional inquiries per month assuming +1.5% conversion improvement
-            const extraInquiriesPerMonth = visitors * 0.015;
-            // 35% close rate on high-ticket leads
-            const extraClientsPerMonth = extraInquiriesPerMonth * 0.35;
-            const extraAnnualRevenue = extraClientsPerMonth * ticket * 12;
-
-            roiAnnualGain.textContent = '$' + Math.round(extraAnnualRevenue).toLocaleString() + ' SGD';
-
-            // ROI relative to $9,800 package
-            const multiple = (extraAnnualRevenue / 9800).toFixed(1);
-            roiMultiple.textContent = multiple + 'x';
-        }
-
-        if (roiVisitors && roiTicket) {
-            roiVisitors.addEventListener('input', updateROI);
-            roiTicket.addEventListener('input', updateROI);
-            updateROI();
-        }
     </script>
 </body>
 </html>
