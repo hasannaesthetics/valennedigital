@@ -267,10 +267,11 @@
                                     <label class="block text-[11px] md:text-xs font-label-caps text-secondary uppercase mb-1" for="industry">Discipline / Sector *</label>
                                     <select class="form-select-minimal" id="industry" name="industry" required>
                                         <option value="" disabled selected>Select your discipline</option>
-                                        <option value="medical_practices">Private Medical & Specialist Practices</option>
-                                        <option value="financial_familyoffice">Financial Institutions & Family Offices</option>
-                                        <option value="premier_sme">Premier SMEs & Professional Consultancies</option>
-                                        <option value="other">Other High-Value Enterprise</option>
+                                        <option value="medical_specialist">Private Medical & Specialist Practice</option>
+                                        <option value="dental">Dental Practice</option>
+                                        <option value="aesthetic">Aesthetic & Cosmetic Clinic</option>
+                                        <option value="design_architecture">Interior Design & Architecture</option>
+                                        <option value="other">Something else</option>
                                     </select>
                                 </div>
                             </div>
@@ -323,7 +324,7 @@
                             <span class="material-symbols-outlined text-primary text-[48px] md:text-[56px] mb-4">check_circle</span>
                             <h3 class="font-headline-md text-[24px] sm:text-[28px] md:text-headline-md text-primary mb-3">Consultation Request Received</h3>
                             <p class="font-body-md text-secondary text-sm md:text-base max-w-md mx-auto mb-6 leading-relaxed">
-                                Thank you. One of our senior partners will review your current digital footprint and connect within 24–48 business hours with preliminary findings.
+                                Thank you. We'll review your current site and come back within 24–48 business hours with our initial findings.
                             </p>
                             <a href="index.html" class="inline-block border border-primary text-primary font-label-caps text-label-caps px-6 py-3.5 rounded hover:bg-black hover:text-white transition-colors">
                                 Return to Homepage
@@ -358,7 +359,7 @@
                             Siglap / East Coast, Singapore
                         </p>
                         <p class="text-xs text-secondary font-mono leading-relaxed">
-                            Digital-first boutique. Available for on-site consultations at your clinic / practice (Paragon Orchard, Mount Elizabeth, Novena) or via secure virtual conference.
+                            Digital-first boutique. Happy to meet at your clinic anywhere in Singapore, or over a video call &mdash; whichever is less disruptive to your day.
                         </p>
                     </div>
 
@@ -388,7 +389,7 @@
                     VALENNE DIGITAL
                 </a>
                 <p class="font-body-md text-secondary text-sm max-w-sm mb-5">
-                    Quiet-luxury digital architecture and conversion engineering for private medical practices, financial institutions & family offices, and premier SMEs.
+                    Quiet-luxury digital architecture and conversion engineering for Singapore's private medical, dental and aesthetic practices.
                 </p>
                 <p class="text-xs text-secondary font-label-caps">
                     SINGAPORE HQ • SIGLAP / EAST COAST
@@ -469,16 +470,51 @@
             }
         });
 
-        // Form Submit Simulation
+        // Form submission — posts to Formspree, then reveals the success state.
+        // REPLACE YOUR_FORM_ID below with the ID from your Formspree dashboard.
+        const FORM_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+
         const form = document.getElementById('consultationForm');
         const successState = document.getElementById('formSuccessState');
 
         if (form && successState) {
-            form.addEventListener('submit', (e) => {
+            form.addEventListener('submit', async (e) => {
                 e.preventDefault();
-                form.classList.add('hidden');
-                successState.classList.remove('hidden');
-                window.scrollTo({ top: form.offsetTop - 100, behavior: 'smooth' });
+
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalLabel = submitBtn ? submitBtn.textContent.trim() : '';
+                if (submitBtn) {
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Sending\u2026';
+                }
+
+                let errorBox = document.getElementById('formError');
+                if (errorBox) errorBox.remove();
+
+                try {
+                    const response = await fetch(FORM_ENDPOINT, {
+                        method: 'POST',
+                        body: new FormData(form),
+                        headers: { 'Accept': 'application/json' }
+                    });
+                    if (!response.ok) throw new Error('Submission rejected');
+
+                    form.classList.add('hidden');
+                    successState.classList.remove('hidden');
+                    window.scrollTo({ top: form.offsetTop - 100, behavior: 'smooth' });
+                } catch (err) {
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = originalLabel;
+                    }
+                    errorBox = document.createElement('p');
+                    errorBox.id = 'formError';
+                    errorBox.setAttribute('role', 'alert');
+                    errorBox.className = 'text-sm mt-4';
+                    errorBox.style.color = '#8A3A31';
+                    errorBox.textContent = "That didn't send. Please email hello@valennedigital.com and we'll pick it up from there.";
+                    form.appendChild(errorBox);
+                }
             });
         }
     </script>

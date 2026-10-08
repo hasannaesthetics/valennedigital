@@ -309,7 +309,7 @@
                     </p>
 
                     <form id="newsletterForm" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-                        <input type="email" id="nlEmail" placeholder="Your email address" required class="flex-grow bg-[#F9F7F2] border border-[#E5E5E5] px-4 py-3 text-base sm:text-sm text-primary placeholder:text-[#747878] focus:border-primary focus:ring-0 rounded"/>
+                        <input type="email" id="nlEmail" name="email" placeholder="Your email address" required class="flex-grow bg-[#F9F7F2] border border-[#E5E5E5] px-4 py-3 text-base sm:text-sm text-primary placeholder:text-[#747878] focus:border-primary focus:ring-0 rounded"/>
                         <button type="submit" class="bg-primary text-white px-6 py-3.5 font-label-caps text-label-caps rounded hover:bg-[#333333] transition-colors shrink-0 w-full sm:w-auto">
                             SUBSCRIBE
                         </button>
@@ -343,7 +343,7 @@
                     VALENNE DIGITAL
                 </a>
                 <p class="font-body-md text-secondary text-sm max-w-sm mb-5">
-                    Quiet-luxury digital architecture and conversion engineering for private medical practices, financial institutions & family offices, and premier SMEs.
+                    Quiet-luxury digital architecture and conversion engineering for Singapore's private medical, dental and aesthetic practices.
                 </p>
                 <p class="text-xs text-secondary font-label-caps">
                     SINGAPORE HQ • SIGLAP / EAST COAST
@@ -402,14 +402,31 @@
             });
         }
 
-        // Newsletter Form
+        // Newsletter — posts to Formspree. Use a SEPARATE form ID from the contact form
+        // so list signups don't land in the same inbox thread as consultation enquiries.
+        const NEWSLETTER_ENDPOINT = 'https://formspree.io/f/YOUR_NEWSLETTER_FORM_ID';
+
         const newsletterForm = document.getElementById('newsletterForm');
         const newsletterSuccess = document.getElementById('newsletterSuccess');
         if (newsletterForm) {
-            newsletterForm.addEventListener('submit', (e) => {
+            newsletterForm.addEventListener('submit', async (e) => {
                 e.preventDefault();
-                newsletterForm.classList.add('hidden');
-                newsletterSuccess.classList.remove('hidden');
+                const btn = newsletterForm.querySelector('button[type="submit"]');
+                const label = btn ? btn.textContent.trim() : '';
+                if (btn) { btn.disabled = true; btn.textContent = 'SENDING\u2026'; }
+                try {
+                    const response = await fetch(NEWSLETTER_ENDPOINT, {
+                        method: 'POST',
+                        body: new FormData(newsletterForm),
+                        headers: { 'Accept': 'application/json' }
+                    });
+                    if (!response.ok) throw new Error('Submission rejected');
+                    newsletterForm.classList.add('hidden');
+                    if (newsletterSuccess) newsletterSuccess.classList.remove('hidden');
+                } catch (err) {
+                    if (btn) { btn.disabled = false; btn.textContent = label; }
+                    alert("That didn't send \u2014 please email hello@valennedigital.com to be added.");
+                }
             });
         }
 
@@ -462,7 +479,7 @@
                 subtitle: "Why crowded interfaces signal bargain positioning while breathing room signals sovereignty.",
                 content: `
                     <p class="mb-4">Mass-market websites cram every pixel with banners, badges, urgency counters, and stock photos. In contrast, iconic luxury brands—from Patek Philippe to Aman Resorts—understand that whitespace is an expression of confidence.</p>
-                    <p class="mb-4">When a medical clinic or family office grants its content room to breathe, it communicates stability, unhurried mastery, and sovereign quality. Discerning patients naturally associate this aesthetic with superior clinical outcomes.</p>
+                    <p class="mb-4">When a medical clinic grants its content room to breathe, it communicates stability, unhurried mastery, and sovereign quality. Discerning patients naturally associate this aesthetic with superior clinical outcomes.</p>
                 `
             }
         };
